@@ -1,0 +1,32 @@
+Quartus Prime Archive log --	C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.qarlog
+
+Archive:	C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.qar
+Date:		Tue Aug 17 22:01:41 2021
+Quartus Prime		19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ADD_PC.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU_Add.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU_Control.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Control_Unit.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.qpf
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.qsf
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_32.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_5.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/RAM.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Shift_Left2_26.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Shift_Left2_32.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Waveform.vwf
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Waveform1.vwf
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/instructions.txt
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/registers.v
+C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/sign_extend.v
+c:/intelfpga_lite/19.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 21 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -1,0 +1,97 @@
+Archive Project report for MIPS
+Tue Aug 17 22:01:41 2021
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue Aug 17 22:01:41 2021 ;
+; Revision Name          ; MIPS                                  ;
+; Top-level Entity Name  ; MIPS                                  ;
+; Family                 ; Cyclone IV E                          ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'MIPS.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/19.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Tue Aug 17 22:01:41 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++--------------------------------------------------------------+
+; Files Archived                                               ;
++--------------------------------------------------------------+
+; File Name                                                    ;
++--------------------------------------------------------------+
+; ADD_PC.v                                                     ;
+; ALU.v                                                        ;
+; ALU_Add.v                                                    ;
+; ALU_Control.v                                                ;
+; c:/intelfpga_lite/19.1/quartus/bin64/assignment_defaults.qdf ;
+; Control_Unit.v                                               ;
+; instructions.txt                                             ;
+; MIPS.qpf                                                     ;
+; MIPS.qsf                                                     ;
+; MIPS.v                                                       ;
+; MUX_5.v                                                      ;
+; MUX_32.v                                                     ;
+; PC.v                                                         ;
+; RAM.v                                                        ;
+; registers.v                                                  ;
+; ROM.v                                                        ;
+; Shift_Left2_26.v                                             ;
+; Shift_Left2_32.v                                             ;
+; sign_extend.v                                                ;
+; Waveform.vwf                                                 ;
+; Waveform1.vwf                                                ;
++--------------------------------------------------------------+
+
+

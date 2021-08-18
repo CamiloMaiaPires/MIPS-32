@@ -1,0 +1,49 @@
+R Functions
+000000 rs rt rd 00000 100000 //ADD op(6) rs(5) rt(5) rd(5) shamt(5) funct(6)
+000000 rs rt rd 00000 100010 //SUB
+000000 rs rt rd 00000 011000 //MULT
+000000 rs rt rd 00000 011010 //DIV
+000000 rs rt rd 00000 100100 //AND
+000000 rs rt rd 00000 100101 //OR
+000000 rs rt rd 00000 100111 //NOR
+000000 rs rt rd 00000 100110 //XOR
+
+
+I Functions
+
+001000 rs rt imm//ADDI op(6) rs(5) rt(5) imeddiate(16)
+001001 rs rt imm//SUBI
+001100 rs rt imm//ANDI
+000100 rs rt offset//BEQ
+000101 rs rt offset//BNE
+000110 rs rt offset//BGT
+000111 rs rt offset//BGE
+001011 rs rt offset//BLE
+100011 rs rt offset//LW
+101011 rs rt offset//SW
+
+
+J Functions
+
+000010 00000000000000000000000000 //J op(6) target(26)
+
+addi $1, $0, 2
+bgt $2, $1, 3
+addi $2, $2, 1
+j 2
+add $1, $2, $3
+
+sw $1, 0($0)
+sw $2, 4($0)
+lw $3, 0($0)
+lw $4, 4($0)
+
+add $5, $3, $4
+
+
+
+
+
+
+
+

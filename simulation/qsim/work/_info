@@ -1,0 +1,119 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/simulation/qsim
+vhard_block
+Z1 !s110 1629245925
+!i10b 1
+!s100 gXdRDY:@Rf[9NH0?;4i_c0
+IV2nG?[Ogj7bmQ@iPBRN0?0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1629245924
+Z4 8MIPS.vo
+Z5 FMIPS.vo
+L0 44710
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1629245925.000000
+Z8 !s107 MIPS.vo|
+Z9 !s90 -work|work|MIPS.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vMIPS
+R1
+!i10b 1
+!s100 X0mUfUf8C]a6on_eC^77^1
+IEGAcUhgI2McoYaOn_b8kh1
+R2
+R0
+R3
+R4
+R5
+Z12 L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@m@i@p@s
+vMIPS_vlg_vec_tst
+R1
+!i10b 1
+!s100 VbGNC:e5BlX7Th@7JbQlj2
+I6ESj7c6zH<mIMNT>2WDjN0
+R2
+R0
+w1629245923
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+Z13 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R10
+R11
+n@m@i@p@s_vlg_vec_tst
+vPC
+Z14 !s110 1629172193
+!i10b 1
+!s100 ]LWnl26d@1KAm4m43PRN01
+I4EVVA5JzQ^eMQ0TCAkHRG1
+R2
+R0
+w1629172191
+R4
+R5
+R12
+R6
+r1
+!s85 0
+31
+Z15 !s108 1629172193.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@p@c
+vPC_vlg_vec_tst
+R14
+!i10b 1
+!s100 EfSi8WkF>g@:E5bXIDaA`3
+IlI1iBMikejFO@YhJ;`o^72
+R2
+R0
+w1629172190
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+R13
+R6
+r1
+!s85 0
+31
+R15
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@p@c_vlg_vec_tst

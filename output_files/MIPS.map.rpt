@@ -1,0 +1,1746 @@
+Analysis & Synthesis report for MIPS
+Tue Aug 17 19:56:40 2021
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Registers Packed Into Inferred Megafunctions
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for RAM:comb_13|altsyncram:ram_rtl_0|altsyncram_hd41:auto_generated
+ 17. Parameter Settings for User Entity Instance: ROM:comb_5
+ 18. Parameter Settings for User Entity Instance: RAM:comb_13
+ 19. Parameter Settings for Inferred Entity Instance: RAM:comb_13|altsyncram:ram_rtl_0
+ 20. Parameter Settings for Inferred Entity Instance: ALU:comb_12|lpm_mult:Mult0
+ 21. Parameter Settings for Inferred Entity Instance: ALU:comb_12|lpm_divide:Div0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. lpm_mult Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "Shift_Left2_26:comb_16"
+ 25. Port Connectivity Checks: "registers:comb_8"
+ 26. Port Connectivity Checks: "MUX_5:comb_7"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2019  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Aug 17 19:56:40 2021       ;
+; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name                      ; MIPS                                        ;
+; Top-level Entity Name              ; MIPS                                        ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 2,027                                       ;
+;     Total combinational functions  ; 1,803                                       ;
+;     Dedicated logic registers      ; 261                                         ;
+; Total registers                    ; 261                                         ;
+; Total pins                         ; 65                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,024                                       ;
+; Embedded Multiplier 9-bit elements ; 6                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; MIPS               ; MIPS               ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.3%      ;
+;     Processor 5            ;   0.3%      ;
+;     Processor 6            ;   0.3%      ;
+;     Processor 7            ;   0.3%      ;
+;     Processor 8            ;   0.3%      ;
+;     Processors 9-12        ;   0.2%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
+; ROM.v                            ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v                      ;         ;
+; MIPS.v                           ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v                     ;         ;
+; RAM.v                            ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/RAM.v                      ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v                       ;         ;
+; ADD_PC.v                         ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ADD_PC.v                   ;         ;
+; MUX_5.v                          ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_5.v                    ;         ;
+; MUX_32.v                         ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_32.v                   ;         ;
+; Shift_Left2_32.v                 ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Shift_Left2_32.v           ;         ;
+; Shift_Left2_26.v                 ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Shift_Left2_26.v           ;         ;
+; sign_extend.v                    ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/sign_extend.v              ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v                      ;         ;
+; registers.v                      ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/registers.v                ;         ;
+; ALU_Add.v                        ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU_Add.v                  ;         ;
+; ALU_Control.v                    ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU_Control.v              ;         ;
+; Control_Unit.v                   ; yes             ; User Verilog HDL File        ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Control_Unit.v             ;         ;
+; instructions.txt                 ; yes             ; Auto-Found File              ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/instructions.txt           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                    ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                    ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
+; db/altsyncram_hd41.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/altsyncram_hd41.tdf     ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mult.tdf                  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.inc               ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/multcore.inc                  ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/bypassff.inc                  ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altshift.inc                  ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/mult_7dt.tdf            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_divide.tdf                ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/abs_divider.inc               ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sign_div_unsign.inc           ;         ;
+; db/lpm_divide_hkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/lpm_divide_hkm.tdf      ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/sign_div_unsign_9nh.tdf ;         ;
+; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/alt_u_div_6af.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/add_sub_8pc.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 2,027       ;
+;                                             ;             ;
+; Total combinational functions               ; 1803        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 968         ;
+;     -- 3 input functions                    ; 740         ;
+;     -- <=2 input functions                  ; 95          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 1150        ;
+;     -- arithmetic mode                      ; 653         ;
+;                                             ;             ;
+; Total registers                             ; 261         ;
+;     -- Dedicated logic registers            ; 261         ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 65          ;
+; Total memory bits                           ; 1024        ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 6           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 293         ;
+; Total fan-out                               ; 7471        ;
+; Average fan-out                             ; 3.35        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |MIPS                                     ; 1803 (1)            ; 261 (0)                   ; 1024        ; 6            ; 0       ; 3         ; 65   ; 0            ; |MIPS                                                                                                                                   ; MIPS                ; work         ;
+;    |ADD_PC:comb_15|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ADD_PC:comb_15                                                                                                                    ; ADD_PC              ; work         ;
+;    |ALU:comb_12|                          ; 1434 (318)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:comb_12                                                                                                                       ; ALU                 ; work         ;
+;       |lpm_divide:Div0|                   ; 1088 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_divide:Div0                                                                                                       ; lpm_divide          ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1088 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm      ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1088 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_6af:divider|    ; 1088 (1087)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af       ; work         ;
+;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc         ; work         ;
+;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_mult:Mult0                                                                                                        ; lpm_mult            ; work         ;
+;          |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:comb_12|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt            ; work         ;
+;    |ALU_Add:comb_18|                      ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU_Add:comb_18                                                                                                                   ; ALU_Add             ; work         ;
+;    |ALU_Control:comb_11|                  ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU_Control:comb_11                                                                                                               ; ALU_Control         ; work         ;
+;    |Control_Unit:comb_6|                  ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Control_Unit:comb_6                                                                                                               ; Control_Unit        ; work         ;
+;    |MUX_32:comb_10|                       ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX_32:comb_10                                                                                                                    ; MUX_32              ; work         ;
+;    |MUX_32:comb_14|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX_32:comb_14                                                                                                                    ; MUX_32              ; work         ;
+;    |MUX_32:comb_21|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX_32:comb_21                                                                                                                    ; MUX_32              ; work         ;
+;    |MUX_5:comb_7|                         ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX_5:comb_7                                                                                                                      ; MUX_5               ; work         ;
+;    |PC:comb_4|                            ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|PC:comb_4                                                                                                                         ; PC                  ; work         ;
+;    |RAM:comb_13|                          ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|RAM:comb_13                                                                                                                       ; RAM                 ; work         ;
+;       |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|RAM:comb_13|altsyncram:ram_rtl_0                                                                                                  ; altsyncram          ; work         ;
+;          |altsyncram_hd41:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|RAM:comb_13|altsyncram:ram_rtl_0|altsyncram_hd41:auto_generated                                                                   ; altsyncram_hd41     ; work         ;
+;    |ROM:comb_5|                           ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ROM:comb_5                                                                                                                        ; ROM                 ; work         ;
+;    |registers:comb_8|                     ; 238 (238)           ; 256 (256)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|registers:comb_8                                                                                                                  ; registers           ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                          ;
++----------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                       ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; RAM:comb_13|altsyncram:ram_rtl_0|altsyncram_hd41:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 32           ; 32           ; --           ; --           ; 1024 ; None ;
++----------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 6           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 3           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; ALU:comb_12|ALU_Result[0]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[1]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[2]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[3]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[4]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[5]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[6]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[7]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[8]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[9]                           ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[10]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[11]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[12]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[13]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[14]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[15]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[16]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[17]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[18]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[19]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[20]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[21]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[22]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[23]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[24]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[25]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[26]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[27]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[28]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[29]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[30]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; ALU:comb_12|ALU_Result[31]                          ; ALU:comb_12|Mux33   ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++-----------------------------------------+-----------------------------------------+
+; Register name                           ; Reason for Removal                      ;
++-----------------------------------------+-----------------------------------------+
+; PC:comb_4|current_adress[1]             ; Merged with PC:comb_4|current_adress[0] ;
+; PC:comb_4|current_adress[0]             ; Stuck at GND due to stuck port data_in  ;
+; registers:comb_8|register~256           ; Lost fanout                             ;
+; registers:comb_8|register~257           ; Lost fanout                             ;
+; registers:comb_8|register~258           ; Lost fanout                             ;
+; registers:comb_8|register~259           ; Lost fanout                             ;
+; registers:comb_8|register~260           ; Lost fanout                             ;
+; registers:comb_8|register~261           ; Lost fanout                             ;
+; registers:comb_8|register~262           ; Lost fanout                             ;
+; registers:comb_8|register~263           ; Lost fanout                             ;
+; registers:comb_8|register~264           ; Lost fanout                             ;
+; registers:comb_8|register~265           ; Lost fanout                             ;
+; registers:comb_8|register~266           ; Lost fanout                             ;
+; registers:comb_8|register~267           ; Lost fanout                             ;
+; registers:comb_8|register~268           ; Lost fanout                             ;
+; registers:comb_8|register~269           ; Lost fanout                             ;
+; registers:comb_8|register~270           ; Lost fanout                             ;
+; registers:comb_8|register~271           ; Lost fanout                             ;
+; registers:comb_8|register~272           ; Lost fanout                             ;
+; registers:comb_8|register~273           ; Lost fanout                             ;
+; registers:comb_8|register~274           ; Lost fanout                             ;
+; registers:comb_8|register~275           ; Lost fanout                             ;
+; registers:comb_8|register~276           ; Lost fanout                             ;
+; registers:comb_8|register~277           ; Lost fanout                             ;
+; registers:comb_8|register~278           ; Lost fanout                             ;
+; registers:comb_8|register~279           ; Lost fanout                             ;
+; registers:comb_8|register~280           ; Lost fanout                             ;
+; registers:comb_8|register~281           ; Lost fanout                             ;
+; registers:comb_8|register~282           ; Lost fanout                             ;
+; registers:comb_8|register~283           ; Lost fanout                             ;
+; registers:comb_8|register~284           ; Lost fanout                             ;
+; registers:comb_8|register~285           ; Lost fanout                             ;
+; registers:comb_8|register~286           ; Lost fanout                             ;
+; registers:comb_8|register~287           ; Lost fanout                             ;
+; registers:comb_8|register~288           ; Lost fanout                             ;
+; registers:comb_8|register~289           ; Lost fanout                             ;
+; registers:comb_8|register~290           ; Lost fanout                             ;
+; registers:comb_8|register~291           ; Lost fanout                             ;
+; registers:comb_8|register~292           ; Lost fanout                             ;
+; registers:comb_8|register~293           ; Lost fanout                             ;
+; registers:comb_8|register~294           ; Lost fanout                             ;
+; registers:comb_8|register~295           ; Lost fanout                             ;
+; registers:comb_8|register~296           ; Lost fanout                             ;
+; registers:comb_8|register~297           ; Lost fanout                             ;
+; registers:comb_8|register~298           ; Lost fanout                             ;
+; registers:comb_8|register~299           ; Lost fanout                             ;
+; registers:comb_8|register~300           ; Lost fanout                             ;
+; registers:comb_8|register~301           ; Lost fanout                             ;
+; registers:comb_8|register~302           ; Lost fanout                             ;
+; registers:comb_8|register~303           ; Lost fanout                             ;
+; registers:comb_8|register~304           ; Lost fanout                             ;
+; registers:comb_8|register~305           ; Lost fanout                             ;
+; registers:comb_8|register~306           ; Lost fanout                             ;
+; registers:comb_8|register~307           ; Lost fanout                             ;
+; registers:comb_8|register~308           ; Lost fanout                             ;
+; registers:comb_8|register~309           ; Lost fanout                             ;
+; registers:comb_8|register~310           ; Lost fanout                             ;
+; registers:comb_8|register~311           ; Lost fanout                             ;
+; registers:comb_8|register~312           ; Lost fanout                             ;
+; registers:comb_8|register~313           ; Lost fanout                             ;
+; registers:comb_8|register~314           ; Lost fanout                             ;
+; registers:comb_8|register~315           ; Lost fanout                             ;
+; registers:comb_8|register~316           ; Lost fanout                             ;
+; registers:comb_8|register~317           ; Lost fanout                             ;
+; registers:comb_8|register~318           ; Lost fanout                             ;
+; registers:comb_8|register~319           ; Lost fanout                             ;
+; registers:comb_8|register~320           ; Lost fanout                             ;
+; registers:comb_8|register~321           ; Lost fanout                             ;
+; registers:comb_8|register~322           ; Lost fanout                             ;
+; registers:comb_8|register~323           ; Lost fanout                             ;
+; registers:comb_8|register~324           ; Lost fanout                             ;
+; registers:comb_8|register~325           ; Lost fanout                             ;
+; registers:comb_8|register~326           ; Lost fanout                             ;
+; registers:comb_8|register~327           ; Lost fanout                             ;
+; registers:comb_8|register~328           ; Lost fanout                             ;
+; registers:comb_8|register~329           ; Lost fanout                             ;
+; registers:comb_8|register~330           ; Lost fanout                             ;
+; registers:comb_8|register~331           ; Lost fanout                             ;
+; registers:comb_8|register~332           ; Lost fanout                             ;
+; registers:comb_8|register~333           ; Lost fanout                             ;
+; registers:comb_8|register~334           ; Lost fanout                             ;
+; registers:comb_8|register~335           ; Lost fanout                             ;
+; registers:comb_8|register~336           ; Lost fanout                             ;
+; registers:comb_8|register~337           ; Lost fanout                             ;
+; registers:comb_8|register~338           ; Lost fanout                             ;
+; registers:comb_8|register~339           ; Lost fanout                             ;
+; registers:comb_8|register~340           ; Lost fanout                             ;
+; registers:comb_8|register~341           ; Lost fanout                             ;
+; registers:comb_8|register~342           ; Lost fanout                             ;
+; registers:comb_8|register~343           ; Lost fanout                             ;
+; registers:comb_8|register~344           ; Lost fanout                             ;
+; registers:comb_8|register~345           ; Lost fanout                             ;
+; registers:comb_8|register~346           ; Lost fanout                             ;
+; registers:comb_8|register~347           ; Lost fanout                             ;
+; registers:comb_8|register~348           ; Lost fanout                             ;
+; registers:comb_8|register~349           ; Lost fanout                             ;
+; registers:comb_8|register~350           ; Lost fanout                             ;
+; registers:comb_8|register~351           ; Lost fanout                             ;
+; registers:comb_8|register~352           ; Lost fanout                             ;
+; registers:comb_8|register~353           ; Lost fanout                             ;
+; registers:comb_8|register~354           ; Lost fanout                             ;
+; registers:comb_8|register~355           ; Lost fanout                             ;
+; registers:comb_8|register~356           ; Lost fanout                             ;
+; registers:comb_8|register~357           ; Lost fanout                             ;
+; registers:comb_8|register~358           ; Lost fanout                             ;
+; registers:comb_8|register~359           ; Lost fanout                             ;
+; registers:comb_8|register~360           ; Lost fanout                             ;
+; registers:comb_8|register~361           ; Lost fanout                             ;
+; registers:comb_8|register~362           ; Lost fanout                             ;
+; registers:comb_8|register~363           ; Lost fanout                             ;
+; registers:comb_8|register~364           ; Lost fanout                             ;
+; registers:comb_8|register~365           ; Lost fanout                             ;
+; registers:comb_8|register~366           ; Lost fanout                             ;
+; registers:comb_8|register~367           ; Lost fanout                             ;
+; registers:comb_8|register~368           ; Lost fanout                             ;
+; registers:comb_8|register~369           ; Lost fanout                             ;
+; registers:comb_8|register~370           ; Lost fanout                             ;
+; registers:comb_8|register~371           ; Lost fanout                             ;
+; registers:comb_8|register~372           ; Lost fanout                             ;
+; registers:comb_8|register~373           ; Lost fanout                             ;
+; registers:comb_8|register~374           ; Lost fanout                             ;
+; registers:comb_8|register~375           ; Lost fanout                             ;
+; registers:comb_8|register~376           ; Lost fanout                             ;
+; registers:comb_8|register~377           ; Lost fanout                             ;
+; registers:comb_8|register~378           ; Lost fanout                             ;
+; registers:comb_8|register~379           ; Lost fanout                             ;
+; registers:comb_8|register~380           ; Lost fanout                             ;
+; registers:comb_8|register~381           ; Lost fanout                             ;
+; registers:comb_8|register~382           ; Lost fanout                             ;
+; registers:comb_8|register~383           ; Lost fanout                             ;
+; registers:comb_8|register~384           ; Lost fanout                             ;
+; registers:comb_8|register~385           ; Lost fanout                             ;
+; registers:comb_8|register~386           ; Lost fanout                             ;
+; registers:comb_8|register~387           ; Lost fanout                             ;
+; registers:comb_8|register~388           ; Lost fanout                             ;
+; registers:comb_8|register~389           ; Lost fanout                             ;
+; registers:comb_8|register~390           ; Lost fanout                             ;
+; registers:comb_8|register~391           ; Lost fanout                             ;
+; registers:comb_8|register~392           ; Lost fanout                             ;
+; registers:comb_8|register~393           ; Lost fanout                             ;
+; registers:comb_8|register~394           ; Lost fanout                             ;
+; registers:comb_8|register~395           ; Lost fanout                             ;
+; registers:comb_8|register~396           ; Lost fanout                             ;
+; registers:comb_8|register~397           ; Lost fanout                             ;
+; registers:comb_8|register~398           ; Lost fanout                             ;
+; registers:comb_8|register~399           ; Lost fanout                             ;
+; registers:comb_8|register~400           ; Lost fanout                             ;
+; registers:comb_8|register~401           ; Lost fanout                             ;
+; registers:comb_8|register~402           ; Lost fanout                             ;
+; registers:comb_8|register~403           ; Lost fanout                             ;
+; registers:comb_8|register~404           ; Lost fanout                             ;
+; registers:comb_8|register~405           ; Lost fanout                             ;
+; registers:comb_8|register~406           ; Lost fanout                             ;
+; registers:comb_8|register~407           ; Lost fanout                             ;
+; registers:comb_8|register~408           ; Lost fanout                             ;
+; registers:comb_8|register~409           ; Lost fanout                             ;
+; registers:comb_8|register~410           ; Lost fanout                             ;
+; registers:comb_8|register~411           ; Lost fanout                             ;
+; registers:comb_8|register~412           ; Lost fanout                             ;
+; registers:comb_8|register~413           ; Lost fanout                             ;
+; registers:comb_8|register~414           ; Lost fanout                             ;
+; registers:comb_8|register~415           ; Lost fanout                             ;
+; registers:comb_8|register~416           ; Lost fanout                             ;
+; registers:comb_8|register~417           ; Lost fanout                             ;
+; registers:comb_8|register~418           ; Lost fanout                             ;
+; registers:comb_8|register~419           ; Lost fanout                             ;
+; registers:comb_8|register~420           ; Lost fanout                             ;
+; registers:comb_8|register~421           ; Lost fanout                             ;
+; registers:comb_8|register~422           ; Lost fanout                             ;
+; registers:comb_8|register~423           ; Lost fanout                             ;
+; registers:comb_8|register~424           ; Lost fanout                             ;
+; registers:comb_8|register~425           ; Lost fanout                             ;
+; registers:comb_8|register~426           ; Lost fanout                             ;
+; registers:comb_8|register~427           ; Lost fanout                             ;
+; registers:comb_8|register~428           ; Lost fanout                             ;
+; registers:comb_8|register~429           ; Lost fanout                             ;
+; registers:comb_8|register~430           ; Lost fanout                             ;
+; registers:comb_8|register~431           ; Lost fanout                             ;
+; registers:comb_8|register~432           ; Lost fanout                             ;
+; registers:comb_8|register~433           ; Lost fanout                             ;
+; registers:comb_8|register~434           ; Lost fanout                             ;
+; registers:comb_8|register~435           ; Lost fanout                             ;
+; registers:comb_8|register~436           ; Lost fanout                             ;
+; registers:comb_8|register~437           ; Lost fanout                             ;
+; registers:comb_8|register~438           ; Lost fanout                             ;
+; registers:comb_8|register~439           ; Lost fanout                             ;
+; registers:comb_8|register~440           ; Lost fanout                             ;
+; registers:comb_8|register~441           ; Lost fanout                             ;
+; registers:comb_8|register~442           ; Lost fanout                             ;
+; registers:comb_8|register~443           ; Lost fanout                             ;
+; registers:comb_8|register~444           ; Lost fanout                             ;
+; registers:comb_8|register~445           ; Lost fanout                             ;
+; registers:comb_8|register~446           ; Lost fanout                             ;
+; registers:comb_8|register~447           ; Lost fanout                             ;
+; registers:comb_8|register~448           ; Lost fanout                             ;
+; registers:comb_8|register~449           ; Lost fanout                             ;
+; registers:comb_8|register~450           ; Lost fanout                             ;
+; registers:comb_8|register~451           ; Lost fanout                             ;
+; registers:comb_8|register~452           ; Lost fanout                             ;
+; registers:comb_8|register~453           ; Lost fanout                             ;
+; registers:comb_8|register~454           ; Lost fanout                             ;
+; registers:comb_8|register~455           ; Lost fanout                             ;
+; registers:comb_8|register~456           ; Lost fanout                             ;
+; registers:comb_8|register~457           ; Lost fanout                             ;
+; registers:comb_8|register~458           ; Lost fanout                             ;
+; registers:comb_8|register~459           ; Lost fanout                             ;
+; registers:comb_8|register~460           ; Lost fanout                             ;
+; registers:comb_8|register~461           ; Lost fanout                             ;
+; registers:comb_8|register~462           ; Lost fanout                             ;
+; registers:comb_8|register~463           ; Lost fanout                             ;
+; registers:comb_8|register~464           ; Lost fanout                             ;
+; registers:comb_8|register~465           ; Lost fanout                             ;
+; registers:comb_8|register~466           ; Lost fanout                             ;
+; registers:comb_8|register~467           ; Lost fanout                             ;
+; registers:comb_8|register~468           ; Lost fanout                             ;
+; registers:comb_8|register~469           ; Lost fanout                             ;
+; registers:comb_8|register~470           ; Lost fanout                             ;
+; registers:comb_8|register~471           ; Lost fanout                             ;
+; registers:comb_8|register~472           ; Lost fanout                             ;
+; registers:comb_8|register~473           ; Lost fanout                             ;
+; registers:comb_8|register~474           ; Lost fanout                             ;
+; registers:comb_8|register~475           ; Lost fanout                             ;
+; registers:comb_8|register~476           ; Lost fanout                             ;
+; registers:comb_8|register~477           ; Lost fanout                             ;
+; registers:comb_8|register~478           ; Lost fanout                             ;
+; registers:comb_8|register~479           ; Lost fanout                             ;
+; registers:comb_8|register~480           ; Lost fanout                             ;
+; registers:comb_8|register~481           ; Lost fanout                             ;
+; registers:comb_8|register~482           ; Lost fanout                             ;
+; registers:comb_8|register~483           ; Lost fanout                             ;
+; registers:comb_8|register~484           ; Lost fanout                             ;
+; registers:comb_8|register~485           ; Lost fanout                             ;
+; registers:comb_8|register~486           ; Lost fanout                             ;
+; registers:comb_8|register~487           ; Lost fanout                             ;
+; registers:comb_8|register~488           ; Lost fanout                             ;
+; registers:comb_8|register~489           ; Lost fanout                             ;
+; registers:comb_8|register~490           ; Lost fanout                             ;
+; registers:comb_8|register~491           ; Lost fanout                             ;
+; registers:comb_8|register~492           ; Lost fanout                             ;
+; registers:comb_8|register~493           ; Lost fanout                             ;
+; registers:comb_8|register~494           ; Lost fanout                             ;
+; registers:comb_8|register~495           ; Lost fanout                             ;
+; registers:comb_8|register~496           ; Lost fanout                             ;
+; registers:comb_8|register~497           ; Lost fanout                             ;
+; registers:comb_8|register~498           ; Lost fanout                             ;
+; registers:comb_8|register~499           ; Lost fanout                             ;
+; registers:comb_8|register~500           ; Lost fanout                             ;
+; registers:comb_8|register~501           ; Lost fanout                             ;
+; registers:comb_8|register~502           ; Lost fanout                             ;
+; registers:comb_8|register~503           ; Lost fanout                             ;
+; registers:comb_8|register~504           ; Lost fanout                             ;
+; registers:comb_8|register~505           ; Lost fanout                             ;
+; registers:comb_8|register~506           ; Lost fanout                             ;
+; registers:comb_8|register~507           ; Lost fanout                             ;
+; registers:comb_8|register~508           ; Lost fanout                             ;
+; registers:comb_8|register~509           ; Lost fanout                             ;
+; registers:comb_8|register~510           ; Lost fanout                             ;
+; registers:comb_8|register~511           ; Lost fanout                             ;
+; registers:comb_8|register~512           ; Lost fanout                             ;
+; registers:comb_8|register~513           ; Lost fanout                             ;
+; registers:comb_8|register~514           ; Lost fanout                             ;
+; registers:comb_8|register~515           ; Lost fanout                             ;
+; registers:comb_8|register~516           ; Lost fanout                             ;
+; registers:comb_8|register~517           ; Lost fanout                             ;
+; registers:comb_8|register~518           ; Lost fanout                             ;
+; registers:comb_8|register~519           ; Lost fanout                             ;
+; registers:comb_8|register~520           ; Lost fanout                             ;
+; registers:comb_8|register~521           ; Lost fanout                             ;
+; registers:comb_8|register~522           ; Lost fanout                             ;
+; registers:comb_8|register~523           ; Lost fanout                             ;
+; registers:comb_8|register~524           ; Lost fanout                             ;
+; registers:comb_8|register~525           ; Lost fanout                             ;
+; registers:comb_8|register~526           ; Lost fanout                             ;
+; registers:comb_8|register~527           ; Lost fanout                             ;
+; registers:comb_8|register~528           ; Lost fanout                             ;
+; registers:comb_8|register~529           ; Lost fanout                             ;
+; registers:comb_8|register~530           ; Lost fanout                             ;
+; registers:comb_8|register~531           ; Lost fanout                             ;
+; registers:comb_8|register~532           ; Lost fanout                             ;
+; registers:comb_8|register~533           ; Lost fanout                             ;
+; registers:comb_8|register~534           ; Lost fanout                             ;
+; registers:comb_8|register~535           ; Lost fanout                             ;
+; registers:comb_8|register~536           ; Lost fanout                             ;
+; registers:comb_8|register~537           ; Lost fanout                             ;
+; registers:comb_8|register~538           ; Lost fanout                             ;
+; registers:comb_8|register~539           ; Lost fanout                             ;
+; registers:comb_8|register~540           ; Lost fanout                             ;
+; registers:comb_8|register~541           ; Lost fanout                             ;
+; registers:comb_8|register~542           ; Lost fanout                             ;
+; registers:comb_8|register~543           ; Lost fanout                             ;
+; registers:comb_8|register~544           ; Lost fanout                             ;
+; registers:comb_8|register~545           ; Lost fanout                             ;
+; registers:comb_8|register~546           ; Lost fanout                             ;
+; registers:comb_8|register~547           ; Lost fanout                             ;
+; registers:comb_8|register~548           ; Lost fanout                             ;
+; registers:comb_8|register~549           ; Lost fanout                             ;
+; registers:comb_8|register~550           ; Lost fanout                             ;
+; registers:comb_8|register~551           ; Lost fanout                             ;
+; registers:comb_8|register~552           ; Lost fanout                             ;
+; registers:comb_8|register~553           ; Lost fanout                             ;
+; registers:comb_8|register~554           ; Lost fanout                             ;
+; registers:comb_8|register~555           ; Lost fanout                             ;
+; registers:comb_8|register~556           ; Lost fanout                             ;
+; registers:comb_8|register~557           ; Lost fanout                             ;
+; registers:comb_8|register~558           ; Lost fanout                             ;
+; registers:comb_8|register~559           ; Lost fanout                             ;
+; registers:comb_8|register~560           ; Lost fanout                             ;
+; registers:comb_8|register~561           ; Lost fanout                             ;
+; registers:comb_8|register~562           ; Lost fanout                             ;
+; registers:comb_8|register~563           ; Lost fanout                             ;
+; registers:comb_8|register~564           ; Lost fanout                             ;
+; registers:comb_8|register~565           ; Lost fanout                             ;
+; registers:comb_8|register~566           ; Lost fanout                             ;
+; registers:comb_8|register~567           ; Lost fanout                             ;
+; registers:comb_8|register~568           ; Lost fanout                             ;
+; registers:comb_8|register~569           ; Lost fanout                             ;
+; registers:comb_8|register~570           ; Lost fanout                             ;
+; registers:comb_8|register~571           ; Lost fanout                             ;
+; registers:comb_8|register~572           ; Lost fanout                             ;
+; registers:comb_8|register~573           ; Lost fanout                             ;
+; registers:comb_8|register~574           ; Lost fanout                             ;
+; registers:comb_8|register~575           ; Lost fanout                             ;
+; registers:comb_8|register~576           ; Lost fanout                             ;
+; registers:comb_8|register~577           ; Lost fanout                             ;
+; registers:comb_8|register~578           ; Lost fanout                             ;
+; registers:comb_8|register~579           ; Lost fanout                             ;
+; registers:comb_8|register~580           ; Lost fanout                             ;
+; registers:comb_8|register~581           ; Lost fanout                             ;
+; registers:comb_8|register~582           ; Lost fanout                             ;
+; registers:comb_8|register~583           ; Lost fanout                             ;
+; registers:comb_8|register~584           ; Lost fanout                             ;
+; registers:comb_8|register~585           ; Lost fanout                             ;
+; registers:comb_8|register~586           ; Lost fanout                             ;
+; registers:comb_8|register~587           ; Lost fanout                             ;
+; registers:comb_8|register~588           ; Lost fanout                             ;
+; registers:comb_8|register~589           ; Lost fanout                             ;
+; registers:comb_8|register~590           ; Lost fanout                             ;
+; registers:comb_8|register~591           ; Lost fanout                             ;
+; registers:comb_8|register~592           ; Lost fanout                             ;
+; registers:comb_8|register~593           ; Lost fanout                             ;
+; registers:comb_8|register~594           ; Lost fanout                             ;
+; registers:comb_8|register~595           ; Lost fanout                             ;
+; registers:comb_8|register~596           ; Lost fanout                             ;
+; registers:comb_8|register~597           ; Lost fanout                             ;
+; registers:comb_8|register~598           ; Lost fanout                             ;
+; registers:comb_8|register~599           ; Lost fanout                             ;
+; registers:comb_8|register~600           ; Lost fanout                             ;
+; registers:comb_8|register~601           ; Lost fanout                             ;
+; registers:comb_8|register~602           ; Lost fanout                             ;
+; registers:comb_8|register~603           ; Lost fanout                             ;
+; registers:comb_8|register~604           ; Lost fanout                             ;
+; registers:comb_8|register~605           ; Lost fanout                             ;
+; registers:comb_8|register~606           ; Lost fanout                             ;
+; registers:comb_8|register~607           ; Lost fanout                             ;
+; registers:comb_8|register~608           ; Lost fanout                             ;
+; registers:comb_8|register~609           ; Lost fanout                             ;
+; registers:comb_8|register~610           ; Lost fanout                             ;
+; registers:comb_8|register~611           ; Lost fanout                             ;
+; registers:comb_8|register~612           ; Lost fanout                             ;
+; registers:comb_8|register~613           ; Lost fanout                             ;
+; registers:comb_8|register~614           ; Lost fanout                             ;
+; registers:comb_8|register~615           ; Lost fanout                             ;
+; registers:comb_8|register~616           ; Lost fanout                             ;
+; registers:comb_8|register~617           ; Lost fanout                             ;
+; registers:comb_8|register~618           ; Lost fanout                             ;
+; registers:comb_8|register~619           ; Lost fanout                             ;
+; registers:comb_8|register~620           ; Lost fanout                             ;
+; registers:comb_8|register~621           ; Lost fanout                             ;
+; registers:comb_8|register~622           ; Lost fanout                             ;
+; registers:comb_8|register~623           ; Lost fanout                             ;
+; registers:comb_8|register~624           ; Lost fanout                             ;
+; registers:comb_8|register~625           ; Lost fanout                             ;
+; registers:comb_8|register~626           ; Lost fanout                             ;
+; registers:comb_8|register~627           ; Lost fanout                             ;
+; registers:comb_8|register~628           ; Lost fanout                             ;
+; registers:comb_8|register~629           ; Lost fanout                             ;
+; registers:comb_8|register~630           ; Lost fanout                             ;
+; registers:comb_8|register~631           ; Lost fanout                             ;
+; registers:comb_8|register~632           ; Lost fanout                             ;
+; registers:comb_8|register~633           ; Lost fanout                             ;
+; registers:comb_8|register~634           ; Lost fanout                             ;
+; registers:comb_8|register~635           ; Lost fanout                             ;
+; registers:comb_8|register~636           ; Lost fanout                             ;
+; registers:comb_8|register~637           ; Lost fanout                             ;
+; registers:comb_8|register~638           ; Lost fanout                             ;
+; registers:comb_8|register~639           ; Lost fanout                             ;
+; registers:comb_8|register~640           ; Lost fanout                             ;
+; registers:comb_8|register~641           ; Lost fanout                             ;
+; registers:comb_8|register~642           ; Lost fanout                             ;
+; registers:comb_8|register~643           ; Lost fanout                             ;
+; registers:comb_8|register~644           ; Lost fanout                             ;
+; registers:comb_8|register~645           ; Lost fanout                             ;
+; registers:comb_8|register~646           ; Lost fanout                             ;
+; registers:comb_8|register~647           ; Lost fanout                             ;
+; registers:comb_8|register~648           ; Lost fanout                             ;
+; registers:comb_8|register~649           ; Lost fanout                             ;
+; registers:comb_8|register~650           ; Lost fanout                             ;
+; registers:comb_8|register~651           ; Lost fanout                             ;
+; registers:comb_8|register~652           ; Lost fanout                             ;
+; registers:comb_8|register~653           ; Lost fanout                             ;
+; registers:comb_8|register~654           ; Lost fanout                             ;
+; registers:comb_8|register~655           ; Lost fanout                             ;
+; registers:comb_8|register~656           ; Lost fanout                             ;
+; registers:comb_8|register~657           ; Lost fanout                             ;
+; registers:comb_8|register~658           ; Lost fanout                             ;
+; registers:comb_8|register~659           ; Lost fanout                             ;
+; registers:comb_8|register~660           ; Lost fanout                             ;
+; registers:comb_8|register~661           ; Lost fanout                             ;
+; registers:comb_8|register~662           ; Lost fanout                             ;
+; registers:comb_8|register~663           ; Lost fanout                             ;
+; registers:comb_8|register~664           ; Lost fanout                             ;
+; registers:comb_8|register~665           ; Lost fanout                             ;
+; registers:comb_8|register~666           ; Lost fanout                             ;
+; registers:comb_8|register~667           ; Lost fanout                             ;
+; registers:comb_8|register~668           ; Lost fanout                             ;
+; registers:comb_8|register~669           ; Lost fanout                             ;
+; registers:comb_8|register~670           ; Lost fanout                             ;
+; registers:comb_8|register~671           ; Lost fanout                             ;
+; registers:comb_8|register~672           ; Lost fanout                             ;
+; registers:comb_8|register~673           ; Lost fanout                             ;
+; registers:comb_8|register~674           ; Lost fanout                             ;
+; registers:comb_8|register~675           ; Lost fanout                             ;
+; registers:comb_8|register~676           ; Lost fanout                             ;
+; registers:comb_8|register~677           ; Lost fanout                             ;
+; registers:comb_8|register~678           ; Lost fanout                             ;
+; registers:comb_8|register~679           ; Lost fanout                             ;
+; registers:comb_8|register~680           ; Lost fanout                             ;
+; registers:comb_8|register~681           ; Lost fanout                             ;
+; registers:comb_8|register~682           ; Lost fanout                             ;
+; registers:comb_8|register~683           ; Lost fanout                             ;
+; registers:comb_8|register~684           ; Lost fanout                             ;
+; registers:comb_8|register~685           ; Lost fanout                             ;
+; registers:comb_8|register~686           ; Lost fanout                             ;
+; registers:comb_8|register~687           ; Lost fanout                             ;
+; registers:comb_8|register~688           ; Lost fanout                             ;
+; registers:comb_8|register~689           ; Lost fanout                             ;
+; registers:comb_8|register~690           ; Lost fanout                             ;
+; registers:comb_8|register~691           ; Lost fanout                             ;
+; registers:comb_8|register~692           ; Lost fanout                             ;
+; registers:comb_8|register~693           ; Lost fanout                             ;
+; registers:comb_8|register~694           ; Lost fanout                             ;
+; registers:comb_8|register~695           ; Lost fanout                             ;
+; registers:comb_8|register~696           ; Lost fanout                             ;
+; registers:comb_8|register~697           ; Lost fanout                             ;
+; registers:comb_8|register~698           ; Lost fanout                             ;
+; registers:comb_8|register~699           ; Lost fanout                             ;
+; registers:comb_8|register~700           ; Lost fanout                             ;
+; registers:comb_8|register~701           ; Lost fanout                             ;
+; registers:comb_8|register~702           ; Lost fanout                             ;
+; registers:comb_8|register~703           ; Lost fanout                             ;
+; registers:comb_8|register~704           ; Lost fanout                             ;
+; registers:comb_8|register~705           ; Lost fanout                             ;
+; registers:comb_8|register~706           ; Lost fanout                             ;
+; registers:comb_8|register~707           ; Lost fanout                             ;
+; registers:comb_8|register~708           ; Lost fanout                             ;
+; registers:comb_8|register~709           ; Lost fanout                             ;
+; registers:comb_8|register~710           ; Lost fanout                             ;
+; registers:comb_8|register~711           ; Lost fanout                             ;
+; registers:comb_8|register~712           ; Lost fanout                             ;
+; registers:comb_8|register~713           ; Lost fanout                             ;
+; registers:comb_8|register~714           ; Lost fanout                             ;
+; registers:comb_8|register~715           ; Lost fanout                             ;
+; registers:comb_8|register~716           ; Lost fanout                             ;
+; registers:comb_8|register~717           ; Lost fanout                             ;
+; registers:comb_8|register~718           ; Lost fanout                             ;
+; registers:comb_8|register~719           ; Lost fanout                             ;
+; registers:comb_8|register~720           ; Lost fanout                             ;
+; registers:comb_8|register~721           ; Lost fanout                             ;
+; registers:comb_8|register~722           ; Lost fanout                             ;
+; registers:comb_8|register~723           ; Lost fanout                             ;
+; registers:comb_8|register~724           ; Lost fanout                             ;
+; registers:comb_8|register~725           ; Lost fanout                             ;
+; registers:comb_8|register~726           ; Lost fanout                             ;
+; registers:comb_8|register~727           ; Lost fanout                             ;
+; registers:comb_8|register~728           ; Lost fanout                             ;
+; registers:comb_8|register~729           ; Lost fanout                             ;
+; registers:comb_8|register~730           ; Lost fanout                             ;
+; registers:comb_8|register~731           ; Lost fanout                             ;
+; registers:comb_8|register~732           ; Lost fanout                             ;
+; registers:comb_8|register~733           ; Lost fanout                             ;
+; registers:comb_8|register~734           ; Lost fanout                             ;
+; registers:comb_8|register~735           ; Lost fanout                             ;
+; registers:comb_8|register~736           ; Lost fanout                             ;
+; registers:comb_8|register~737           ; Lost fanout                             ;
+; registers:comb_8|register~738           ; Lost fanout                             ;
+; registers:comb_8|register~739           ; Lost fanout                             ;
+; registers:comb_8|register~740           ; Lost fanout                             ;
+; registers:comb_8|register~741           ; Lost fanout                             ;
+; registers:comb_8|register~742           ; Lost fanout                             ;
+; registers:comb_8|register~743           ; Lost fanout                             ;
+; registers:comb_8|register~744           ; Lost fanout                             ;
+; registers:comb_8|register~745           ; Lost fanout                             ;
+; registers:comb_8|register~746           ; Lost fanout                             ;
+; registers:comb_8|register~747           ; Lost fanout                             ;
+; registers:comb_8|register~748           ; Lost fanout                             ;
+; registers:comb_8|register~749           ; Lost fanout                             ;
+; registers:comb_8|register~750           ; Lost fanout                             ;
+; registers:comb_8|register~751           ; Lost fanout                             ;
+; registers:comb_8|register~752           ; Lost fanout                             ;
+; registers:comb_8|register~753           ; Lost fanout                             ;
+; registers:comb_8|register~754           ; Lost fanout                             ;
+; registers:comb_8|register~755           ; Lost fanout                             ;
+; registers:comb_8|register~756           ; Lost fanout                             ;
+; registers:comb_8|register~757           ; Lost fanout                             ;
+; registers:comb_8|register~758           ; Lost fanout                             ;
+; registers:comb_8|register~759           ; Lost fanout                             ;
+; registers:comb_8|register~760           ; Lost fanout                             ;
+; registers:comb_8|register~761           ; Lost fanout                             ;
+; registers:comb_8|register~762           ; Lost fanout                             ;
+; registers:comb_8|register~763           ; Lost fanout                             ;
+; registers:comb_8|register~764           ; Lost fanout                             ;
+; registers:comb_8|register~765           ; Lost fanout                             ;
+; registers:comb_8|register~766           ; Lost fanout                             ;
+; registers:comb_8|register~767           ; Lost fanout                             ;
+; registers:comb_8|register~768           ; Lost fanout                             ;
+; registers:comb_8|register~769           ; Lost fanout                             ;
+; registers:comb_8|register~770           ; Lost fanout                             ;
+; registers:comb_8|register~771           ; Lost fanout                             ;
+; registers:comb_8|register~772           ; Lost fanout                             ;
+; registers:comb_8|register~773           ; Lost fanout                             ;
+; registers:comb_8|register~774           ; Lost fanout                             ;
+; registers:comb_8|register~775           ; Lost fanout                             ;
+; registers:comb_8|register~776           ; Lost fanout                             ;
+; registers:comb_8|register~777           ; Lost fanout                             ;
+; registers:comb_8|register~778           ; Lost fanout                             ;
+; registers:comb_8|register~779           ; Lost fanout                             ;
+; registers:comb_8|register~780           ; Lost fanout                             ;
+; registers:comb_8|register~781           ; Lost fanout                             ;
+; registers:comb_8|register~782           ; Lost fanout                             ;
+; registers:comb_8|register~783           ; Lost fanout                             ;
+; registers:comb_8|register~784           ; Lost fanout                             ;
+; registers:comb_8|register~785           ; Lost fanout                             ;
+; registers:comb_8|register~786           ; Lost fanout                             ;
+; registers:comb_8|register~787           ; Lost fanout                             ;
+; registers:comb_8|register~788           ; Lost fanout                             ;
+; registers:comb_8|register~789           ; Lost fanout                             ;
+; registers:comb_8|register~790           ; Lost fanout                             ;
+; registers:comb_8|register~791           ; Lost fanout                             ;
+; registers:comb_8|register~792           ; Lost fanout                             ;
+; registers:comb_8|register~793           ; Lost fanout                             ;
+; registers:comb_8|register~794           ; Lost fanout                             ;
+; registers:comb_8|register~795           ; Lost fanout                             ;
+; registers:comb_8|register~796           ; Lost fanout                             ;
+; registers:comb_8|register~797           ; Lost fanout                             ;
+; registers:comb_8|register~798           ; Lost fanout                             ;
+; registers:comb_8|register~799           ; Lost fanout                             ;
+; registers:comb_8|register~800           ; Lost fanout                             ;
+; registers:comb_8|register~801           ; Lost fanout                             ;
+; registers:comb_8|register~802           ; Lost fanout                             ;
+; registers:comb_8|register~803           ; Lost fanout                             ;
+; registers:comb_8|register~804           ; Lost fanout                             ;
+; registers:comb_8|register~805           ; Lost fanout                             ;
+; registers:comb_8|register~806           ; Lost fanout                             ;
+; registers:comb_8|register~807           ; Lost fanout                             ;
+; registers:comb_8|register~808           ; Lost fanout                             ;
+; registers:comb_8|register~809           ; Lost fanout                             ;
+; registers:comb_8|register~810           ; Lost fanout                             ;
+; registers:comb_8|register~811           ; Lost fanout                             ;
+; registers:comb_8|register~812           ; Lost fanout                             ;
+; registers:comb_8|register~813           ; Lost fanout                             ;
+; registers:comb_8|register~814           ; Lost fanout                             ;
+; registers:comb_8|register~815           ; Lost fanout                             ;
+; registers:comb_8|register~816           ; Lost fanout                             ;
+; registers:comb_8|register~817           ; Lost fanout                             ;
+; registers:comb_8|register~818           ; Lost fanout                             ;
+; registers:comb_8|register~819           ; Lost fanout                             ;
+; registers:comb_8|register~820           ; Lost fanout                             ;
+; registers:comb_8|register~821           ; Lost fanout                             ;
+; registers:comb_8|register~822           ; Lost fanout                             ;
+; registers:comb_8|register~823           ; Lost fanout                             ;
+; registers:comb_8|register~824           ; Lost fanout                             ;
+; registers:comb_8|register~825           ; Lost fanout                             ;
+; registers:comb_8|register~826           ; Lost fanout                             ;
+; registers:comb_8|register~827           ; Lost fanout                             ;
+; registers:comb_8|register~828           ; Lost fanout                             ;
+; registers:comb_8|register~829           ; Lost fanout                             ;
+; registers:comb_8|register~830           ; Lost fanout                             ;
+; registers:comb_8|register~831           ; Lost fanout                             ;
+; registers:comb_8|register~832           ; Lost fanout                             ;
+; registers:comb_8|register~833           ; Lost fanout                             ;
+; registers:comb_8|register~834           ; Lost fanout                             ;
+; registers:comb_8|register~835           ; Lost fanout                             ;
+; registers:comb_8|register~836           ; Lost fanout                             ;
+; registers:comb_8|register~837           ; Lost fanout                             ;
+; registers:comb_8|register~838           ; Lost fanout                             ;
+; registers:comb_8|register~839           ; Lost fanout                             ;
+; registers:comb_8|register~840           ; Lost fanout                             ;
+; registers:comb_8|register~841           ; Lost fanout                             ;
+; registers:comb_8|register~842           ; Lost fanout                             ;
+; registers:comb_8|register~843           ; Lost fanout                             ;
+; registers:comb_8|register~844           ; Lost fanout                             ;
+; registers:comb_8|register~845           ; Lost fanout                             ;
+; registers:comb_8|register~846           ; Lost fanout                             ;
+; registers:comb_8|register~847           ; Lost fanout                             ;
+; registers:comb_8|register~848           ; Lost fanout                             ;
+; registers:comb_8|register~849           ; Lost fanout                             ;
+; registers:comb_8|register~850           ; Lost fanout                             ;
+; registers:comb_8|register~851           ; Lost fanout                             ;
+; registers:comb_8|register~852           ; Lost fanout                             ;
+; registers:comb_8|register~853           ; Lost fanout                             ;
+; registers:comb_8|register~854           ; Lost fanout                             ;
+; registers:comb_8|register~855           ; Lost fanout                             ;
+; registers:comb_8|register~856           ; Lost fanout                             ;
+; registers:comb_8|register~857           ; Lost fanout                             ;
+; registers:comb_8|register~858           ; Lost fanout                             ;
+; registers:comb_8|register~859           ; Lost fanout                             ;
+; registers:comb_8|register~860           ; Lost fanout                             ;
+; registers:comb_8|register~861           ; Lost fanout                             ;
+; registers:comb_8|register~862           ; Lost fanout                             ;
+; registers:comb_8|register~863           ; Lost fanout                             ;
+; registers:comb_8|register~864           ; Lost fanout                             ;
+; registers:comb_8|register~865           ; Lost fanout                             ;
+; registers:comb_8|register~866           ; Lost fanout                             ;
+; registers:comb_8|register~867           ; Lost fanout                             ;
+; registers:comb_8|register~868           ; Lost fanout                             ;
+; registers:comb_8|register~869           ; Lost fanout                             ;
+; registers:comb_8|register~870           ; Lost fanout                             ;
+; registers:comb_8|register~871           ; Lost fanout                             ;
+; registers:comb_8|register~872           ; Lost fanout                             ;
+; registers:comb_8|register~873           ; Lost fanout                             ;
+; registers:comb_8|register~874           ; Lost fanout                             ;
+; registers:comb_8|register~875           ; Lost fanout                             ;
+; registers:comb_8|register~876           ; Lost fanout                             ;
+; registers:comb_8|register~877           ; Lost fanout                             ;
+; registers:comb_8|register~878           ; Lost fanout                             ;
+; registers:comb_8|register~879           ; Lost fanout                             ;
+; registers:comb_8|register~880           ; Lost fanout                             ;
+; registers:comb_8|register~881           ; Lost fanout                             ;
+; registers:comb_8|register~882           ; Lost fanout                             ;
+; registers:comb_8|register~883           ; Lost fanout                             ;
+; registers:comb_8|register~884           ; Lost fanout                             ;
+; registers:comb_8|register~885           ; Lost fanout                             ;
+; registers:comb_8|register~886           ; Lost fanout                             ;
+; registers:comb_8|register~887           ; Lost fanout                             ;
+; registers:comb_8|register~888           ; Lost fanout                             ;
+; registers:comb_8|register~889           ; Lost fanout                             ;
+; registers:comb_8|register~890           ; Lost fanout                             ;
+; registers:comb_8|register~891           ; Lost fanout                             ;
+; registers:comb_8|register~892           ; Lost fanout                             ;
+; registers:comb_8|register~893           ; Lost fanout                             ;
+; registers:comb_8|register~894           ; Lost fanout                             ;
+; registers:comb_8|register~895           ; Lost fanout                             ;
+; registers:comb_8|register~896           ; Lost fanout                             ;
+; registers:comb_8|register~897           ; Lost fanout                             ;
+; registers:comb_8|register~898           ; Lost fanout                             ;
+; registers:comb_8|register~899           ; Lost fanout                             ;
+; registers:comb_8|register~900           ; Lost fanout                             ;
+; registers:comb_8|register~901           ; Lost fanout                             ;
+; registers:comb_8|register~902           ; Lost fanout                             ;
+; registers:comb_8|register~903           ; Lost fanout                             ;
+; registers:comb_8|register~904           ; Lost fanout                             ;
+; registers:comb_8|register~905           ; Lost fanout                             ;
+; registers:comb_8|register~906           ; Lost fanout                             ;
+; registers:comb_8|register~907           ; Lost fanout                             ;
+; registers:comb_8|register~908           ; Lost fanout                             ;
+; registers:comb_8|register~909           ; Lost fanout                             ;
+; registers:comb_8|register~910           ; Lost fanout                             ;
+; registers:comb_8|register~911           ; Lost fanout                             ;
+; registers:comb_8|register~912           ; Lost fanout                             ;
+; registers:comb_8|register~913           ; Lost fanout                             ;
+; registers:comb_8|register~914           ; Lost fanout                             ;
+; registers:comb_8|register~915           ; Lost fanout                             ;
+; registers:comb_8|register~916           ; Lost fanout                             ;
+; registers:comb_8|register~917           ; Lost fanout                             ;
+; registers:comb_8|register~918           ; Lost fanout                             ;
+; registers:comb_8|register~919           ; Lost fanout                             ;
+; registers:comb_8|register~920           ; Lost fanout                             ;
+; registers:comb_8|register~921           ; Lost fanout                             ;
+; registers:comb_8|register~922           ; Lost fanout                             ;
+; registers:comb_8|register~923           ; Lost fanout                             ;
+; registers:comb_8|register~924           ; Lost fanout                             ;
+; registers:comb_8|register~925           ; Lost fanout                             ;
+; registers:comb_8|register~926           ; Lost fanout                             ;
+; registers:comb_8|register~927           ; Lost fanout                             ;
+; registers:comb_8|register~928           ; Lost fanout                             ;
+; registers:comb_8|register~929           ; Lost fanout                             ;
+; registers:comb_8|register~930           ; Lost fanout                             ;
+; registers:comb_8|register~931           ; Lost fanout                             ;
+; registers:comb_8|register~932           ; Lost fanout                             ;
+; registers:comb_8|register~933           ; Lost fanout                             ;
+; registers:comb_8|register~934           ; Lost fanout                             ;
+; registers:comb_8|register~935           ; Lost fanout                             ;
+; registers:comb_8|register~936           ; Lost fanout                             ;
+; registers:comb_8|register~937           ; Lost fanout                             ;
+; registers:comb_8|register~938           ; Lost fanout                             ;
+; registers:comb_8|register~939           ; Lost fanout                             ;
+; registers:comb_8|register~940           ; Lost fanout                             ;
+; registers:comb_8|register~941           ; Lost fanout                             ;
+; registers:comb_8|register~942           ; Lost fanout                             ;
+; registers:comb_8|register~943           ; Lost fanout                             ;
+; registers:comb_8|register~944           ; Lost fanout                             ;
+; registers:comb_8|register~945           ; Lost fanout                             ;
+; registers:comb_8|register~946           ; Lost fanout                             ;
+; registers:comb_8|register~947           ; Lost fanout                             ;
+; registers:comb_8|register~948           ; Lost fanout                             ;
+; registers:comb_8|register~949           ; Lost fanout                             ;
+; registers:comb_8|register~950           ; Lost fanout                             ;
+; registers:comb_8|register~951           ; Lost fanout                             ;
+; registers:comb_8|register~952           ; Lost fanout                             ;
+; registers:comb_8|register~953           ; Lost fanout                             ;
+; registers:comb_8|register~954           ; Lost fanout                             ;
+; registers:comb_8|register~955           ; Lost fanout                             ;
+; registers:comb_8|register~956           ; Lost fanout                             ;
+; registers:comb_8|register~957           ; Lost fanout                             ;
+; registers:comb_8|register~958           ; Lost fanout                             ;
+; registers:comb_8|register~959           ; Lost fanout                             ;
+; registers:comb_8|register~960           ; Lost fanout                             ;
+; registers:comb_8|register~961           ; Lost fanout                             ;
+; registers:comb_8|register~962           ; Lost fanout                             ;
+; registers:comb_8|register~963           ; Lost fanout                             ;
+; registers:comb_8|register~964           ; Lost fanout                             ;
+; registers:comb_8|register~965           ; Lost fanout                             ;
+; registers:comb_8|register~966           ; Lost fanout                             ;
+; registers:comb_8|register~967           ; Lost fanout                             ;
+; registers:comb_8|register~968           ; Lost fanout                             ;
+; registers:comb_8|register~969           ; Lost fanout                             ;
+; registers:comb_8|register~970           ; Lost fanout                             ;
+; registers:comb_8|register~971           ; Lost fanout                             ;
+; registers:comb_8|register~972           ; Lost fanout                             ;
+; registers:comb_8|register~973           ; Lost fanout                             ;
+; registers:comb_8|register~974           ; Lost fanout                             ;
+; registers:comb_8|register~975           ; Lost fanout                             ;
+; registers:comb_8|register~976           ; Lost fanout                             ;
+; registers:comb_8|register~977           ; Lost fanout                             ;
+; registers:comb_8|register~978           ; Lost fanout                             ;
+; registers:comb_8|register~979           ; Lost fanout                             ;
+; registers:comb_8|register~980           ; Lost fanout                             ;
+; registers:comb_8|register~981           ; Lost fanout                             ;
+; registers:comb_8|register~982           ; Lost fanout                             ;
+; registers:comb_8|register~983           ; Lost fanout                             ;
+; registers:comb_8|register~984           ; Lost fanout                             ;
+; registers:comb_8|register~985           ; Lost fanout                             ;
+; registers:comb_8|register~986           ; Lost fanout                             ;
+; registers:comb_8|register~987           ; Lost fanout                             ;
+; registers:comb_8|register~988           ; Lost fanout                             ;
+; registers:comb_8|register~989           ; Lost fanout                             ;
+; registers:comb_8|register~990           ; Lost fanout                             ;
+; registers:comb_8|register~991           ; Lost fanout                             ;
+; registers:comb_8|register~992           ; Lost fanout                             ;
+; registers:comb_8|register~993           ; Lost fanout                             ;
+; registers:comb_8|register~994           ; Lost fanout                             ;
+; registers:comb_8|register~995           ; Lost fanout                             ;
+; registers:comb_8|register~996           ; Lost fanout                             ;
+; registers:comb_8|register~997           ; Lost fanout                             ;
+; registers:comb_8|register~998           ; Lost fanout                             ;
+; registers:comb_8|register~999           ; Lost fanout                             ;
+; registers:comb_8|register~1000          ; Lost fanout                             ;
+; registers:comb_8|register~1001          ; Lost fanout                             ;
+; registers:comb_8|register~1002          ; Lost fanout                             ;
+; registers:comb_8|register~1003          ; Lost fanout                             ;
+; registers:comb_8|register~1004          ; Lost fanout                             ;
+; registers:comb_8|register~1005          ; Lost fanout                             ;
+; registers:comb_8|register~1006          ; Lost fanout                             ;
+; registers:comb_8|register~1007          ; Lost fanout                             ;
+; registers:comb_8|register~1008          ; Lost fanout                             ;
+; registers:comb_8|register~1009          ; Lost fanout                             ;
+; registers:comb_8|register~1010          ; Lost fanout                             ;
+; registers:comb_8|register~1011          ; Lost fanout                             ;
+; registers:comb_8|register~1012          ; Lost fanout                             ;
+; registers:comb_8|register~1013          ; Lost fanout                             ;
+; registers:comb_8|register~1014          ; Lost fanout                             ;
+; registers:comb_8|register~1015          ; Lost fanout                             ;
+; registers:comb_8|register~1016          ; Lost fanout                             ;
+; registers:comb_8|register~1017          ; Lost fanout                             ;
+; registers:comb_8|register~1018          ; Lost fanout                             ;
+; registers:comb_8|register~1019          ; Lost fanout                             ;
+; registers:comb_8|register~1020          ; Lost fanout                             ;
+; registers:comb_8|register~1021          ; Lost fanout                             ;
+; registers:comb_8|register~1022          ; Lost fanout                             ;
+; registers:comb_8|register~1023          ; Lost fanout                             ;
+; PC:comb_4|current_adress[7..31]         ; Lost fanout                             ;
+; Total Number of Removed Registers = 795 ;                                         ;
++-----------------------------------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                     ;
++------------------------------+--------------------+-------------------------------------------------------------+
+; Register name                ; Reason for Removal ; Registers Removed due to This Register                      ;
++------------------------------+--------------------+-------------------------------------------------------------+
+; PC:comb_4|current_adress[31] ; Lost Fanouts       ; PC:comb_4|current_adress[30], PC:comb_4|current_adress[29], ;
+;                              ;                    ; PC:comb_4|current_adress[28], PC:comb_4|current_adress[27], ;
+;                              ;                    ; PC:comb_4|current_adress[26], PC:comb_4|current_adress[25], ;
+;                              ;                    ; PC:comb_4|current_adress[24], PC:comb_4|current_adress[23], ;
+;                              ;                    ; PC:comb_4|current_adress[22], PC:comb_4|current_adress[21], ;
+;                              ;                    ; PC:comb_4|current_adress[20], PC:comb_4|current_adress[19], ;
+;                              ;                    ; PC:comb_4|current_adress[18], PC:comb_4|current_adress[17], ;
+;                              ;                    ; PC:comb_4|current_adress[16], PC:comb_4|current_adress[15], ;
+;                              ;                    ; PC:comb_4|current_adress[14], PC:comb_4|current_adress[13], ;
+;                              ;                    ; PC:comb_4|current_adress[12], PC:comb_4|current_adress[11], ;
+;                              ;                    ; PC:comb_4|current_adress[10], PC:comb_4|current_adress[9],  ;
+;                              ;                    ; PC:comb_4|current_adress[8], PC:comb_4|current_adress[7]    ;
++------------------------------+--------------------+-------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 261   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 256   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions              ;
++----------------------------+-----------------------+------+
+; Register Name              ; Megafunction          ; Type ;
++----------------------------+-----------------------+------+
+; RAM:comb_13|addr_reg[0..4] ; RAM:comb_13|ram_rtl_0 ; RAM  ;
++----------------------------+-----------------------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |MIPS|PC:comb_4|current_adress[28] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |MIPS|PC:comb_4|current_adress[13] ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |MIPS|ALU_Control:comb_11|Mux2     ;
+; 12:1               ; 32 bits   ; 256 LEs       ; 160 LEs              ; 96 LEs                 ; No         ; |MIPS|ALU:comb_12|Mux32            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Source assignments for RAM:comb_13|altsyncram:ram_rtl_0|altsyncram_hd41:auto_generated ;
++---------------------------------+--------------------+------+--------------------------+
+; Assignment                      ; Value              ; From ; To                       ;
++---------------------------------+--------------------+------+--------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                        ;
++---------------------------------+--------------------+------+--------------------------+
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:comb_5 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                 ;
+; ADDR_WIDTH     ; 5     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:comb_13 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; DATA_WIDTH     ; 32    ; Signed Integer                  ;
+; ADDR_WIDTH     ; 5     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: RAM:comb_13|altsyncram:ram_rtl_0 ;
++------------------------------------+----------------------+-----------------------+
+; Parameter Name                     ; Value                ; Type                  ;
++------------------------------------+----------------------+-----------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped               ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE        ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped               ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped               ;
+; WIDTH_A                            ; 32                   ; Untyped               ;
+; WIDTHAD_A                          ; 5                    ; Untyped               ;
+; NUMWORDS_A                         ; 32                   ; Untyped               ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped               ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped               ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped               ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped               ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped               ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped               ;
+; WIDTH_B                            ; 1                    ; Untyped               ;
+; WIDTHAD_B                          ; 1                    ; Untyped               ;
+; NUMWORDS_B                         ; 1                    ; Untyped               ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped               ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped               ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped               ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped               ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped               ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped               ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped               ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped               ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped               ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped               ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped               ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped               ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped               ;
+; BYTE_SIZE                          ; 8                    ; Untyped               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped               ;
+; INIT_FILE                          ; UNUSED               ; Untyped               ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped               ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped               ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped               ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped               ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped               ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped               ;
+; ENABLE_ECC                         ; FALSE                ; Untyped               ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped               ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped               ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped               ;
+; CBXI_PARAMETER                     ; altsyncram_hd41      ; Untyped               ;
++------------------------------------+----------------------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:comb_12|lpm_mult:Mult0         ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 32           ; Untyped             ;
+; LPM_WIDTHB                                     ; 32           ; Untyped             ;
+; LPM_WIDTHP                                     ; 64           ; Untyped             ;
+; LPM_WIDTHR                                     ; 64           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU:comb_12|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                            ;
+; LPM_WIDTHD             ; 32             ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                             ;
++-------------------------------------------+----------------------------------+
+; Name                                      ; Value                            ;
++-------------------------------------------+----------------------------------+
+; Number of entity instances                ; 1                                ;
+; Entity Instance                           ; RAM:comb_13|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                      ;
+;     -- WIDTH_A                            ; 32                               ;
+;     -- NUMWORDS_A                         ; 32                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                     ;
+;     -- WIDTH_B                            ; 1                                ;
+;     -- NUMWORDS_B                         ; 1                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                        ;
++-------------------------------------------+----------------------------------+
+
+
++--------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                     ;
++---------------------------------------+----------------------------+
+; Name                                  ; Value                      ;
++---------------------------------------+----------------------------+
+; Number of entity instances            ; 1                          ;
+; Entity Instance                       ; ALU:comb_12|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                         ;
+;     -- LPM_WIDTHB                     ; 32                         ;
+;     -- LPM_WIDTHP                     ; 64                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                         ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                         ;
+;     -- USE_EAB                        ; OFF                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                         ;
++---------------------------------------+----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Shift_Left2_26:comb_16"                                                                                                                                                               ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; pc_plus4 ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (4 bits) it drives.  The 28 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registers:comb_8"                                                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; wr   ; Input ; Warning  ; Input port expression (6 bits) is wider than the input port (5 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX_5:comb_7"                                                                                                                                                         ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out  ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (6 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 65                          ;
+; cycloneiii_ff         ; 261                         ;
+;     ENA               ; 256                         ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 1806                        ;
+;     arith             ; 653                         ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 647                         ;
+;     normal            ; 1153                        ;
+;         0 data inputs ; 31                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 57                          ;
+;         3 data inputs ; 93                          ;
+;         4 data inputs ; 968                         ;
+; cycloneiii_mac_mult   ; 3                           ;
+; cycloneiii_mac_out    ; 3                           ;
+; cycloneiii_ram_block  ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 129.50                      ;
+; Average LUT depth     ; 94.93                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+    Info: Processing started: Tue Aug 17 19:56:28 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: ROM File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mips.v
+    Info (12023): Found entity 1: MIPS File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/RAM.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file add_pc.v
+    Info (12023): Found entity 1: ADD_PC File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ADD_PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_5.v
+    Info (12023): Found entity 1: MUX_5 File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_5.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_32.v
+    Info (12023): Found entity 1: MUX_32 File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left2_32.v
+    Info (12023): Found entity 1: Shift_Left2_32 File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Shift_Left2_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left2_26.v
+    Info (12023): Found entity 1: Shift_Left2_26 File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Shift_Left2_26.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sign_extend.v
+    Info (12023): Found entity 1: sign_extend File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/sign_extend.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file registers.v
+    Info (12023): Found entity 1: registers File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/registers.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_add.v
+    Info (12023): Found entity 1: ALU_Add File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU_Add.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control.v
+    Info (12023): Found entity 1: ALU_Control File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU_Control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
+    Info (12023): Found entity 1: Control_Unit File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/Control_Unit.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at MIPS.v(7): created implicit net for "CLK" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at MIPS.v(13): created implicit net for "MemRead" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(8): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(11): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(13): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(17): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(22): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(25): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(29): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 29
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(34): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(38): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 38
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(42): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 42
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(45): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 45
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(50): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 50
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(53): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 53
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(56): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 56
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(59): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 59
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(65): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 65
+Critical Warning (10846): Verilog HDL Instantiation warning at MIPS.v(68): instance has no name File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 68
+Info (12127): Elaborating entity "MIPS" for the top level hierarchy
+Info (12128): Elaborating entity "PC" for hierarchy "PC:comb_4" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 8
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:comb_5" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 11
+Warning (10850): Verilog HDL warning at ROM.v(15): number of words (10) in memory file does not match the number of elements in the address range [0:31] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v Line: 15
+Warning (10030): Net "rom.data_a" at ROM.v(11) has no driver or initial value, using a default initial value '0' File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v Line: 11
+Warning (10030): Net "rom.waddr_a" at ROM.v(11) has no driver or initial value, using a default initial value '0' File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v Line: 11
+Warning (10030): Net "rom.we_a" at ROM.v(11) has no driver or initial value, using a default initial value '0' File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ROM.v Line: 11
+Info (12128): Elaborating entity "Control_Unit" for hierarchy "Control_Unit:comb_6" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 13
+Info (12128): Elaborating entity "MUX_5" for hierarchy "MUX_5:comb_7" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 17
+Warning (10235): Verilog HDL Always Construct warning at MUX_5.v(8): variable "option" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_5.v Line: 8
+Info (12128): Elaborating entity "registers" for hierarchy "registers:comb_8" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 22
+Info (12128): Elaborating entity "sign_extend" for hierarchy "sign_extend:comb_9" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 25
+Info (12128): Elaborating entity "MUX_32" for hierarchy "MUX_32:comb_10" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at MUX_32.v(8): variable "option" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MUX_32.v Line: 8
+Info (12128): Elaborating entity "ALU_Control" for hierarchy "ALU_Control:comb_11" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 34
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:comb_12" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 38
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(9): inferring latch(es) for variable "ALU_Result", which holds its previous value in one or more paths through the always construct File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[0]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[1]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[2]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[3]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[4]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[5]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[6]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[7]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[8]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[9]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[10]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[11]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[12]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[13]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[14]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[15]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[16]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[17]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[18]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[19]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[20]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[21]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[22]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[23]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[24]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[25]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[26]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[27]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[28]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[29]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[30]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (10041): Inferred latch for "ALU_Result[31]" at ALU.v(9) File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:comb_13" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 42
+Info (12128): Elaborating entity "ADD_PC" for hierarchy "ADD_PC:comb_15" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 50
+Info (12128): Elaborating entity "Shift_Left2_26" for hierarchy "Shift_Left2_26:comb_16" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 53
+Info (12128): Elaborating entity "Shift_Left2_32" for hierarchy "Shift_Left2_32:comb_17" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 56
+Info (12128): Elaborating entity "ALU_Add" for hierarchy "ALU_Add:comb_18" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 59
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Write_register[5]" is missing source, defaulting to GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 16
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Write_register[5]" is missing source, defaulting to GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 16
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Write_register[5]" is missing source, defaulting to GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 16
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Write_register[5]" is missing source, defaulting to GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 16
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "registers:comb_8|register" is uninferred due to asynchronous read logic File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/registers.v Line: 9
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/MIPS.ram0_ROM_16bd8.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "RAM:comb_13|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to SINGLE_PORT
+        Info (286033): Parameter WIDTH_A set to 32
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:comb_12|Mult0" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 13
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:comb_12|Div0" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 14
+Info (12130): Elaborated megafunction instantiation "RAM:comb_13|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "RAM:comb_13|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "SINGLE_PORT"
+    Info (12134): Parameter "WIDTH_A" = "32"
+    Info (12134): Parameter "WIDTHAD_A" = "5"
+    Info (12134): Parameter "NUMWORDS_A" = "32"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hd41.tdf
+    Info (12023): Found entity 1: altsyncram_hd41 File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/altsyncram_hd41.tdf Line: 28
+Info (12130): Elaborated megafunction instantiation "ALU:comb_12|lpm_mult:Mult0" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 13
+Info (12133): Instantiated megafunction "ALU:comb_12|lpm_mult:Mult0" with the following parameter: File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 13
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/mult_7dt.tdf Line: 31
+Info (12130): Elaborated megafunction instantiation "ALU:comb_12|lpm_divide:Div0" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 14
+Info (12133): Instantiated megafunction "ALU:comb_12|lpm_divide:Div0" with the following parameter: File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 14
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hkm.tdf
+    Info (12023): Found entity 1: lpm_divide_hkm File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/lpm_divide_hkm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/sign_div_unsign_9nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_6af.tdf
+    Info (12023): Found entity 1: alt_u_div_6af File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/alt_u_div_6af.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/add_sub_7pc.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/add_sub_8pc.tdf Line: 23
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following DSP element node(s):
+        Warning (14320): Synthesized away node "ALU:comb_12|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/mult_7dt.tdf Line: 67
+        Warning (14320): Synthesized away node "ALU:comb_12|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/db/mult_7dt.tdf Line: 91
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 84 buffer(s)
+    Info (13019): Ignored 84 SOFT buffer(s)
+Warning (13012): Latch ALU:comb_12|ALU_Result[0] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[1] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[2] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[3] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[4] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[5] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[6] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[7] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[8] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[9] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[10] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[11] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[12] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[13] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[14] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[15] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[16] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[17] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[18] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[19] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[20] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[21] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[22] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[23] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[24] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[25] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[26] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[27] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[28] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[29] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[30] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13012): Latch ALU:comb_12|ALU_Result[31] has unsafe behavior File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/ALU.v Line: 9
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:comb_4|current_adress[2] File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/PC.v Line: 7
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "instruction[3]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[4]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[6]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[7]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[8]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[9]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[10]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[14]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[15]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[19]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[20]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[23]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[24]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[25]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+    Warning (13410): Pin "instruction[30]" is stuck at GND File: C:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/MIPS.v Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 793 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2162 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 2059 logic cells
+    Info (21064): Implemented 32 RAM segments
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 121 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Tue Aug 17 19:56:40 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
+
+
