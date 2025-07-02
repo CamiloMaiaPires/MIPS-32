@@ -1,0 +1,209 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "instruction[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[11]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[12]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[13]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[16]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[17]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[18]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[21]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[22]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[26]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[27]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[28]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[29]",
+					"strict" : false
+				},
+				{
+					"name" : "instruction[31]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_Result[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

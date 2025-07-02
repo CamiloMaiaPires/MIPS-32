@@ -14,7 +14,7 @@ module MIPS(Clock, instruction, ALU_Result);
 	
 	wire RegDst; //Sinal de controle para o multiplexador com endereço do write register
 	wire [5:0] Write_register; //saída do mux
-	MUX_5(instruction[20:16], instruction[15:11], RegDst, Write_register);
+	MUX_5b_3in(instruction[20:16], instruction[15:11], 2b'11111, RegDst, Write_register);
 	
 	wire [31:0] Write_Data; //dado para escrever no Write Register
 	wire [31:0] Read_Data1, Read_Data2; //conteúdo dos registradores lidos no Registers
