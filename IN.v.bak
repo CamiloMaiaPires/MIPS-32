@@ -1,0 +1,12 @@
+module IN(
+	input enter;
+	output in_flag;
+
+);
+
+	always @(enter)
+	begin
+		in_flag = 1;
+	end
+
+endmodule

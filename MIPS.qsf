@@ -60,7 +60,6 @@ set_global_assignment -name VERILOG_FILE Shift_Left2_26.v
 set_global_assignment -name VERILOG_FILE sign_extend.v
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name VERILOG_FILE registers.v
-set_global_assignment -name VERILOG_FILE ALU_Add.v
 set_global_assignment -name VERILOG_FILE ALU_Control.v
 set_global_assignment -name VERILOG_FILE Control_Unit.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
@@ -68,5 +67,27 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE MUX_5b_3in.v
+set_global_assignment -name VERILOG_FILE MUX_5b_4in.v
+set_global_assignment -name VERILOG_FILE MUX_32b_4in.v
+set_global_assignment -name VERILOG_FILE Add.v
+set_global_assignment -name VERILOG_FILE IN.v
+set_global_assignment -name VERILOG_FILE OUT.v
+set_location_assignment PIN_Y16 -to in[0]
+set_location_assignment PIN_AC22 -to in[12]
+set_location_assignment PIN_AE16 -to in[2]
+set_location_assignment PIN_AD21 -to in[1]
+set_location_assignment PIN_AD15 -to in[3]
+set_location_assignment PIN_AE15 -to in[4]
+set_location_assignment PIN_AC19 -to in[5]
+set_location_assignment PIN_AF16 -to in[6]
+set_location_assignment PIN_AD19 -to in[7]
+set_location_assignment PIN_AF15 -to in[8]
+set_location_assignment PIN_AF24 -to in[9]
+set_location_assignment PIN_AE21 -to in[10]
+set_location_assignment PIN_AF25 -to in[11]
+set_location_assignment PIN_AE22 -to in[13]
+set_location_assignment PIN_AF21 -to in[14]
+set_location_assignment PIN_AF22 -to in[15]
+set_location_assignment PIN_AG25 -to enter
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
