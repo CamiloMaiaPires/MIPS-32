@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f MIXED_VERSIONS
 13
 !s112 1.1
 !i10d 8192
@@ -9,111 +10,117 @@ z2
 cModel Technology
 Z0 dC:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/simulation/qsim
 vhard_block
-Z1 !s110 1629245925
+Z1 !s110 1752691232
 !i10b 1
-!s100 gXdRDY:@Rf[9NH0?;4i_c0
-IV2nG?[Ogj7bmQ@iPBRN0?0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z3 w1629245924
-Z4 8MIPS.vo
-Z5 FMIPS.vo
-L0 44710
-Z6 OV;L;10.5b;63
+!s100 VWzHQPNWWo61e_DPjf7gf3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I>IU<gL>;jlKW@Ec@Z1gQJ1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 dC:/Users/Camilo/Documents/GitHub/MIPS-32/simulation/qsim
+Z5 w1752691230
+Z6 8MIPS.vo
+Z7 FMIPS.vo
+!i122 154
+L0 137288 34
+Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1629245925.000000
-Z8 !s107 MIPS.vo|
-Z9 !s90 -work|work|MIPS.vo|
+Z9 !s108 1752691231.000000
+Z10 !s107 MIPS.vo|
+Z11 !s90 -work|work|MIPS.vo|
 !i113 1
-Z10 o-work work
-Z11 tCvgOpt 0
+Z12 o-work work
+Z13 tCvgOpt 0
 vMIPS
 R1
 !i10b 1
-!s100 X0mUfUf8C]a6on_eC^77^1
-IEGAcUhgI2McoYaOn_b8kh1
+!s100 M`z8Z2Id?VfEeII]2E34d0
 R2
-R0
+I2njC:kFVZ@lf`SF?[:P@30
 R3
 R4
 R5
-Z12 L0 32
 R6
+R7
+!i122 154
+L0 32 137255
+R8
 r1
 !s85 0
 31
-R7
-R8
 R9
-!i113 1
 R10
 R11
+!i113 1
+R12
+R13
 n@m@i@p@s
 vMIPS_vlg_vec_tst
 R1
 !i10b 1
-!s100 VbGNC:e5BlX7Th@7JbQlj2
-I6ESj7c6zH<mIMNT>2WDjN0
+!s100 Fc1Z93khnD2J45S4DkI=<3
 R2
-R0
-w1629245923
-8Waveform1.vwf.vt
-FWaveform1.vwf.vt
-Z13 L0 30
-R6
+IdfAD;HDdb9<cQjjDZl_2K2
+R3
+R4
+w1752691229
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 155
+L0 30 144
+R8
 r1
 !s85 0
 31
-R7
-!s107 Waveform1.vwf.vt|
-!s90 -work|work|Waveform1.vwf.vt|
+!s108 1752691232.000000
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
 !i113 1
-R10
-R11
+R12
+R13
 n@m@i@p@s_vlg_vec_tst
 vPC
 Z14 !s110 1629172193
 !i10b 1
 !s100 ]LWnl26d@1KAm4m43PRN01
 I4EVVA5JzQ^eMQ0TCAkHRG1
-R2
+R3
 R0
 w1629172191
-R4
-R5
-R12
 R6
+R7
+L0 32
+Z15 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z15 !s108 1629172193.000000
-R8
-R9
-!i113 1
+Z16 !s108 1629172193.000000
 R10
 R11
+!i113 1
+R12
+R13
 n@p@c
 vPC_vlg_vec_tst
 R14
 !i10b 1
 !s100 EfSi8WkF>g@:E5bXIDaA`3
 IlI1iBMikejFO@YhJ;`o^72
-R2
+R3
 R0
 w1629172190
 8Waveform.vwf.vt
 FWaveform.vwf.vt
-R13
-R6
+L0 30
+R15
 r1
 !s85 0
 31
-R15
+R16
 !s107 Waveform.vwf.vt|
 !s90 -work|work|Waveform.vwf.vt|
 !i113 1
-R10
-R11
+R12
+R13
 n@p@c_vlg_vec_tst

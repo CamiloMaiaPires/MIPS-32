@@ -1,4 +1,4 @@
-// Copyright (C) 2019  Intel Corporation. All rights reserved.
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
 // and other software and tools, and any partner logic 
 // functions, and any output files from any of the foregoing 
@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/17/2021 18:44:32"
+// Generated on "07/15/2025 20:25:22"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          MIPS
 // 
@@ -31,42 +31,150 @@ module MIPS_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg Clock;
+reg enter;
+reg [15:0] in;
+reg reset;
 // wires                                               
-wire [31:0] ALU_B;
 wire [31:0] ALU_Result;
-wire Branch;
-wire [31:0] Read_Data;
 wire [31:0] Read_Data1;
-wire [31:0] Read_Data2;
+wire halt;
+wire in_flag;
 wire [31:0] instruction;
-wire out_and;
-wire zero;
+wire [6:0] seg1;
+wire [6:0] seg2;
+wire [6:0] seg3;
+wire [6:0] seg4;
+wire [6:0] seg5;
+wire [6:0] seg6;
+wire [6:0] seg7;
+wire [6:0] seg8;
 
 // assign statements (if any)                          
 MIPS i1 (
 // port map - connection between master ports and signals/registers   
-	.ALU_B(ALU_B),
 	.ALU_Result(ALU_Result),
-	.Branch(Branch),
 	.Clock(Clock),
-	.Read_Data(Read_Data),
 	.Read_Data1(Read_Data1),
-	.Read_Data2(Read_Data2),
+	.enter(enter),
+	.halt(halt),
+	.in(in),
+	.in_flag(in_flag),
 	.instruction(instruction),
-	.out_and(out_and),
-	.zero(zero)
+	.reset(reset),
+	.seg1(seg1),
+	.seg2(seg2),
+	.seg3(seg3),
+	.seg4(seg4),
+	.seg5(seg5),
+	.seg6(seg6),
+	.seg7(seg7),
+	.seg8(seg8)
 );
 initial 
 begin 
-#1000000 $finish;
+#100000 $finish;
 end 
 
 // Clock
 always
 begin
 	Clock = 1'b0;
-	Clock = #25000 1'b1;
+	Clock = #5000 1'b1;
+	#5000;
+end 
+// in[ 15 ]
+initial
+begin
+	in[15] = 1'b0;
+end 
+// in[ 14 ]
+initial
+begin
+	in[14] = 1'b0;
+end 
+// in[ 13 ]
+initial
+begin
+	in[13] = 1'b0;
+end 
+// in[ 12 ]
+initial
+begin
+	in[12] = 1'b0;
+end 
+// in[ 11 ]
+initial
+begin
+	in[11] = 1'b0;
+end 
+// in[ 10 ]
+initial
+begin
+	in[10] = 1'b0;
+end 
+// in[ 9 ]
+initial
+begin
+	in[9] = 1'b0;
+end 
+// in[ 8 ]
+initial
+begin
+	in[8] = 1'b0;
+end 
+// in[ 7 ]
+initial
+begin
+	in[7] = 1'b0;
+end 
+// in[ 6 ]
+initial
+begin
+	in[6] = 1'b0;
+end 
+// in[ 5 ]
+initial
+begin
+	in[5] = 1'b0;
+end 
+// in[ 4 ]
+initial
+begin
+	in[4] = 1'b0;
+end 
+// in[ 3 ]
+initial
+begin
+	in[3] = 1'b0;
+end 
+// in[ 2 ]
+initial
+begin
+	in[2] = 1'b0;
+end 
+// in[ 1 ]
+initial
+begin
+	in[1] = 1'b0;
+end 
+// in[ 0 ]
+initial
+begin
+	in[0] = 1'b1;
+end 
+
+// enter
+always
+begin
+	enter = 1'b0;
+	enter = #25000 1'b1;
 	#25000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
 end 
 endmodule
 

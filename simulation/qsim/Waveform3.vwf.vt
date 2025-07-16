@@ -1,4 +1,4 @@
-// Copyright (C) 2019  Intel Corporation. All rights reserved.
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
 // Your use of Intel Corporation's design tools, logic functions 
 // and other software and tools, and any partner logic 
 // functions, and any output files from any of the foregoing 
@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "08/17/2021 17:50:05"
+// Generated on "07/16/2025 15:40:29"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          MIPS
 // 
@@ -31,22 +31,42 @@ module MIPS_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg Clock;
+reg enter;
+reg [15:0] in;
+reg reset;
 // wires                                               
 wire [31:0] ALU_Result;
+wire Ativa_PC;
+wire LED_Input;
+wire LED_Input2;
+wire [55:0] display;
+wire entrada_ff;
+wire halt;
+wire [31:0] imprime_saida;
 wire [31:0] instruction;
-wire out_and;
+wire saida_ff;
 
 // assign statements (if any)                          
 MIPS i1 (
 // port map - connection between master ports and signals/registers   
 	.ALU_Result(ALU_Result),
+	.Ativa_PC(Ativa_PC),
 	.Clock(Clock),
+	.LED_Input(LED_Input),
+	.LED_Input2(LED_Input2),
+	.display(display),
+	.enter(enter),
+	.entrada_ff(entrada_ff),
+	.halt(halt),
+	.imprime_saida(imprime_saida),
+	.in(in),
 	.instruction(instruction),
-	.out_and(out_and)
+	.reset(reset),
+	.saida_ff(saida_ff)
 );
 initial 
 begin 
-#1000000 $finish;
+#100000 $finish;
 end 
 
 // Clock
@@ -55,6 +75,100 @@ begin
 	Clock = 1'b0;
 	Clock = #10000 1'b1;
 	#10000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+
+// enter
+initial
+begin
+	enter = 1'b0;
+	enter = #50000 1'b1;
+	enter = #30000 1'b0;
+end 
+// in[ 15 ]
+initial
+begin
+	in[15] = 1'b0;
+end 
+// in[ 14 ]
+initial
+begin
+	in[14] = 1'b0;
+end 
+// in[ 13 ]
+initial
+begin
+	in[13] = 1'b0;
+end 
+// in[ 12 ]
+initial
+begin
+	in[12] = 1'b0;
+end 
+// in[ 11 ]
+initial
+begin
+	in[11] = 1'b0;
+end 
+// in[ 10 ]
+initial
+begin
+	in[10] = 1'b0;
+end 
+// in[ 9 ]
+initial
+begin
+	in[9] = 1'b0;
+end 
+// in[ 8 ]
+initial
+begin
+	in[8] = 1'b0;
+end 
+// in[ 7 ]
+initial
+begin
+	in[7] = 1'b0;
+end 
+// in[ 6 ]
+initial
+begin
+	in[6] = 1'b0;
+end 
+// in[ 5 ]
+initial
+begin
+	in[5] = 1'b0;
+end 
+// in[ 4 ]
+initial
+begin
+	in[4] = 1'b0;
+end 
+// in[ 3 ]
+initial
+begin
+	in[3] = 1'b0;
+end 
+// in[ 2 ]
+initial
+begin
+	in[2] = 1'b0;
+end 
+// in[ 1 ]
+initial
+begin
+	in[1] = 1'b0;
+end 
+// in[ 0 ]
+initial
+begin
+	in[0] = 1'b1;
 end 
 endmodule
 

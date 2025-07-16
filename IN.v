@@ -1,6 +1,7 @@
 module IN(
 	input CLK,
 	input enter,
+	input halt,
 	output reg in_flag
 );
 
@@ -11,8 +12,8 @@ module IN(
 	end
 
 	always @(posedge CLK) begin
-		if (enter && !enter_d)
-			in_flag <= ~in_flag; 
+		if (enter == !enter_d)
+			in_flag = 1;
 	end
 
 endmodule

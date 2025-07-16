@@ -65,8 +65,6 @@ set_global_assignment -name VERILOG_FILE Control_Unit.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VERILOG_FILE MUX_5b_3in.v
 set_global_assignment -name VERILOG_FILE MUX_5b_4in.v
 set_global_assignment -name VERILOG_FILE MUX_32b_4in.v
@@ -90,4 +88,75 @@ set_location_assignment PIN_AE22 -to in[13]
 set_location_assignment PIN_AF21 -to in[14]
 set_location_assignment PIN_AF22 -to in[15]
 set_location_assignment PIN_AG25 -to enter
+set_location_assignment PIN_AD22 -to reset
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VERILOG_FILE Salva_saida.v
+set_global_assignment -name VERILOG_FILE Gerenciador_De_Saidas.v
+set_global_assignment -name VERILOG_FILE display_7_seg.v
+set_global_assignment -name VERILOG_FILE Split_Digitos.v
+set_location_assignment PIN_H22 -to display[0]
+set_location_assignment PIN_J22 -to display[1]
+set_location_assignment PIN_L25 -to display[2]
+set_location_assignment PIN_L26 -to display[3]
+set_location_assignment PIN_E17 -to display[4]
+set_location_assignment PIN_F22 -to display[5]
+set_location_assignment PIN_G18 -to display[6]
+
+set_location_assignment PIN_U24 -to display[7]
+set_location_assignment PIN_U23 -to display[8]
+set_location_assignment PIN_W25 -to display[9]
+set_location_assignment PIN_W22 -to display[10]
+set_location_assignment PIN_W21 -to display[11]
+set_location_assignment PIN_Y22 -to display[12]
+set_location_assignment PIN_M24 -to display[13]
+
+set_location_assignment PIN_W28 -to display[14]
+set_location_assignment PIN_W27 -to display[15]
+set_location_assignment PIN_Y26 -to display[16]
+set_location_assignment PIN_W26 -to display[17]
+set_location_assignment PIN_Y25 -to display[18]
+set_location_assignment PIN_AA26 -to display[19]
+set_location_assignment PIN_Y19 -to display[21]
+
+set_location_assignment PIN_AF23 -to display[22]
+set_location_assignment PIN_AD24 -to display[23]
+set_location_assignment PIN_AA21 -to display[24]
+set_location_assignment PIN_AB20 -to display[25]
+set_location_assignment PIN_U21 -to display[26]
+set_location_assignment PIN_V21 -to display[27]
+set_location_assignment PIN_AE18 -to display[28]
+set_location_assignment PIN_AF19 -to display[29]
+set_location_assignment PIN_AE19 -to display[30]
+set_location_assignment PIN_AH21 -to display[31]
+set_location_assignment PIN_AG21 -to display[32]
+set_location_assignment PIN_AA19 -to display[33]
+set_location_assignment PIN_AB19 -to display[34]
+set_location_assignment PIN_AH18 -to display[35]
+set_location_assignment PIN_AF18 -to display[36]
+set_location_assignment PIN_AG19 -to display[37]
+set_location_assignment PIN_AH19 -to display[38]
+set_location_assignment PIN_AB18 -to display[39]
+set_location_assignment PIN_AC18 -to display[40]
+set_location_assignment PIN_AD18 -to display[41]
+set_location_assignment PIN_AC17 -to display[42]
+set_location_assignment PIN_AA15 -to display[43]
+set_location_assignment PIN_AB15 -to display[44]
+set_location_assignment PIN_AB17 -to display[45]
+set_location_assignment PIN_AA16 -to display[46]
+set_location_assignment PIN_AB16 -to display[47]
+set_location_assignment PIN_AA17 -to display[48]
+set_location_assignment PIN_AA14 -to display[49]
+set_location_assignment PIN_AG18 -to display[50]
+set_location_assignment PIN_AF17 -to display[51]
+set_location_assignment PIN_AH17 -to display[52]
+set_location_assignment PIN_AG17 -to display[53]
+set_location_assignment PIN_AE17 -to display[54]
+set_location_assignment PIN_AD17 -to display[55]
+
+set_location_assignment PIN_Y2 -to Clock
+set_global_assignment -name VERILOG_FILE Flip_Flop_Input.v
+set_location_assignment PIN_G16 -to LED_Input
+set_location_assignment PIN_G15 -to LED_Input2
+set_global_assignment -name VERILOG_FILE Debounce_Switch.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
