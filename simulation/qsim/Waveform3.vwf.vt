@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "07/16/2025 15:40:29"
+// Generated on "07/17/2025 00:55:48"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          MIPS
 // 
@@ -42,8 +42,9 @@ wire LED_Input2;
 wire [55:0] display;
 wire entrada_ff;
 wire halt;
-wire [31:0] imprime_saida;
+wire imprime_saida;
 wire [31:0] instruction;
+wire ledtest;
 wire saida_ff;
 
 // assign statements (if any)                          
@@ -61,20 +62,25 @@ MIPS i1 (
 	.imprime_saida(imprime_saida),
 	.in(in),
 	.instruction(instruction),
+	.ledtest(ledtest),
 	.reset(reset),
 	.saida_ff(saida_ff)
 );
 initial 
 begin 
-#100000 $finish;
+#150000 $finish;
 end 
 
 // Clock
-always
+initial
 begin
+	repeat(7)
+	begin
+		Clock = 1'b0;
+		Clock = #10000 1'b1;
+		# 10000;
+	end
 	Clock = 1'b0;
-	Clock = #10000 1'b1;
-	#10000;
 end 
 
 // reset
@@ -87,8 +93,7 @@ end
 initial
 begin
 	enter = 1'b0;
-	enter = #50000 1'b1;
-	enter = #30000 1'b0;
+	enter = #70000 1'b1;
 end 
 // in[ 15 ]
 initial
@@ -169,6 +174,7 @@ end
 initial
 begin
 	in[0] = 1'b1;
+	in[0] = #99000 1'b0;
 end 
 endmodule
 

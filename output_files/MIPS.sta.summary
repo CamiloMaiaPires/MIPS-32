@@ -3,39 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'Clock'
-Slack : -74.285
-TNS   : -3084.364
+Slack : -73.744
+TNS   : -3255.626
+
+Type  : Slow 1200mV 85C Model Setup 'PC:comb_17|current_adress[2]'
+Slack : -2.363
+TNS   : -2.363
 
 Type  : Slow 1200mV 85C Model Hold 'Clock'
 Slack : 0.405
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'PC:comb_17|current_adress[2]'
+Slack : 1.784
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
 Slack : -3.000
-TNS   : -347.872
+TNS   : -340.162
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PC:comb_17|current_adress[2]'
+Slack : 0.452
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'Clock'
-Slack : -67.067
-TNS   : -2782.840
+Slack : -66.560
+TNS   : -2956.836
+
+Type  : Slow 1200mV 0C Model Setup 'PC:comb_17|current_adress[2]'
+Slack : -2.069
+TNS   : -2.069
 
 Type  : Slow 1200mV 0C Model Hold 'Clock'
 Slack : 0.356
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Hold 'PC:comb_17|current_adress[2]'
+Slack : 1.645
+TNS   : 0.000
+
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
 Slack : -3.000
-TNS   : -347.696
+TNS   : -339.986
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PC:comb_17|current_adress[2]'
+Slack : 0.470
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'Clock'
-Slack : -35.570
-TNS   : -1394.950
+Slack : -35.568
+TNS   : -1492.458
+
+Type  : Fast 1200mV 0C Model Setup 'PC:comb_17|current_adress[2]'
+Slack : -1.352
+TNS   : -1.352
 
 Type  : Fast 1200mV 0C Model Hold 'Clock'
-Slack : 0.180
+Slack : -0.162
+TNS   : -0.162
+
+Type  : Fast 1200mV 0C Model Hold 'PC:comb_17|current_adress[2]'
+Slack : 1.555
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
 Slack : -3.000
-TNS   : -295.176
+TNS   : -287.643
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PC:comb_17|current_adress[2]'
+Slack : 0.429
+TNS   : 0.000
 
 ------------------------------------------------------------

@@ -16,9 +16,10 @@ out_flag,
 entrada_ff,
 LED_Input_Ativa,
 LED_Input_Ativa2,
-Ativa_PC
+Ativa_PC,
+ledtest
 );
-
+	output reg ledtest;
 	input saida_ff;
 	input enter;
 	input [5:0] op_code;
@@ -31,7 +32,7 @@ Ativa_PC
 	end
 
 	
-	always @ (op_code)
+	always @ (*)
 	begin
 		case(op_code)
 			//Tipo R
@@ -52,6 +53,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//ADDI
 			6'b010000:
@@ -71,6 +73,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//SUBI
 			6'b010001:
@@ -90,6 +93,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//ANDI
 			6'b010010:
@@ -109,6 +113,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			
 			//BEQ
@@ -129,6 +134,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//BNE
 			6'b001001:
@@ -148,6 +154,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//BGT
 			6'b001010:
@@ -167,6 +174,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//BGE
 			6'b001011:
@@ -186,6 +194,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//BLE
 			6'b001100:
@@ -205,6 +214,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			
 			//LW
@@ -225,6 +235,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//SW
 			6'b101011:
@@ -244,6 +255,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//J
 			6'b000001:
@@ -263,6 +275,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//JAL
 			6'b000001:
@@ -282,6 +295,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//JR
 			6'b000001:
@@ -299,25 +313,30 @@ Ativa_PC
 				Ativa_PC <= 1;
 				out_flag <= 0;
 				entrada_ff <= saida_ff;
-				//LED_Input_Ativa <= 0;
-				//LED_Input_Ativa2 <= 0;
+				LED_Input_Ativa <= 0;
+				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
+				entrada_ff <= 1'b0;
 			end
 			//IN
 			6'b100000:
 			begin
+				
 				if (enter == saida_ff)
 				begin
+					ledtest <= 1'b1;
 					Ativa_PC <= 1;
-					entrada_ff <= ~saida_ff;
+					entrada_ff <= 1'b1;
 					LED_Input_Ativa <= 0;
 					LED_Input_Ativa2 <= 0;
 				end
 				else
 				begin
 					Ativa_PC <= 0;
-					entrada_ff <= saida_ff;
-					//☺LED_Input_Ativa <= enter;
-					//LED_Input_Ativa2 <= ~enter;
+					entrada_ff <= 1'b0;
+					LED_Input_Ativa <= enter;
+					LED_Input_Ativa2 <= ~enter;
+					ledtest <= 1'b0;
 				end
 				RegDst <= 2'b00;
 				jump <= 0;
@@ -350,6 +369,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			//HALT
 			6'b111111: 	
@@ -364,11 +384,12 @@ Ativa_PC
 				ALUSrc <= 0;
 				RegWrite <= 0;
 				halt <= 1;
-				Ativa_PC <= 1;
+				Ativa_PC <= 0;
 				out_flag <= 0;
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 			default:
 			begin
@@ -387,6 +408,7 @@ Ativa_PC
 				entrada_ff <= saida_ff;
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
 			end
 		endcase
 	end

@@ -1,18 +1,19 @@
 module Flip_Flop_Input(
-input clk,
-input enter,
-input entrada_ff,
-output reg saida_ff
+    input clk,
+    input reset,
+    input enter,
+    input entrada_ff,
+    output reg toggle
 );
 
-reg toggle;
-
 always @(posedge clk) begin
-
-    if (enter == entrada_ff) begin
-        saida_ff <= toggle ? 1 : 0;  
-        toggle <= ~toggle;   
-    end
+    if (reset) begin
+        toggle <= 1'b1;
+    end else if (entrada_ff == 1'b1) begin
+        toggle <= ~toggle;
+    end else begin
+			toggle <= toggle;
+	 end
 end
 
 endmodule
