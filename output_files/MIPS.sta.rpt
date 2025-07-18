@@ -1,5 +1,5 @@
 Timing Analyzer report for MIPS
-Thu Jul 17 01:43:04 2025
+Thu Jul 17 22:15:32 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,49 +17,31 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Slow 1200mV 85C Model Recovery Summary
  10. Slow 1200mV 85C Model Removal Summary
  11. Slow 1200mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1200mV 85C Model Setup: 'Clock'
- 13. Slow 1200mV 85C Model Setup: 'PC:comb_17|current_adress[2]'
- 14. Slow 1200mV 85C Model Hold: 'Clock'
- 15. Slow 1200mV 85C Model Hold: 'PC:comb_17|current_adress[2]'
- 16. Slow 1200mV 85C Model Metastability Summary
- 17. Slow 1200mV 0C Model Fmax Summary
- 18. Slow 1200mV 0C Model Setup Summary
- 19. Slow 1200mV 0C Model Hold Summary
- 20. Slow 1200mV 0C Model Recovery Summary
- 21. Slow 1200mV 0C Model Removal Summary
- 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
- 23. Slow 1200mV 0C Model Setup: 'Clock'
- 24. Slow 1200mV 0C Model Setup: 'PC:comb_17|current_adress[2]'
- 25. Slow 1200mV 0C Model Hold: 'Clock'
- 26. Slow 1200mV 0C Model Hold: 'PC:comb_17|current_adress[2]'
- 27. Slow 1200mV 0C Model Metastability Summary
- 28. Fast 1200mV 0C Model Setup Summary
- 29. Fast 1200mV 0C Model Hold Summary
- 30. Fast 1200mV 0C Model Recovery Summary
- 31. Fast 1200mV 0C Model Removal Summary
- 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
- 33. Fast 1200mV 0C Model Setup: 'Clock'
- 34. Fast 1200mV 0C Model Setup: 'PC:comb_17|current_adress[2]'
- 35. Fast 1200mV 0C Model Hold: 'Clock'
- 36. Fast 1200mV 0C Model Hold: 'PC:comb_17|current_adress[2]'
- 37. Fast 1200mV 0C Model Metastability Summary
- 38. Multicorner Timing Analysis Summary
- 39. Board Trace Model Assignments
- 40. Input Transition Times
- 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
- 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
- 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
- 44. Setup Transfers
- 45. Hold Transfers
- 46. Report TCCS
- 47. Report RSKM
- 48. Unconstrained Paths Summary
- 49. Clock Status Summary
- 50. Unconstrained Input Ports
- 51. Unconstrained Output Ports
- 52. Unconstrained Input Ports
- 53. Unconstrained Output Ports
- 54. Timing Analyzer Messages
+ 12. Slow 1200mV 85C Model Metastability Summary
+ 13. Slow 1200mV 0C Model Fmax Summary
+ 14. Slow 1200mV 0C Model Setup Summary
+ 15. Slow 1200mV 0C Model Hold Summary
+ 16. Slow 1200mV 0C Model Recovery Summary
+ 17. Slow 1200mV 0C Model Removal Summary
+ 18. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 19. Slow 1200mV 0C Model Metastability Summary
+ 20. Fast 1200mV 0C Model Setup Summary
+ 21. Fast 1200mV 0C Model Hold Summary
+ 22. Fast 1200mV 0C Model Recovery Summary
+ 23. Fast 1200mV 0C Model Removal Summary
+ 24. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 25. Fast 1200mV 0C Model Metastability Summary
+ 26. Multicorner Timing Analysis Summary
+ 27. Board Trace Model Assignments
+ 28. Input Transition Times
+ 29. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 30. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 31. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 32. Clock Transfers
+ 33. Report TCCS
+ 34. Report RSKM
+ 35. Unconstrained Paths Summary
+ 36. Timing Analyzer Messages
 
 
 
@@ -105,36 +87,25 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 2.34        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  71.8%      ;
-;     Processor 3            ;  52.1%      ;
-;     Processor 4            ;   2.7%      ;
-;     Processors 5-8         ;   1.9%      ;
+;     Processors 2-8         ;   0.2%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                     ;
-+------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
-; Clock Name                   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                          ;
-+------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
-; Clock                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock }                        ;
-; PC:comb_17|current_adress[2] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { PC:comb_17|current_adress[2] } ;
-+------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------+
+----------
+; Clocks ;
+----------
+No clocks to report.
 
 
-+-------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary              ;
-+-----------+-----------------+------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
-+-----------+-----------------+------------+------+
-; 13.38 MHz ; 13.38 MHz       ; Clock      ;      ;
-+-----------+-----------------+------------+------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
 
 
 ----------------------------------
@@ -143,24 +114,16 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+--------------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                    ;
-+------------------------------+---------+---------------+
-; Clock                        ; Slack   ; End Point TNS ;
-+------------------------------+---------+---------------+
-; Clock                        ; -73.744 ; -3255.626     ;
-; PC:comb_17|current_adress[2] ; -2.363  ; -2.363        ;
-+------------------------------+---------+---------------+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
 
 
-+------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                   ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; Clock                        ; 0.405 ; 0.000         ;
-; PC:comb_17|current_adress[2] ; 1.784 ; 0.000         ;
-+------------------------------+-------+---------------+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
 
 
 ------------------------------------------
@@ -175,287 +138,34 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary     ;
-+------------------------------+--------+---------------+
-; Clock                        ; Slack  ; End Point TNS ;
-+------------------------------+--------+---------------+
-; Clock                        ; -3.000 ; -340.162      ;
-; PC:comb_17|current_adress[2] ; 0.452  ; 0.000         ;
-+------------------------------+--------+---------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'Clock'                                                                                                                                            ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack   ; From Node                        ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -73.744 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.251      ; 74.993     ;
-; -73.729 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.250      ; 74.977     ;
-; -73.712 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.250      ; 74.960     ;
-; -73.684 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.250      ; 74.932     ;
-; -73.568 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.296      ; 74.862     ;
-; -73.553 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.846     ;
-; -73.536 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.829     ;
-; -73.508 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.801     ;
-; -73.496 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.296      ; 74.790     ;
-; -73.481 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.774     ;
-; -73.464 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.757     ;
-; -73.436 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.729     ;
-; -73.381 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.250      ; 74.629     ;
-; -73.338 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.296      ; 74.632     ;
-; -73.323 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.616     ;
-; -73.306 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.599     ;
-; -73.278 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.571     ;
-; -73.233 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.262      ; 74.493     ;
-; -73.205 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.498     ;
-; -73.133 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.426     ;
-; -73.082 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.263      ; 74.343     ;
-; -73.068 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.262      ; 74.328     ;
-; -73.053 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.262      ; 74.313     ;
-; -73.015 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.275      ; 74.288     ;
-; -72.975 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 74.268     ;
-; -72.965 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 74.241     ;
-; -72.917 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.263      ; 74.178     ;
-; -72.902 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.263      ; 74.163     ;
-; -72.864 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.276      ; 74.138     ;
-; -72.800 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 74.076     ;
-; -72.785 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 74.061     ;
-; -72.747 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.291      ; 74.036     ;
-; -72.739 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.279      ; 74.016     ;
-; -72.574 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.279      ; 73.851     ;
-; -72.559 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.279      ; 73.836     ;
-; -72.537 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.813     ;
-; -72.521 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.292      ; 73.811     ;
-; -72.427 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.703     ;
-; -72.372 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.648     ;
-; -72.359 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.635     ;
-; -72.357 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.633     ;
-; -72.319 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.291      ; 73.608     ;
-; -72.262 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.538     ;
-; -72.247 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.523     ;
-; -72.209 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.291      ; 73.498     ;
-; -72.194 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.470     ;
-; -72.179 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.278      ; 73.455     ;
-; -72.141 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.291      ; 73.430     ;
-; -71.886 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 73.179     ;
-; -71.767 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 73.060     ;
-; -71.708 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 73.001     ;
-; -71.606 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.914     ;
-; -71.515 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.823     ;
-; -71.490 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.798     ;
-; -71.430 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.738     ;
-; -71.428 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.736     ;
-; -71.378 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.234      ; 72.610     ;
-; -71.339 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.647     ;
-; -71.337 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.645     ;
-; -71.314 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.622     ;
-; -71.312 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 72.620     ;
-; -71.202 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.279      ; 72.479     ;
-; -71.130 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.279      ; 72.407     ;
-; -70.972 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.279      ; 72.249     ;
-; -70.888 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 72.188     ;
-; -70.789 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 72.089     ;
-; -70.788 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 72.088     ;
-; -70.783 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.264      ; 72.045     ;
-; -70.769 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 72.069     ;
-; -70.710 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 72.010     ;
-; -70.670 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 71.970     ;
-; -70.669 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 71.969     ;
-; -70.618 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.264      ; 71.880     ;
-; -70.611 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 71.911     ;
-; -70.610 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.302      ; 71.910     ;
-; -70.603 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.264      ; 71.865     ;
-; -70.565 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.277      ; 71.840     ;
-; -70.294 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.311      ; 71.603     ;
-; -70.118 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.311      ; 71.427     ;
-; -70.116 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.311      ; 71.425     ;
-; -69.821 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.296      ; 71.115     ;
-; -69.485 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.235      ; 70.718     ;
-; -69.309 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.280      ; 70.587     ;
-; -69.237 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.280      ; 70.515     ;
-; -69.079 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.280      ; 70.357     ;
-; -68.823 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.303      ; 70.124     ;
-; -68.724 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.303      ; 70.025     ;
-; -68.723 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.303      ; 70.024     ;
-; -68.562 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 69.870     ;
-; -68.386 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 69.694     ;
-; -68.384 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.310      ; 69.692     ;
-; -67.924 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.295      ; 69.217     ;
-; -67.610 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.327      ; 68.935     ;
-; -67.510 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.312      ; 68.820     ;
-; -67.499 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.311      ; 68.808     ;
-; -67.384 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.310      ; 68.692     ;
-; -67.350 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.326      ; 68.674     ;
-; -67.301 ; Salva_saida:comb_24|out_data[22] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.329      ; 68.628     ;
-; -67.042 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.279      ; 68.319     ;
-; -66.978 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[1] ; Clock        ; Clock       ; 1.000        ; 0.290      ; 68.266     ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'PC:comb_17|current_adress[2]'                                                                                                       ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; Slack  ; From Node                          ; To Node                      ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; -2.363 ; Flip_Flop_Input:comb_20|toggle     ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; 0.500        ; -0.589     ; 1.244      ;
-; -2.201 ; Debounce_Switch:comb_19|switch_out ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; 0.500        ; -0.589     ; 1.082      ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'Clock'                                                                                                                                                                                     ;
-+-------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                     ; To Node                                                   ; Launch Clock                 ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-; 0.405 ; reset_counter[1]                                              ; reset_counter[1]                                          ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.669      ;
-; 0.405 ; reset_counter[0]                                              ; reset_counter[0]                                          ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.669      ;
-; 0.406 ; Flip_Flop_Input:comb_20|toggle                                ; Flip_Flop_Input:comb_20|toggle                            ; Clock                        ; Clock       ; 0.000        ; 0.077      ; 0.669      ;
-; 0.406 ; Debounce_Switch:comb_19|switch_out                            ; Debounce_Switch:comb_19|switch_out                        ; Clock                        ; Clock       ; 0.000        ; 0.077      ; 0.669      ;
-; 0.432 ; reset_counter[0]                                              ; reset_counter[1]                                          ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.696      ;
-; 0.432 ; Salva_saida:comb_24|out_data[0]                               ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[0] ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.697      ;
-; 0.444 ; reset_counter[1]                                              ; reset_counter[0]                                          ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.708      ;
-; 0.590 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[41]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.855      ;
-; 0.593 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[40]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.858      ;
-; 0.593 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[38]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.858      ;
-; 0.596 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[39]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.861      ;
-; 0.597 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[37]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.862      ;
-; 0.601 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[36]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.866      ;
-; 0.602 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[35]                   ; Clock                        ; Clock       ; 0.000        ; 0.079      ; 0.867      ;
-; 0.606 ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~45                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 3.111      ; 4.155      ;
-; 0.643 ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.907      ;
-; 0.644 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[9]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.908      ;
-; 0.644 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.908      ;
-; 0.644 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.908      ;
-; 0.644 ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.908      ;
-; 0.646 ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[1]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.910      ;
-; 0.647 ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.911      ;
-; 0.648 ; Debounce_Switch:comb_19|counter[15]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.912      ;
-; 0.648 ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.912      ;
-; 0.649 ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.913      ;
-; 0.649 ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.913      ;
-; 0.649 ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.913      ;
-; 0.650 ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.914      ;
-; 0.652 ; Debounce_Switch:comb_19|counter[16]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.916      ;
-; 0.657 ; Gerenciador_De_Saidas:comb_25|contador[3]                     ; Gerenciador_De_Saidas:comb_25|contador[3]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.921      ;
-; 0.657 ; Gerenciador_De_Saidas:comb_25|contador[13]                    ; Gerenciador_De_Saidas:comb_25|contador[13]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.921      ;
-; 0.657 ; Debounce_Switch:comb_19|counter[7]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.921      ;
-; 0.658 ; Gerenciador_De_Saidas:comb_25|contador[11]                    ; Gerenciador_De_Saidas:comb_25|contador[11]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.922      ;
-; 0.658 ; Gerenciador_De_Saidas:comb_25|contador[5]                     ; Gerenciador_De_Saidas:comb_25|contador[5]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.922      ;
-; 0.659 ; Gerenciador_De_Saidas:comb_25|contador[1]                     ; Gerenciador_De_Saidas:comb_25|contador[1]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.923      ;
-; 0.660 ; Gerenciador_De_Saidas:comb_25|contador[7]                     ; Gerenciador_De_Saidas:comb_25|contador[7]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.924      ;
-; 0.662 ; Gerenciador_De_Saidas:comb_25|contador[2]                     ; Gerenciador_De_Saidas:comb_25|contador[2]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.926      ;
-; 0.663 ; Gerenciador_De_Saidas:comb_25|contador[12]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.927      ;
-; 0.663 ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[10]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.927      ;
-; 0.663 ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.927      ;
-; 0.687 ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[0]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 0.951      ;
-; 0.750 ; reset_counter[1]                                              ; PC:comb_17|current_adress[5]                              ; Clock                        ; Clock       ; -0.500       ; 1.073      ; 1.529      ;
-; 0.753 ; reset_counter[1]                                              ; PC:comb_17|current_adress[3]                              ; Clock                        ; Clock       ; -0.500       ; 1.073      ; 1.532      ;
-; 0.757 ; reset_counter[1]                                              ; PC:comb_17|current_adress[4]                              ; Clock                        ; Clock       ; -0.500       ; 1.073      ; 1.536      ;
-; 0.760 ; reset_counter[1]                                              ; PC:comb_17|current_adress[6]                              ; Clock                        ; Clock       ; -0.500       ; 1.073      ; 1.539      ;
-; 0.804 ; Debounce_Switch:comb_19|button_sync0                          ; Debounce_Switch:comb_19|button_sync1                      ; Clock                        ; Clock       ; 0.000        ; 0.080      ; 1.070      ;
-; 0.805 ; Debounce_Switch:comb_19|button_sync1                          ; Debounce_Switch:comb_19|switch_out                        ; Clock                        ; Clock       ; 0.000        ; 0.077      ; 1.068      ;
-; 0.939 ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~13                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 3.113      ; 4.490      ;
-; 0.950 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[20]                   ; Clock                        ; Clock       ; 0.000        ; -0.287     ; 0.849      ;
-; 0.951 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[17]                   ; Clock                        ; Clock       ; 0.000        ; -0.287     ; 0.850      ;
-; 0.952 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[14]                   ; Clock                        ; Clock       ; 0.000        ; -0.287     ; 0.851      ;
-; 0.954 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[38]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.212      ;
-; 0.954 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[35]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.212      ;
-; 0.955 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[41]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.213      ;
-; 0.955 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[40]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.213      ;
-; 0.955 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[37]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.213      ;
-; 0.960 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[16]                   ; Clock                        ; Clock       ; 0.000        ; -0.287     ; 0.859      ;
-; 0.961 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.225      ;
-; 0.961 ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.225      ;
-; 0.962 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.226      ;
-; 0.962 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.226      ;
-; 0.962 ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.226      ;
-; 0.963 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[36]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.221      ;
-; 0.963 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[39]                   ; Clock                        ; Clock       ; 0.000        ; 0.072      ; 1.221      ;
-; 0.963 ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.227      ;
-; 0.964 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[19]                   ; Clock                        ; Clock       ; 0.000        ; -0.287     ; 0.863      ;
-; 0.965 ; Debounce_Switch:comb_19|counter[15]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.229      ;
-; 0.968 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[15]                   ; Clock                        ; Clock       ; 0.000        ; -0.287     ; 0.867      ;
-; 0.974 ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.238      ;
-; 0.975 ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[9]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.239      ;
-; 0.976 ; Gerenciador_De_Saidas:comb_25|contador[1]                     ; Gerenciador_De_Saidas:comb_25|contador[2]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.240      ;
-; 0.976 ; Gerenciador_De_Saidas:comb_25|contador[11]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.240      ;
-; 0.976 ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.240      ;
-; 0.976 ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.240      ;
-; 0.976 ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.240      ;
-; 0.977 ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.241      ;
-; 0.979 ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.243      ;
-; 0.980 ; Debounce_Switch:comb_19|counter[7]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.073      ; 1.239      ;
-; 0.980 ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.244      ;
-; 0.981 ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.245      ;
-; 0.981 ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.245      ;
-; 0.981 ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.245      ;
-; 0.982 ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.246      ;
-; 0.989 ; Gerenciador_De_Saidas:comb_25|contador[2]                     ; Gerenciador_De_Saidas:comb_25|contador[3]                 ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.253      ;
-; 0.990 ; Gerenciador_De_Saidas:comb_25|contador[12]                    ; Gerenciador_De_Saidas:comb_25|contador[13]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.254      ;
-; 0.990 ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.254      ;
-; 0.990 ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[11]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.254      ;
-; 0.991 ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[1]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.255      ;
-; 0.995 ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.259      ;
-; 0.996 ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.260      ;
-; 1.000 ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.073      ; 1.259      ;
-; 1.048 ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~45                             ; PC:comb_17|current_adress[2] ; Clock       ; -0.500       ; 3.111      ; 4.097      ;
-; 1.082 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.346      ;
-; 1.082 ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.346      ;
-; 1.083 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.347      ;
-; 1.083 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.347      ;
-; 1.083 ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.347      ;
-; 1.084 ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.348      ;
-; 1.086 ; Debounce_Switch:comb_19|switch_out                            ; Flip_Flop_Input:comb_20|toggle                            ; Clock                        ; Clock       ; 0.000        ; 0.077      ; 1.349      ;
-; 1.087 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.078      ; 1.351      ;
-+-------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'PC:comb_17|current_adress[2]'                                                                                                       ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; Slack ; From Node                          ; To Node                      ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; 1.784 ; Debounce_Switch:comb_19|switch_out ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; -0.500       ; -0.329     ; 0.975      ;
-; 1.910 ; Flip_Flop_Input:comb_20|toggle     ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; -0.500       ; -0.329     ; 1.101      ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
+-----------------------------------------------------
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
+-----------------------------------------------------
+No paths to report.
 
 
 -----------------------------------------------
 ; Slow 1200mV 85C Model Metastability Summary ;
 -----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+No synchronizer chains to report.
 
 
-
-+------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary              ;
-+----------+-----------------+------------+------+
-; Fmax     ; Restricted Fmax ; Clock Name ; Note ;
-+----------+-----------------+------------+------+
-; 14.8 MHz ; 14.8 MHz        ; Clock      ;      ;
-+----------+-----------------+------------+------+
-This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
 
 
-+--------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                     ;
-+------------------------------+---------+---------------+
-; Clock                        ; Slack   ; End Point TNS ;
-+------------------------------+---------+---------------+
-; Clock                        ; -66.560 ; -2956.836     ;
-; PC:comb_17|current_adress[2] ; -2.069  ; -2.069        ;
-+------------------------------+---------+---------------+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
 
 
-+------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                    ;
-+------------------------------+-------+---------------+
-; Clock                        ; Slack ; End Point TNS ;
-+------------------------------+-------+---------------+
-; Clock                        ; 0.356 ; 0.000         ;
-; PC:comb_17|current_adress[2] ; 1.645 ; 0.000         ;
-+------------------------------+-------+---------------+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
 
 
 -----------------------------------------
@@ -470,277 +180,28 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary      ;
-+------------------------------+--------+---------------+
-; Clock                        ; Slack  ; End Point TNS ;
-+------------------------------+--------+---------------+
-; Clock                        ; -3.000 ; -339.986      ;
-; PC:comb_17|current_adress[2] ; 0.470  ; 0.000         ;
-+------------------------------+--------+---------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'Clock'                                                                                                                                             ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack   ; From Node                        ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -66.560 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.217      ; 67.776     ;
-; -66.552 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.215      ; 67.766     ;
-; -66.542 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.215      ; 67.756     ;
-; -66.517 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.215      ; 67.731     ;
-; -66.366 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.255      ; 67.620     ;
-; -66.358 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.610     ;
-; -66.348 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.600     ;
-; -66.340 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.255      ; 67.594     ;
-; -66.332 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.584     ;
-; -66.323 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.575     ;
-; -66.322 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.574     ;
-; -66.297 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.549     ;
-; -66.215 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.216      ; 67.430     ;
-; -66.205 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.255      ; 67.459     ;
-; -66.197 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.449     ;
-; -66.187 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.439     ;
-; -66.162 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 67.414     ;
-; -66.142 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.223      ; 67.364     ;
-; -66.021 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.254      ; 67.274     ;
-; -66.009 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.224      ; 67.232     ;
-; -66.003 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.223      ; 67.225     ;
-; -65.995 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.254      ; 67.248     ;
-; -65.986 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.223      ; 67.208     ;
-; -65.935 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.236      ; 67.170     ;
-; -65.905 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.235      ; 67.139     ;
-; -65.870 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.224      ; 67.093     ;
-; -65.860 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.254      ; 67.113     ;
-; -65.853 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.224      ; 67.076     ;
-; -65.802 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.237      ; 67.038     ;
-; -65.766 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.235      ; 67.000     ;
-; -65.749 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.235      ; 66.983     ;
-; -65.698 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.248      ; 66.945     ;
-; -65.698 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.236      ; 66.933     ;
-; -65.559 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.236      ; 66.794     ;
-; -65.542 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.236      ; 66.777     ;
-; -65.520 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.753     ;
-; -65.491 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.249      ; 66.739     ;
-; -65.428 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.661     ;
-; -65.381 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.614     ;
-; -65.368 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.601     ;
-; -65.364 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.597     ;
-; -65.313 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.247      ; 66.559     ;
-; -65.289 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.522     ;
-; -65.272 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.505     ;
-; -65.229 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.462     ;
-; -65.221 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.247      ; 66.467     ;
-; -65.212 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.234      ; 66.445     ;
-; -65.161 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.247      ; 66.407     ;
-; -64.995 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.252      ; 66.246     ;
-; -64.887 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.252      ; 66.138     ;
-; -64.837 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.252      ; 66.088     ;
-; -64.642 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.910     ;
-; -64.571 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.839     ;
-; -64.542 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.810     ;
-; -64.466 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.734     ;
-; -64.464 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.732     ;
-; -64.412 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.204      ; 65.615     ;
-; -64.395 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.663     ;
-; -64.393 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.661     ;
-; -64.366 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.634     ;
-; -64.364 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.269      ; 65.632     ;
-; -64.218 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.242      ; 65.459     ;
-; -64.192 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.242      ; 65.433     ;
-; -64.057 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.242      ; 65.298     ;
-; -64.002 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.261     ;
-; -63.959 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.225      ; 65.183     ;
-; -63.948 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.207     ;
-; -63.948 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.207     ;
-; -63.894 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.153     ;
-; -63.844 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.103     ;
-; -63.840 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.099     ;
-; -63.840 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.099     ;
-; -63.820 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.225      ; 65.044     ;
-; -63.803 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.225      ; 65.027     ;
-; -63.790 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.049     ;
-; -63.790 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.260      ; 65.049     ;
-; -63.752 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.238      ; 64.989     ;
-; -63.453 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.271      ; 64.723     ;
-; -63.277 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.271      ; 64.547     ;
-; -63.275 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.271      ; 64.545     ;
-; -63.120 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.254      ; 64.373     ;
-; -62.701 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.205      ; 63.905     ;
-; -62.507 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.243      ; 63.749     ;
-; -62.481 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.243      ; 63.723     ;
-; -62.346 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.243      ; 63.588     ;
-; -62.127 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.262      ; 63.388     ;
-; -62.073 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.262      ; 63.334     ;
-; -62.073 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.262      ; 63.334     ;
-; -61.898 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.270      ; 63.167     ;
-; -61.722 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.270      ; 62.991     ;
-; -61.720 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.270      ; 62.989     ;
-; -61.426 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.253      ; 62.678     ;
-; -60.940 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.281      ; 62.220     ;
-; -60.845 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.269      ; 62.113     ;
-; -60.844 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.270      ; 62.113     ;
-; -60.729 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.268      ; 61.996     ;
-; -60.709 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.280      ; 61.988     ;
-; -60.652 ; Salva_saida:comb_24|out_data[22] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.282      ; 61.933     ;
-; -60.521 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.236      ; 61.756     ;
-; -60.433 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.261      ; 61.693     ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'PC:comb_17|current_adress[2]'                                                                                                        ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; Slack  ; From Node                          ; To Node                      ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; -2.069 ; Flip_Flop_Input:comb_20|toggle     ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; 0.500        ; -0.507     ; 1.126      ;
-; -1.921 ; Debounce_Switch:comb_19|switch_out ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; 0.500        ; -0.507     ; 0.978      ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'Clock'                                                                                                                                                                                      ;
-+-------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                                     ; To Node                                                   ; Launch Clock                 ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-; 0.356 ; reset_counter[1]                                              ; reset_counter[1]                                          ; Clock                        ; Clock       ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; reset_counter[0]                                              ; reset_counter[0]                                          ; Clock                        ; Clock       ; 0.000        ; 0.070      ; 0.597      ;
-; 0.357 ; Flip_Flop_Input:comb_20|toggle                                ; Flip_Flop_Input:comb_20|toggle                            ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.597      ;
-; 0.357 ; Debounce_Switch:comb_19|switch_out                            ; Debounce_Switch:comb_19|switch_out                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.597      ;
-; 0.398 ; reset_counter[0]                                              ; reset_counter[1]                                          ; Clock                        ; Clock       ; 0.000        ; 0.070      ; 0.639      ;
-; 0.399 ; Salva_saida:comb_24|out_data[0]                               ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[0] ; Clock                        ; Clock       ; 0.000        ; 0.070      ; 0.640      ;
-; 0.402 ; reset_counter[1]                                              ; reset_counter[0]                                          ; Clock                        ; Clock       ; 0.000        ; 0.070      ; 0.643      ;
-; 0.527 ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~45                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 2.801      ; 3.732      ;
-; 0.534 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[41]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.776      ;
-; 0.535 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[40]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.777      ;
-; 0.537 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[38]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.779      ;
-; 0.539 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[39]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.781      ;
-; 0.546 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[37]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.788      ;
-; 0.549 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[36]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.791      ;
-; 0.551 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[35]                   ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.793      ;
-; 0.588 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.828      ;
-; 0.589 ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.829      ;
-; 0.589 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.829      ;
-; 0.590 ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.830      ;
-; 0.591 ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.831      ;
-; 0.591 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[9]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.831      ;
-; 0.592 ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[1]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.832      ;
-; 0.592 ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.832      ;
-; 0.593 ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.833      ;
-; 0.593 ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.833      ;
-; 0.594 ; Debounce_Switch:comb_19|counter[15]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.834      ;
-; 0.594 ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.834      ;
-; 0.595 ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.835      ;
-; 0.597 ; Debounce_Switch:comb_19|counter[16]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.837      ;
-; 0.601 ; Gerenciador_De_Saidas:comb_25|contador[3]                     ; Gerenciador_De_Saidas:comb_25|contador[3]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.841      ;
-; 0.601 ; Gerenciador_De_Saidas:comb_25|contador[13]                    ; Gerenciador_De_Saidas:comb_25|contador[13]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.841      ;
-; 0.601 ; Debounce_Switch:comb_19|counter[7]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.841      ;
-; 0.602 ; Gerenciador_De_Saidas:comb_25|contador[11]                    ; Gerenciador_De_Saidas:comb_25|contador[11]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.842      ;
-; 0.602 ; Gerenciador_De_Saidas:comb_25|contador[5]                     ; Gerenciador_De_Saidas:comb_25|contador[5]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.842      ;
-; 0.604 ; Gerenciador_De_Saidas:comb_25|contador[1]                     ; Gerenciador_De_Saidas:comb_25|contador[1]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.844      ;
-; 0.605 ; Gerenciador_De_Saidas:comb_25|contador[7]                     ; Gerenciador_De_Saidas:comb_25|contador[7]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.845      ;
-; 0.606 ; Gerenciador_De_Saidas:comb_25|contador[2]                     ; Gerenciador_De_Saidas:comb_25|contador[2]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.846      ;
-; 0.607 ; Gerenciador_De_Saidas:comb_25|contador[12]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.847      ;
-; 0.607 ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[10]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.847      ;
-; 0.607 ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.847      ;
-; 0.627 ; reset_counter[1]                                              ; PC:comb_17|current_adress[5]                              ; Clock                        ; Clock       ; -0.500       ; 1.092      ; 1.410      ;
-; 0.629 ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[0]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.869      ;
-; 0.630 ; reset_counter[1]                                              ; PC:comb_17|current_adress[3]                              ; Clock                        ; Clock       ; -0.500       ; 1.092      ; 1.413      ;
-; 0.635 ; reset_counter[1]                                              ; PC:comb_17|current_adress[4]                              ; Clock                        ; Clock       ; -0.500       ; 1.092      ; 1.418      ;
-; 0.637 ; reset_counter[1]                                              ; PC:comb_17|current_adress[6]                              ; Clock                        ; Clock       ; -0.500       ; 1.092      ; 1.420      ;
-; 0.748 ; Debounce_Switch:comb_19|button_sync1                          ; Debounce_Switch:comb_19|switch_out                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 0.988      ;
-; 0.751 ; Debounce_Switch:comb_19|button_sync0                          ; Debounce_Switch:comb_19|button_sync1                      ; Clock                        ; Clock       ; 0.000        ; 0.071      ; 0.993      ;
-; 0.819 ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~13                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 2.803      ; 4.026      ;
-; 0.853 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[20]                   ; Clock                        ; Clock       ; 0.000        ; -0.253     ; 0.771      ;
-; 0.854 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[17]                   ; Clock                        ; Clock       ; 0.000        ; -0.253     ; 0.772      ;
-; 0.855 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[14]                   ; Clock                        ; Clock       ; 0.000        ; -0.253     ; 0.773      ;
-; 0.862 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[16]                   ; Clock                        ; Clock       ; 0.000        ; -0.253     ; 0.780      ;
-; 0.865 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[19]                   ; Clock                        ; Clock       ; 0.000        ; -0.253     ; 0.783      ;
-; 0.874 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.114      ;
-; 0.875 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.115      ;
-; 0.875 ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.115      ;
-; 0.876 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[15]                   ; Clock                        ; Clock       ; 0.000        ; -0.253     ; 0.794      ;
-; 0.876 ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.116      ;
-; 0.878 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.118      ;
-; 0.879 ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.119      ;
-; 0.879 ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.119      ;
-; 0.880 ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[9]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.120      ;
-; 0.881 ; Debounce_Switch:comb_19|counter[15]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.121      ;
-; 0.881 ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.121      ;
-; 0.881 ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.121      ;
-; 0.882 ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.122      ;
-; 0.883 ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.123      ;
-; 0.887 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[38]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.123      ;
-; 0.887 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[35]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.123      ;
-; 0.888 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[41]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.124      ;
-; 0.888 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[40]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.124      ;
-; 0.888 ; Gerenciador_De_Saidas:comb_25|contador[11]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.128      ;
-; 0.889 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[37]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.125      ;
-; 0.890 ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.130      ;
-; 0.891 ; Gerenciador_De_Saidas:comb_25|contador[1]                     ; Gerenciador_De_Saidas:comb_25|contador[2]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.131      ;
-; 0.891 ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.131      ;
-; 0.892 ; Debounce_Switch:comb_19|counter[7]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.064      ; 1.127      ;
-; 0.892 ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.132      ;
-; 0.892 ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.132      ;
-; 0.893 ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.133      ;
-; 0.894 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[39]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.130      ;
-; 0.894 ; Gerenciador_De_Saidas:comb_25|contador[2]                     ; Gerenciador_De_Saidas:comb_25|contador[3]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.134      ;
-; 0.894 ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.134      ;
-; 0.895 ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[36]                   ; Clock                        ; Clock       ; 0.000        ; 0.065      ; 1.131      ;
-; 0.895 ; Gerenciador_De_Saidas:comb_25|contador[12]                    ; Gerenciador_De_Saidas:comb_25|contador[13]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.135      ;
-; 0.895 ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.135      ;
-; 0.895 ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[11]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.135      ;
-; 0.896 ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[1]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.136      ;
-; 0.906 ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.146      ;
-; 0.907 ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.147      ;
-; 0.911 ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.064      ; 1.146      ;
-; 0.973 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.213      ;
-; 0.974 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.214      ;
-; 0.974 ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.214      ;
-; 0.975 ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.215      ;
-; 0.977 ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.217      ;
-; 0.978 ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.218      ;
-; 0.984 ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.224      ;
-; 0.985 ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.225      ;
-; 0.986 ; Gerenciador_De_Saidas:comb_25|contador[3]                     ; Gerenciador_De_Saidas:comb_25|contador[5]                 ; Clock                        ; Clock       ; 0.000        ; 0.069      ; 1.226      ;
-+-------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'PC:comb_17|current_adress[2]'                                                                                                        ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; Slack ; From Node                          ; To Node                      ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; 1.645 ; Debounce_Switch:comb_19|switch_out ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; -0.500       ; -0.270     ; 0.895      ;
-; 1.758 ; Flip_Flop_Input:comb_20|toggle     ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; -0.500       ; -0.270     ; 1.008      ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
+----------------------------------------------------
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
 
 
 ----------------------------------------------
 ; Slow 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+No synchronizer chains to report.
 
 
-
-+--------------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                     ;
-+------------------------------+---------+---------------+
-; Clock                        ; Slack   ; End Point TNS ;
-+------------------------------+---------+---------------+
-; Clock                        ; -35.568 ; -1492.458     ;
-; PC:comb_17|current_adress[2] ; -1.352  ; -1.352        ;
-+------------------------------+---------+---------------+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
 
 
-+-------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                     ;
-+------------------------------+--------+---------------+
-; Clock                        ; Slack  ; End Point TNS ;
-+------------------------------+--------+---------------+
-; Clock                        ; -0.162 ; -0.162        ;
-; PC:comb_17|current_adress[2] ; 1.555  ; 0.000         ;
-+------------------------------+--------+---------------+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
 
 
 -----------------------------------------
@@ -755,271 +216,26 @@ No paths to report.
 No paths to report.
 
 
-+-------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary      ;
-+------------------------------+--------+---------------+
-; Clock                        ; Slack  ; End Point TNS ;
-+------------------------------+--------+---------------+
-; Clock                        ; -3.000 ; -287.643      ;
-; PC:comb_17|current_adress[2] ; 0.429  ; 0.000         ;
-+------------------------------+--------+---------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'Clock'                                                                                                                                             ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack   ; From Node                        ; To Node                                                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -35.568 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.113      ; 36.668     ;
-; -35.564 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.111      ; 36.662     ;
-; -35.535 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.111      ; 36.633     ;
-; -35.523 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.136      ; 36.646     ;
-; -35.519 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.111      ; 36.617     ;
-; -35.519 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.640     ;
-; -35.507 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.111      ; 36.605     ;
-; -35.490 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.611     ;
-; -35.474 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.595     ;
-; -35.456 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.136      ; 36.579     ;
-; -35.452 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.573     ;
-; -35.430 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.112      ; 36.529     ;
-; -35.424 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.111      ; 36.522     ;
-; -35.423 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.544     ;
-; -35.421 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.111      ; 36.519     ;
-; -35.407 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.528     ;
-; -35.395 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.112      ; 36.494     ;
-; -35.388 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.124      ; 36.499     ;
-; -35.371 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.136      ; 36.494     ;
-; -35.367 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.488     ;
-; -35.358 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.120      ; 36.465     ;
-; -35.350 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.135      ; 36.472     ;
-; -35.347 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.112      ; 36.446     ;
-; -35.344 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.112      ; 36.443     ;
-; -35.338 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.459     ;
-; -35.322 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.443     ;
-; -35.311 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.125      ; 36.423     ;
-; -35.283 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.135      ; 36.405     ;
-; -35.275 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.120      ; 36.382     ;
-; -35.272 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.120      ; 36.379     ;
-; -35.239 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.133      ; 36.359     ;
-; -35.225 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.121      ; 36.333     ;
-; -35.198 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.135      ; 36.320     ;
-; -35.142 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.121      ; 36.250     ;
-; -35.139 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.121      ; 36.247     ;
-; -35.124 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.230     ;
-; -35.106 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.134      ; 36.227     ;
-; -35.069 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.175     ;
-; -35.041 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.147     ;
-; -35.038 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.144     ;
-; -35.032 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.138     ;
-; -35.005 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.132      ; 36.124     ;
-; -34.986 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.092     ;
-; -34.983 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.089     ;
-; -34.950 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.132      ; 36.069     ;
-; -34.949 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.055     ;
-; -34.946 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.119      ; 36.052     ;
-; -34.913 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.132      ; 36.032     ;
-; -34.394 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.103      ; 35.484     ;
-; -34.349 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.126      ; 35.462     ;
-; -34.282 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.126      ; 35.395     ;
-; -34.240 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[3]     ; Clock        ; Clock       ; 1.000        ; 0.114      ; 35.341     ;
-; -34.235 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.135      ; 35.357     ;
-; -34.197 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.126      ; 35.310     ;
-; -34.177 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.135      ; 35.299     ;
-; -34.157 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[2]     ; Clock        ; Clock       ; 1.000        ; 0.114      ; 35.258     ;
-; -34.154 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[1]     ; Clock        ; Clock       ; 1.000        ; 0.114      ; 35.255     ;
-; -34.149 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.135      ; 35.271     ;
-; -34.121 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|mil[0]     ; Clock        ; Clock       ; 1.000        ; 0.127      ; 35.235     ;
-; -33.999 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.134     ;
-; -33.964 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.099     ;
-; -33.960 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.095     ;
-; -33.954 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.089     ;
-; -33.939 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.074     ;
-; -33.925 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.060     ;
-; -33.919 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.054     ;
-; -33.900 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.035     ;
-; -33.894 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.148      ; 35.029     ;
-; -33.735 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.862     ;
-; -33.677 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.804     ;
-; -33.669 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.796     ;
-; -33.669 ; Salva_saida:comb_24|out_data[29] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.796     ;
-; -33.649 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.776     ;
-; -33.611 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.738     ;
-; -33.611 ; Salva_saida:comb_24|out_data[30] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.738     ;
-; -33.583 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.710     ;
-; -33.583 ; Salva_saida:comb_24|out_data[31] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.140      ; 34.710     ;
-; -33.432 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]    ; Clock        ; Clock       ; 1.000        ; 0.104      ; 34.523     ;
-; -33.387 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[0]    ; Clock        ; Clock       ; 1.000        ; 0.127      ; 34.501     ;
-; -33.385 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.150      ; 34.522     ;
-; -33.346 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.150      ; 34.483     ;
-; -33.340 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.150      ; 34.477     ;
-; -33.320 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[3]    ; Clock        ; Clock       ; 1.000        ; 0.127      ; 34.434     ;
-; -33.239 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[0]    ; Clock        ; Clock       ; 1.000        ; 0.137      ; 34.363     ;
-; -33.235 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[2]    ; Clock        ; Clock       ; 1.000        ; 0.127      ; 34.349     ;
-; -32.782 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.145      ; 33.914     ;
-; -32.739 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[2]    ; Clock        ; Clock       ; 1.000        ; 0.142      ; 33.868     ;
-; -32.737 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.136      ; 33.860     ;
-; -32.693 ; Salva_saida:comb_24|out_data[24] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.138      ; 33.818     ;
-; -32.673 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[1]    ; Clock        ; Clock       ; 1.000        ; 0.142      ; 33.802     ;
-; -32.673 ; Salva_saida:comb_24|out_data[28] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|tens[3]    ; Clock        ; Clock       ; 1.000        ; 0.142      ; 33.802     ;
-; -32.648 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.144      ; 33.779     ;
-; -32.642 ; Salva_saida:comb_24|out_data[26] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.135      ; 33.764     ;
-; -32.598 ; Salva_saida:comb_24|out_data[22] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[0] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 33.733     ;
-; -32.588 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[2]    ; Clock        ; Clock       ; 1.000        ; 0.149      ; 33.724     ;
-; -32.549 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[3]    ; Clock        ; Clock       ; 1.000        ; 0.149      ; 33.685     ;
-; -32.543 ; Salva_saida:comb_24|out_data[27] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1]    ; Clock        ; Clock       ; 1.000        ; 0.149      ; 33.679     ;
-; -32.515 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[1] ; Clock        ; Clock       ; 1.000        ; 0.134      ; 33.636     ;
-; -32.490 ; Salva_saida:comb_24|out_data[23] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[3] ; Clock        ; Clock       ; 1.000        ; 0.134      ; 33.611     ;
-; -32.470 ; Salva_saida:comb_24|out_data[25] ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|dez_mil[1] ; Clock        ; Clock       ; 1.000        ; 0.125      ; 33.582     ;
-+---------+----------------------------------+--------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'PC:comb_17|current_adress[2]'                                                                                                        ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; Slack  ; From Node                          ; To Node                      ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; -1.352 ; Flip_Flop_Input:comb_20|toggle     ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; 0.500        ; -0.764     ; 0.586      ;
-; -1.278 ; Debounce_Switch:comb_19|switch_out ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; 0.500        ; -0.764     ; 0.512      ;
-+--------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'Clock'                                                                                                                                                                                       ;
-+--------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                                     ; To Node                                                   ; Launch Clock                 ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-; -0.162 ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~45                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 1.981      ; 2.028      ;
-; 0.000  ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~13                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 1.983      ; 2.192      ;
-; 0.180  ; Flip_Flop_Input:comb_20|toggle                                ; Flip_Flop_Input:comb_20|toggle                            ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.307      ;
-; 0.180  ; Debounce_Switch:comb_19|switch_out                            ; Debounce_Switch:comb_19|switch_out                        ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.307      ;
-; 0.185  ; reset_counter[1]                                              ; reset_counter[1]                                          ; Clock                        ; Clock       ; 0.000        ; 0.038      ; 0.307      ;
-; 0.185  ; reset_counter[0]                                              ; reset_counter[0]                                          ; Clock                        ; Clock       ; 0.000        ; 0.038      ; 0.307      ;
-; 0.185  ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~45                             ; PC:comb_17|current_adress[2] ; Clock       ; -0.500       ; 1.981      ; 1.875      ;
-; 0.188  ; Salva_saida:comb_24|out_data[0]                               ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[0] ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.316      ;
-; 0.192  ; reset_counter[0]                                              ; reset_counter[1]                                          ; Clock                        ; Clock       ; 0.000        ; 0.038      ; 0.314      ;
-; 0.204  ; reset_counter[1]                                              ; reset_counter[0]                                          ; Clock                        ; Clock       ; 0.000        ; 0.038      ; 0.326      ;
-; 0.270  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[37]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.398      ;
-; 0.272  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[41]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.400      ;
-; 0.272  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[40]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.400      ;
-; 0.273  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[36]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.401      ;
-; 0.274  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[38]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.402      ;
-; 0.275  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[35]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.403      ;
-; 0.276  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[0] ; Gerenciador_De_Saidas:comb_25|saida[39]                   ; Clock                        ; Clock       ; 0.000        ; 0.044      ; 0.404      ;
-; 0.288  ; reset_counter[1]                                              ; PC:comb_17|current_adress[5]                              ; Clock                        ; Clock       ; -0.500       ; 0.825      ; 0.717      ;
-; 0.291  ; reset_counter[1]                                              ; PC:comb_17|current_adress[3]                              ; Clock                        ; Clock       ; -0.500       ; 0.825      ; 0.720      ;
-; 0.291  ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[9]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.417      ;
-; 0.292  ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.418      ;
-; 0.292  ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.418      ;
-; 0.292  ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.418      ;
-; 0.293  ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.419      ;
-; 0.293  ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[1]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.419      ;
-; 0.293  ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.419      ;
-; 0.293  ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.419      ;
-; 0.294  ; Debounce_Switch:comb_19|counter[15]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.420      ;
-; 0.294  ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.420      ;
-; 0.294  ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.420      ;
-; 0.294  ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.420      ;
-; 0.295  ; Debounce_Switch:comb_19|counter[16]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.421      ;
-; 0.295  ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.421      ;
-; 0.296  ; reset_counter[1]                                              ; PC:comb_17|current_adress[4]                              ; Clock                        ; Clock       ; -0.500       ; 0.825      ; 0.725      ;
-; 0.297  ; Gerenciador_De_Saidas:comb_25|contador[3]                     ; Gerenciador_De_Saidas:comb_25|contador[3]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.424      ;
-; 0.297  ; Gerenciador_De_Saidas:comb_25|contador[13]                    ; Gerenciador_De_Saidas:comb_25|contador[13]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.424      ;
-; 0.297  ; Gerenciador_De_Saidas:comb_25|contador[5]                     ; Gerenciador_De_Saidas:comb_25|contador[5]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.424      ;
-; 0.298  ; reset_counter[1]                                              ; PC:comb_17|current_adress[6]                              ; Clock                        ; Clock       ; -0.500       ; 0.825      ; 0.727      ;
-; 0.298  ; Gerenciador_De_Saidas:comb_25|contador[11]                    ; Gerenciador_De_Saidas:comb_25|contador[11]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.425      ;
-; 0.298  ; Gerenciador_De_Saidas:comb_25|contador[7]                     ; Gerenciador_De_Saidas:comb_25|contador[7]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.425      ;
-; 0.298  ; Gerenciador_De_Saidas:comb_25|contador[1]                     ; Gerenciador_De_Saidas:comb_25|contador[1]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.425      ;
-; 0.298  ; Debounce_Switch:comb_19|counter[7]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.424      ;
-; 0.299  ; Gerenciador_De_Saidas:comb_25|contador[2]                     ; Gerenciador_De_Saidas:comb_25|contador[2]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.426      ;
-; 0.300  ; Gerenciador_De_Saidas:comb_25|contador[12]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.427      ;
-; 0.300  ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[10]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.427      ;
-; 0.300  ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.426      ;
-; 0.312  ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[0]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.438      ;
-; 0.341  ; Debounce_Switch:comb_19|button_sync0                          ; Debounce_Switch:comb_19|button_sync1                      ; Clock                        ; Clock       ; 0.000        ; 0.045      ; 0.470      ;
-; 0.347  ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~13                             ; PC:comb_17|current_adress[2] ; Clock       ; -0.500       ; 1.983      ; 2.039      ;
-; 0.355  ; Debounce_Switch:comb_19|button_sync1                          ; Debounce_Switch:comb_19|switch_out                        ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.482      ;
-; 0.440  ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.566      ;
-; 0.441  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[38]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.564      ;
-; 0.441  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[39]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.564      ;
-; 0.441  ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.567      ;
-; 0.441  ; Debounce_Switch:comb_19|counter[3]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.567      ;
-; 0.441  ; Debounce_Switch:comb_19|counter[5]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.567      ;
-; 0.442  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[41]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.565      ;
-; 0.442  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[36]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.565      ;
-; 0.442  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[35]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.565      ;
-; 0.442  ; Debounce_Switch:comb_19|counter[1]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.568      ;
-; 0.442  ; Debounce_Switch:comb_19|counter[11]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.568      ;
-; 0.443  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[37]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.566      ;
-; 0.443  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent_mil[1] ; Gerenciador_De_Saidas:comb_25|saida[40]                   ; Clock                        ; Clock       ; 0.000        ; 0.039      ; 0.566      ;
-; 0.443  ; Debounce_Switch:comb_19|counter[15]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.569      ;
-; 0.447  ; Gerenciador_De_Saidas:comb_25|contador[1]                     ; Gerenciador_De_Saidas:comb_25|contador[2]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.574      ;
-; 0.447  ; Gerenciador_De_Saidas:comb_25|contador[11]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.574      ;
-; 0.448  ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~63                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 1.978      ; 2.635      ;
-; 0.451  ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[9]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.577      ;
-; 0.451  ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.577      ;
-; 0.452  ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[3]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.578      ;
-; 0.452  ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[5]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.578      ;
-; 0.452  ; Debounce_Switch:comb_19|counter[7]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.037      ; 0.573      ;
-; 0.452  ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.578      ;
-; 0.453  ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[13]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.579      ;
-; 0.454  ; Debounce_Switch:comb_19|counter[8]                            ; Debounce_Switch:comb_19|counter[10]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.580      ;
-; 0.454  ; Debounce_Switch:comb_19|counter[14]                           ; Debounce_Switch:comb_19|counter[16]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.580      ;
-; 0.455  ; Debounce_Switch:comb_19|counter[2]                            ; Debounce_Switch:comb_19|counter[4]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.581      ;
-; 0.455  ; Debounce_Switch:comb_19|counter[4]                            ; Debounce_Switch:comb_19|counter[6]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.581      ;
-; 0.455  ; Debounce_Switch:comb_19|counter[10]                           ; Debounce_Switch:comb_19|counter[12]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.581      ;
-; 0.456  ; Debounce_Switch:comb_19|counter[12]                           ; Debounce_Switch:comb_19|counter[14]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.582      ;
-; 0.457  ; Gerenciador_De_Saidas:comb_25|contador[2]                     ; Gerenciador_De_Saidas:comb_25|contador[3]                 ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.584      ;
-; 0.458  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[20]                   ; Clock                        ; Clock       ; 0.000        ; -0.148     ; 0.394      ;
-; 0.458  ; Gerenciador_De_Saidas:comb_25|contador[12]                    ; Gerenciador_De_Saidas:comb_25|contador[13]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.585      ;
-; 0.458  ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[11]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.585      ;
-; 0.458  ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[7]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.584      ;
-; 0.459  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[17]                   ; Clock                        ; Clock       ; 0.000        ; -0.148     ; 0.395      ;
-; 0.459  ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[1]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.585      ;
-; 0.460  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[14]                   ; Clock                        ; Clock       ; 0.000        ; -0.148     ; 0.396      ;
-; 0.461  ; Gerenciador_De_Saidas:comb_25|contador[10]                    ; Gerenciador_De_Saidas:comb_25|contador[12]                ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.588      ;
-; 0.462  ; Debounce_Switch:comb_19|counter[0]                            ; Debounce_Switch:comb_19|counter[2]                        ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.588      ;
-; 0.464  ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~43                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 1.981      ; 2.654      ;
-; 0.464  ; PC:comb_17|current_adress[2]                                  ; registers:comb_23|register~11                             ; PC:comb_17|current_adress[2] ; Clock       ; 0.000        ; 1.981      ; 2.654      ;
-; 0.466  ; Debounce_Switch:comb_19|counter[6]                            ; Debounce_Switch:comb_19|counter[8]                        ; Clock                        ; Clock       ; 0.000        ; 0.037      ; 0.587      ;
-; 0.467  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[16]                   ; Clock                        ; Clock       ; 0.000        ; -0.148     ; 0.403      ;
-; 0.468  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[15]                   ; Clock                        ; Clock       ; 0.000        ; -0.148     ; 0.404      ;
-; 0.469  ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|cent[1]     ; Gerenciador_De_Saidas:comb_25|saida[19]                   ; Clock                        ; Clock       ; 0.000        ; -0.148     ; 0.405      ;
-; 0.487  ; Debounce_Switch:comb_19|switch_out                            ; Flip_Flop_Input:comb_20|toggle                            ; Clock                        ; Clock       ; 0.000        ; 0.043      ; 0.614      ;
-; 0.490  ; Salva_saida:comb_24|out_data[1]                               ; Gerenciador_De_Saidas:comb_25|Split_Digitos:split|ones[1] ; Clock                        ; Clock       ; 0.000        ; 0.276      ; 0.850      ;
-; 0.503  ; Debounce_Switch:comb_19|counter[9]                            ; Debounce_Switch:comb_19|counter[11]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.629      ;
-; 0.504  ; Debounce_Switch:comb_19|counter[13]                           ; Debounce_Switch:comb_19|counter[15]                       ; Clock                        ; Clock       ; 0.000        ; 0.042      ; 0.630      ;
-+--------+---------------------------------------------------------------+-----------------------------------------------------------+------------------------------+-------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'PC:comb_17|current_adress[2]'                                                                                                        ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; Slack ; From Node                          ; To Node                      ; Launch Clock ; Latch Clock                  ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
-; 1.555 ; Debounce_Switch:comb_19|switch_out ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; -0.500       ; -0.632     ; 0.443      ;
-; 1.615 ; Flip_Flop_Input:comb_20|toggle     ; Control_Unit:comb_21|ledtest ; Clock        ; PC:comb_17|current_adress[2] ; -0.500       ; -0.632     ; 0.503      ;
-+-------+------------------------------------+------------------------------+--------------+------------------------------+--------------+------------+------------+
+----------------------------------------------------
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
+----------------------------------------------------
+No paths to report.
 
 
 ----------------------------------------------
 ; Fast 1200mV 0C Model Metastability Summary ;
 ----------------------------------------------
-Design MTBF is not calculated because the design doesn't meet its timing requirements.
+No synchronizer chains to report.
 
 
-
-+-----------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                           ;
-+-------------------------------+-----------+--------+----------+---------+---------------------+
-; Clock                         ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack              ; -73.744   ; -0.162 ; N/A      ; N/A     ; -3.000              ;
-;  Clock                        ; -73.744   ; -0.162 ; N/A      ; N/A     ; -3.000              ;
-;  PC:comb_17|current_adress[2] ; -2.363    ; 1.555  ; N/A      ; N/A     ; 0.429               ;
-; Design-wide TNS               ; -3257.989 ; -0.162 ; 0.0      ; 0.0     ; -340.162            ;
-;  Clock                        ; -3255.626 ; -0.162 ; N/A      ; N/A     ; -340.162            ;
-;  PC:comb_17|current_adress[2] ; -2.363    ; 0.000  ; N/A      ; N/A     ; 0.000               ;
-+-------------------------------+-----------+--------+----------+---------+---------------------+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1096,25 +312,25 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; Clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; enter                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; in[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; in[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[15]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[14]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[13]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[12]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[11]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[10]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[9]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; in[2]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[3]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[4]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[5]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[6]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[7]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[8]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[9]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[10]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[11]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[12]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[13]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[14]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; in[15]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1328,28 +544,10 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                             ;
-+------------------------------+------------------------------+----------+----------+----------+--------------+
-; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths     ;
-+------------------------------+------------------------------+----------+----------+----------+--------------+
-; Clock                        ; Clock                        ; 4        ; 0        ; 61       ; > 2147483647 ;
-; PC:comb_17|current_adress[2] ; Clock                        ; 0        ; 0        ; 11820    ; 11820        ;
-; Clock                        ; PC:comb_17|current_adress[2] ; 0        ; 2        ; 0        ; 0            ;
-+------------------------------+------------------------------+----------+----------+----------+--------------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                              ;
-+------------------------------+------------------------------+----------+----------+----------+--------------+
-; From Clock                   ; To Clock                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths     ;
-+------------------------------+------------------------------+----------+----------+----------+--------------+
-; Clock                        ; Clock                        ; 4        ; 0        ; 61       ; > 2147483647 ;
-; PC:comb_17|current_adress[2] ; Clock                        ; 0        ; 0        ; 11820    ; 11820        ;
-; Clock                        ; PC:comb_17|current_adress[2] ; 0        ; 2        ; 0        ; 0            ;
-+------------------------------+------------------------------+----------+----------+----------+--------------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
 
 
 ---------------
@@ -1371,207 +569,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 18    ; 18   ;
-; Unconstrained Input Port Paths  ; 96    ; 96   ;
-; Unconstrained Output Ports      ; 59    ; 59   ;
-; Unconstrained Output Port Paths ; 71    ; 71   ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
 +---------------------------------+-------+------+
-
-
-+----------------------------------------------------------------------------------+
-; Clock Status Summary                                                             ;
-+------------------------------+------------------------------+------+-------------+
-; Target                       ; Clock                        ; Type ; Status      ;
-+------------------------------+------------------------------+------+-------------+
-; Clock                        ; Clock                        ; Base ; Constrained ;
-; PC:comb_17|current_adress[2] ; PC:comb_17|current_adress[2] ; Base ; Constrained ;
-+------------------------------+------------------------------+------+-------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; enter      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[8]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[9]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[10]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[11]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[12]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[13]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[14]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[15]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; LED_Input   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED_Input2  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[16] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[17] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[18] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[19] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[20] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[21] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[22] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[23] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[24] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[25] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[26] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[27] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[28] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[29] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[30] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[31] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[32] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[33] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[34] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[35] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[36] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[37] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[38] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[39] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[40] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[41] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[42] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[43] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[44] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[45] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[46] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[47] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[48] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[49] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[50] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[51] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[52] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[53] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[54] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[55] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledtest     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; enter      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[2]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[3]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[4]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[8]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[9]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[10]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[11]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[12]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[13]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[14]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; in[15]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; LED_Input   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LED_Input2  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[8]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[9]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[10] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[11] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[12] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[13] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[14] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[15] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[16] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[17] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[18] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[19] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[20] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[21] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[22] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[23] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[24] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[25] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[26] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[27] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[28] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[29] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[30] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[31] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[32] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[33] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[34] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[35] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[36] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[37] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[38] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[39] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[40] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[41] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[42] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[43] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[44] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[45] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[46] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[47] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[48] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[49] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[50] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[51] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[52] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[53] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[54] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; display[55] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; ledtest     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -1580,98 +582,57 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jul 17 01:42:56 2025
+    Info: Processing started: Thu Jul 17 22:15:30 2025
 Info: Command: quartus_sta MIPS -c MIPS
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'MIPS.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name Clock Clock
-    Info (332105): create_clock -period 1.000 -name PC:comb_17|current_adress[2] PC:comb_17|current_adress[2]
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
 Info: Analyzing Slow 1200mV 85C Model
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -73.744
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):   -73.744           -3255.626 Clock 
-    Info (332119):    -2.363              -2.363 PC:comb_17|current_adress[2] 
-Info (332146): Worst-case hold slack is 0.405
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.405               0.000 Clock 
-    Info (332119):     1.784               0.000 PC:comb_17|current_adress[2] 
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -340.162 Clock 
-    Info (332119):     0.452               0.000 PC:comb_17|current_adress[2] 
-Info (332114): Report Metastability: Found 2 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332140): No Minimum Pulse Width paths to report
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -66.560
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):   -66.560           -2956.836 Clock 
-    Info (332119):    -2.069              -2.069 PC:comb_17|current_adress[2] 
-Info (332146): Worst-case hold slack is 0.356
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.356               0.000 Clock 
-    Info (332119):     1.645               0.000 PC:comb_17|current_adress[2] 
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -339.986 Clock 
-    Info (332119):     0.470               0.000 PC:comb_17|current_adress[2] 
-Info (332114): Report Metastability: Found 2 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332140): No Minimum Pulse Width paths to report
 Info: Analyzing Fast 1200mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -35.568
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):   -35.568           -1492.458 Clock 
-    Info (332119):    -1.352              -1.352 PC:comb_17|current_adress[2] 
-Info (332146): Worst-case hold slack is -0.162
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.162              -0.162 Clock 
-    Info (332119):     1.555               0.000 PC:comb_17|current_adress[2] 
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -3.000
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -287.643 Clock 
-    Info (332119):     0.429               0.000 PC:comb_17|current_adress[2] 
-Info (332114): Report Metastability: Found 2 synchronizer chains.
-    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
-Info (332102): Design is not fully constrained for setup requirements
-Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4990 megabytes
-    Info: Processing ended: Thu Jul 17 01:43:04 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+Info (332140): No Minimum Pulse Width paths to report
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4885 megabytes
+    Info: Processing ended: Thu Jul 17 22:15:32 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
