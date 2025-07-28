@@ -17,6 +17,8 @@ module ALU_Control(ALUop,Function,ALUctr);
 						6'b100111: ALUctr <= 4'b0110; //NOR
 						6'b100110: ALUctr <= 4'b0111; //XOR
 						6'b010000: ALUctr <= 4'b1100; //GT
+						6'b010001: ALUctr <= 4'b1101; //EQ
+						6'b010010: ALUctr <= 4'b1110; //LET
 						default: ALUctr <= 4'b1111;
 					endcase
 				end

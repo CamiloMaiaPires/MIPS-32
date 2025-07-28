@@ -1,7 +1,7 @@
 // Instruction memory
 
 module ROM
-#(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=5)
+#(parameter DATA_WIDTH=32, parameter ADDR_WIDTH=6)
 (
 	input [(ADDR_WIDTH-1):0] addr,
 	input clk, 

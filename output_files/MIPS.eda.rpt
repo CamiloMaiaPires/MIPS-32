@@ -1,5 +1,5 @@
 EDA Netlist Writer report for MIPS
-Thu Jul 17 00:55:49 2025
+Wed Jul 23 12:38:20 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Jul 17 00:55:49 2025 ;
+; EDA Netlist Writer Status ; Successful - Wed Jul 23 12:38:20 2025 ;
 ; Revision Name             ; MIPS                                  ;
 ; Top-level Entity Name     ; MIPS                                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Jul 17 00:55:49 2025
+    Info: Processing started: Wed Jul 23 12:38:18 2025
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/Camilo/Documents/GitHub/MIPS-32/simulation/qsim/ MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file MIPS.vo in folder "C:/Users/Camilo/Documents/GitHub/MIPS-32/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4652 megabytes
-    Info: Processing ended: Thu Jul 17 00:55:50 2025
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4692 megabytes
+    Info: Processing ended: Wed Jul 23 12:38:21 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

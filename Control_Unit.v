@@ -23,8 +23,8 @@ ledtest
 	input saida_ff;
 	input enter;
 	input [5:0] op_code;
-	output reg jump,Branch,MemRead,MemWrite,ALUSrc,RegWrite, halt, out_flag, LED_Input_Ativa,LED_Input_Ativa2, entrada_ff, Ativa_PC;
-	output reg [1:0] RegDst,MemtoReg;
+	output reg Branch,MemRead,MemWrite,ALUSrc,RegWrite, halt, out_flag, LED_Input_Ativa,LED_Input_Ativa2, entrada_ff, Ativa_PC;
+	output reg [1:0] RegDst,MemtoReg, jump;
 	output reg [2:0] ALUop;
 	
 	initial begin
@@ -39,7 +39,7 @@ ledtest
 			6'b000000:
 			begin 
 				RegDst <= 2'b01; 
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -59,7 +59,7 @@ ledtest
 			6'b010000:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -79,7 +79,7 @@ ledtest
 			6'b010001:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -99,7 +99,7 @@ ledtest
 			6'b010010:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -120,7 +120,7 @@ ledtest
 			6'b001000:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 1;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -140,7 +140,7 @@ ledtest
 			6'b001001:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 1;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -160,7 +160,7 @@ ledtest
 			6'b001010:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 1;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -180,7 +180,7 @@ ledtest
 			6'b001011:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 1;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -200,7 +200,7 @@ ledtest
 			6'b001100:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 1;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -221,7 +221,7 @@ ledtest
 			6'b100011:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 1;
 				MemtoReg <= 2'b01;
@@ -241,7 +241,7 @@ ledtest
 			6'b101011:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -261,7 +261,7 @@ ledtest
 			6'b000001:
 			begin
 				RegDst <= 2'b00;
-				jump <= 1;
+				jump <= 2'b01;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -278,17 +278,17 @@ ledtest
 				entrada_ff <= 1'b0;
 			end
 			//JAL
-			6'b000001:
+			6'b000010:
 			begin
 				RegDst <= 2'b10;
-				jump <= 1;
+				jump <= 2'b01;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b10;
 				ALUop <= 3'b000;
 				MemWrite <= 0;
 				ALUSrc <= 0;
-				RegWrite <= 0;
+				RegWrite <= 1;
 				halt <= 0;
 				Ativa_PC <= 1;
 				out_flag <= 0;
@@ -298,10 +298,10 @@ ledtest
 				entrada_ff <= 1'b0;
 			end
 			//JR
-			6'b000001:
+			6'b000011:
 			begin
-				RegDst <= 2'b10;
-				jump <= 1;
+				RegDst <= 2'b00;
+				jump <= 2'b10;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -339,7 +339,7 @@ ledtest
 					ledtest <= 1'b0;
 				end
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b11;
@@ -355,7 +355,7 @@ ledtest
 			6'b100001:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -375,7 +375,7 @@ ledtest
 			6'b111111: 	
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;
@@ -394,7 +394,7 @@ ledtest
 			default:
 			begin
 				RegDst <= 2'b00;
-				jump <= 0;
+				jump <= 2'b00;
 				Branch <= 0;
 				MemRead <= 0;
 				MemtoReg <= 2'b00;

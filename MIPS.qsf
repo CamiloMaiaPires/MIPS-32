@@ -89,8 +89,6 @@ set_location_assignment PIN_AF21 -to in[14]
 set_location_assignment PIN_AF22 -to in[15]
 set_location_assignment PIN_AG25 -to enter
 set_location_assignment PIN_AD22 -to reset
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name VERILOG_FILE Salva_saida.v
 set_global_assignment -name VERILOG_FILE Gerenciador_De_Saidas.v
 set_global_assignment -name VERILOG_FILE display_7_seg.v
@@ -161,4 +159,13 @@ set_location_assignment PIN_G15 -to LED_Input2
 set_global_assignment -name VERILOG_FILE Debounce_Switch.v
 set_location_assignment PIN_AA25 -to display[20]
 set_location_assignment PIN_E21 -to ledtest
+set_location_assignment PIN_AB22 -to bt0
+set_location_assignment PIN_E22 -to led_btn
+set_global_assignment -name VERILOG_FILE Divisor_Freq.v
+set_global_assignment -name VERILOG_FILE MUX_32b_3in.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name VERILOG_FILE output_files/MUX_32b_3in.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name OPTIMIZE_TIMING OFF
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

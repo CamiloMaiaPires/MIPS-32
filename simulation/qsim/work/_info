@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Arquivos de PC/Arquivos de PC/UNIFESP/5sem/LabAOC/MIPS/simulation/qsim
 vhard_block
-Z1 !s110 1752724550
+Z1 !s110 1753285104
 !i10b 1
-!s100 _FWVRlFdmDeOf3>?]6nXi1
+!s100 @Zih383@Z2^L^OZYzB<MS3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I;cHfPNFRhWJ:laBkenb0O0
+IiVa]W:?>`7kU<ClBj6L=I3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 dC:/Users/Camilo/Documents/GitHub/MIPS-32/simulation/qsim
-Z5 w1752724549
+Z5 w1753285100
 Z6 8MIPS.vo
 Z7 FMIPS.vo
-!i122 194
-L0 7682 34
+!i122 296
+L0 220651 34
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1752724550.000000
+Z9 !s108 1753285102.000000
 Z10 !s107 MIPS.vo|
 Z11 !s90 -work|work|MIPS.vo|
 !i113 1
@@ -35,16 +35,16 @@ Z13 tCvgOpt 0
 vMIPS
 R1
 !i10b 1
-!s100 W4HzlZ][5Q<X2>l2<<5:L1
+!s100 ><EWFg4L6^ElBZ1P`<Z122
 R2
-IBbc:RKEiDYf=hR_Vj?IgL2
+IhmZR<Zd=1L;ok_QfDFbQ82
 R3
 R4
 R5
 R6
 R7
-!i122 194
-L0 32 7649
+!i122 296
+L0 32 220618
 R8
 r1
 !s85 0
@@ -59,23 +59,23 @@ n@m@i@p@s
 vMIPS_vlg_vec_tst
 R1
 !i10b 1
-!s100 ANEl??K^8JQK4RUQ3GPI_0
+!s100 A5jXaVgH4LAlU]cdAmRLm0
 R2
-I;n=llcf[aobePoKWSR<k61
+IjZLS6adZZec@7Sg<Y8iUU0
 R3
 R4
-R5
-8Waveform3.vwf.vt
-FWaveform3.vwf.vt
-!i122 195
-L0 30 150
+w1753285098
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+!i122 297
+L0 30 168
 R8
 r1
 !s85 0
 31
-R9
-!s107 Waveform3.vwf.vt|
-!s90 -work|work|Waveform3.vwf.vt|
+!s108 1753285104.000000
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
 !i113 1
 R12
 R13
