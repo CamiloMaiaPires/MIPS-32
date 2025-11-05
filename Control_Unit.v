@@ -17,6 +17,7 @@ entrada_ff,
 LED_Input_Ativa,
 LED_Input_Ativa2,
 Ativa_PC,
+setLCD,
 ledtest
 );
 	output reg ledtest;
@@ -26,6 +27,8 @@ ledtest
 	output reg Branch,MemRead,MemWrite,ALUSrc,RegWrite, halt, out_flag, LED_Input_Ativa,LED_Input_Ativa2, entrada_ff, Ativa_PC;
 	output reg [1:0] RegDst,MemtoReg, jump;
 	output reg [2:0] ALUop;
+	output reg setLCD;
+
 	
 	initial begin
 		entrada_ff <= 1;
@@ -54,6 +57,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//ADDI
 			6'b010000:
@@ -74,6 +78,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//SUBI
 			6'b010001:
@@ -94,6 +99,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//ANDI
 			6'b010010:
@@ -114,6 +120,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			
 			//BEQ
@@ -135,6 +142,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//BNE
 			6'b001001:
@@ -155,6 +163,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//BGT
 			6'b001010:
@@ -175,6 +184,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//BGE
 			6'b001011:
@@ -195,6 +205,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//BLE
 			6'b001100:
@@ -215,6 +226,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			
 			//LW
@@ -236,6 +248,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//SW
 			6'b101011:
@@ -256,6 +269,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//J
 			6'b000001:
@@ -276,6 +290,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//JAL
 			6'b000010:
@@ -296,6 +311,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//JR
 			6'b000011:
@@ -317,11 +333,11 @@ ledtest
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//IN
 			6'b100000:
 			begin
-				
 				if (enter == saida_ff)
 				begin
 					ledtest <= 1'b1;
@@ -349,6 +365,7 @@ ledtest
 				RegWrite <= 1;
 				halt <= 0;
 				out_flag <= 0;
+				setLCD <= 0;
 				
 			end
 			//OUT
@@ -370,6 +387,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 			//HALT
 			6'b111111: 	
@@ -390,6 +408,28 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
+			end
+			//SETLCD
+			6'b110000: 	
+			begin
+				RegDst <= 2'b00;
+				jump <= 2'b00;
+				Branch <= 0;
+				MemRead <= 0;
+				MemtoReg <= 2'b00;
+				ALUop <= 3'b000;
+				MemWrite <= 0;
+				ALUSrc <= 0;
+				RegWrite <= 0;
+				halt <= 0;
+				Ativa_PC <= 1;
+				out_flag <= 0;
+				entrada_ff <= saida_ff;
+				LED_Input_Ativa <= 0;
+				LED_Input_Ativa2 <= 0;
+				entrada_ff <= 1'b0;
+				setLCD <= 1;
 			end
 			default:
 			begin
@@ -409,6 +449,7 @@ ledtest
 				LED_Input_Ativa <= 0;
 				LED_Input_Ativa2 <= 0;
 				entrada_ff <= 1'b0;
+				setLCD <= 0;
 			end
 		endcase
 	end

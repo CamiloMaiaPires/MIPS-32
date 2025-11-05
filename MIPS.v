@@ -2,13 +2,16 @@
 	module MIPS(
 		Clock, enter, in, reset,
 		display, LED_Input, LED_Input2,
-		instruction, ALU_Result, halt, imprime_saida, Ativa_PC, saida_ff, entrada_ff,
-		Read_Data2, Read_Data, Write_Data, Read_Data1, Write_register, RegDst,MemWrite, MemRead,
-		CLK, CLK_read,next_adress_PC,
+//		instruction, ALU_Result, halt, imprime_saida, Ativa_PC, saida_ff, entrada_ff,
+//		Read_Data2, Read_Data, Write_Data, Read_Data1, Write_register, RegDst,MemWrite, MemRead,
+//		CLK, CLK_read,next_adress_PC,
 		ledtest, 
 //		bt0, led_btn
-		
+		LCD_DATA, LCD_ON,	LCD_BLON, LCD_RW,	LCD_EN, LCD_RS, Read_Data1, instruction
 	);
+	
+		// === INOUT ===
+		inout [7:0] LCD_DATA;
 
 		// === INPUTS ===
 		input Clock, enter, reset;
@@ -24,21 +27,25 @@
 		output ledtest;
 //		output reg led_btn;
 
-		
+
 		output [31:0] instruction; // instrução atual
-		output [31:0] ALU_Result;
-		output Ativa_PC, saida_ff, entrada_ff;
-		output imprime_saida;
-		output halt;
-		output Read_Data2;
-		output Read_Data;
-		output Write_Data;
+//		output [31:0] ALU_Result;
+//		output Ativa_PC, saida_ff, entrada_ff;
+//		output imprime_saida;
+//		output halt;
+//		output Read_Data2;
+//		output Read_Data;
+//		output Write_Data;
 		output Read_Data1;
-		output Write_register;
-		output RegDst;
-		output MemWrite, MemRead;
-		output CLK, CLK_read;
-		output next_adress_PC;
+//		output Write_register;
+//		output RegDst;
+//		output MemWrite, MemRead;
+
+//		output CLK, CLK_read;
+//		output next_adress_PC;
+		
+		//LCD
+		output LCD_ON,	LCD_BLON, LCD_RW,	LCD_EN, LCD_RS;
 
 		// === WIRES ===
 		wire [31:0] instruction; // instrução atual
@@ -62,7 +69,7 @@
 		wire ALUSrc;
 		wire [31:0] ALU_B;
 		wire [2:0] ALUOp;
-		wire [3:0] ALU_ctr;
+		wire [4:0] ALU_ctr;
 		wire zero;
 		wire MemWrite;
 		wire [31:0] Read_Data;
@@ -76,6 +83,9 @@
 		wire out_and;
 		wire [31:0] out_next_mux;
 		wire [1:0] Jump;
+		
+		//LCD
+		wire setLCD;
 
 
 	//========= DEBUG - Clock por botão ========
@@ -145,7 +155,7 @@
 	Debounce_Switch(CLK, enter, enter_debounce);
 	Flip_Flop_Input(CLK, reset_combined, enter_debounce, entrada_ff, saida_ff);
 
-	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, halt, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, ledtest);
+	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, halt, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, ledtest);
 
 	MUX_5b_3in mux_5b3i(.V1(instruction[20:16]), .V2(instruction[15:11]), .V3(5'b11111), .option(RegDst), .out(Write_register));
 
@@ -182,5 +192,21 @@
 	MUX_32(next_adress_addpc, Add_Out, out_and, out_next_mux);
 
 	MUX_32b_3in(out_next_mux, Shift_26_Out, Read_Data1, Jump, next_adress_PC);
+	
+	Display_LCD(Clock,
+		  CLK,
+		  setLCD,
+		  Read_Data1,
+		  LCD_DATA,
+		  LCD_ON,
+		  LCD_BLON,
+		  LCD_RW,
+		  LCD_EN,
+		  LCD_RS);
+			  
+//	HD(Clock,
+//      endereco_HD,
+//      dado_HD
+//	);
 
 endmodule
