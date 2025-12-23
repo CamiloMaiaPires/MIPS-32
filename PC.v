@@ -1,6 +1,6 @@
-module PC(CLK, next_adress, current_adress, Ativa_PC, halt, reset);
+module PC(CLK, next_adress, current_adress, Ativa_PC, reset);
 
-	input CLK, halt, reset, Ativa_PC;
+	input CLK, reset, Ativa_PC;
 	input [31:0] next_adress;
 	output reg [31:0] current_adress;
 	

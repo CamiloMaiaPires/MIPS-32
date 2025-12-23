@@ -1,0 +1,45 @@
+module Temporizador (
+    input Clock,            
+    input Reset,            
+    input Desativa_Quantum,    
+    input Quantum_flag,     
+	 input [1:0] Entrada,
+	 input Halt,
+    output reg quantum_end, 
+    output reg teste        
+);
+
+    parameter LIMITE_QUANTUM = 16; 
+
+    reg [7:0] contador;  
+
+    
+    initial begin
+        contador <= 0;
+        quantum_end <= 0;
+        teste <= 0;
+    end
+
+    always @(posedge Clock) begin
+        if (Reset || Halt) begin
+            
+            contador <= 0;
+            quantum_end <= 0;
+            teste <= 0;
+        end else 
+        if (Quantum_flag == 1 && Entrada != 2'b01 /*&& teste == 1*/) begin
+            if (contador < LIMITE_QUANTUM - 1) begin
+                
+                contador <= contador + 1;
+                quantum_end <= 0; 
+                teste <= 1;
+            end else begin
+                
+                contador <= 0;     
+                quantum_end <= 1;
+                teste <= 0;        
+            end
+        end 
+    end
+
+endmodule

@@ -4,7 +4,8 @@ module Display_LCD(
 	 input [31:0] Read_Data1,
 
     output [7:0] LCD_DATA,
-    output LCD_ON, LCD_BLON, LCD_RW, LCD_EN, LCD_RS    
+    output LCD_ON, LCD_BLON, LCD_RW, LCD_EN, LCD_RS,
+	 input reset
 );
 
 	wire DLY_RST;
@@ -17,7 +18,11 @@ module Display_LCD(
 	begin
 		if(setLCD)
 		begin 
-			Msg <= Read_Data1;	
+			if(reset)begin
+				Msg <= 32'b00000000000000000000000000001011;
+			end else begin
+				Msg <= Read_Data1;	
+			end
 		end
 	end
 	

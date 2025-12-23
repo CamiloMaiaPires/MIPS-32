@@ -1,7 +1,7 @@
 Quartus Prime Archive log --	C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.qarlog
 
 Archive:	C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.qar
-Date:		Wed Jul 23 14:14:59 2025
+Date:		Thu Dec 18 19:24:51 2025
 Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
@@ -11,10 +11,15 @@ C:/Users/Camilo/Documents/GitHub/MIPS-32/ALU_Control.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Add.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Control_Unit.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Debounce_Switch.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/Display_LCD.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Divisor_Freq.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Flip_Flop_Input.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Gerenciador_De_Saidas.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/HD.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/IN.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/Instructions.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/LCD.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/LCD_Controller.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.qpf
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.qsf
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.v
@@ -22,36 +27,29 @@ C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS_assignment_defaults.qdf
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_32.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_32b_3in.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_32b_4in.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_32b_5in.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_5.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_5b_2in.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_5b_3in.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_5b_4in.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/MUX_5b_5in.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/OUT.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/PC.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/RAM.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/ROM.v
+C:/Users/Camilo/Documents/GitHub/MIPS-32/Reset_Delay.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Salva_saida.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Shift_Left2_26.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Shift_Left2_32.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/Split_Digitos.v
-C:/Users/Camilo/Documents/GitHub/MIPS-32/Waveform4.vwf
+C:/Users/Camilo/Documents/GitHub/MIPS-32/Waveform1.vwf
 C:/Users/Camilo/Documents/GitHub/MIPS-32/display_7_seg.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/instructions.txt
 C:/Users/Camilo/Documents/GitHub/MIPS-32/output_files/MUX_32b_3in.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/registers.v
 C:/Users/Camilo/Documents/GitHub/MIPS-32/sign_extend.v
-	======= Total: 34 files to archive =======
+C:/Users/Camilo/Documents/GitHub/MIPS-32/timer.v
+	======= Total: 44 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
-
-
-******* Archived project restoration attempt on Sun Jul 27 20:11:51 2025
-Source archive file:	C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.qar
-Archive was extracted into	C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS_restored/
-		 - successfully.
-
-
-******* Archived project restoration attempt on Sun Jul 27 20:12:56 2025
-Source archive file:	C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS.qar
-Archive was extracted into	C:/Users/Camilo/Documents/GitHub/MIPS-32/MIPS_restored/
-		 - successfully.

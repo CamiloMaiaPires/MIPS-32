@@ -20,6 +20,7 @@ module ALU_Control(ALUop,Function,ALUctr);
 						6'b010001: ALUctr <= 5'b01101; //EQ
 						6'b010010: ALUctr <= 5'b01110; //LET
 						6'b010011: ALUctr <= 5'b01111; //NEQ
+						6'b010100: ALUctr <= 5'b10000; //LT
 						default: ALUctr <= 5'b11111;
 					endcase
 				end

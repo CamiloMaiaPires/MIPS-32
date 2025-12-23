@@ -24,6 +24,7 @@ module ALU(in_A, in_B, ALU_Control, zero, ALU_Result);
 			5'b01101: begin zero <= 0; ALU_Result <= in_A == in_B; end //eq
 			5'b01110: begin zero <= 0; ALU_Result <= in_A <= in_B; end //let
 			5'b01111: begin zero <= 0; ALU_Result <= in_A != in_B; end //neq
+			5'b10000: begin zero <= 0; ALU_Result <= in_A < in_B; end //lt
 			
 			default: begin zero <= 0; ALU_Result <= 0; end
 		endcase

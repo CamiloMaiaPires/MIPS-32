@@ -81,7 +81,7 @@ end
 
 always
 begin
-    if(Msg < 10) begin
+    if(Msg < 11) begin
 			  case(LUT_INDEX)
 					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
 					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
@@ -122,310 +122,12 @@ begin
 					LCD_LINE2+13: LUT_DATA <= 9'h120; // ' '
 					LCD_LINE2+14: LUT_DATA <= 9'h120; // ' '
 					LCD_LINE2+15: LUT_DATA <= 9'h120; // ' '
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
 
 					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
-
-					default:        LUT_DATA    <=    9'dx ;
-			  endcase
-	end else if(Msg == 10) begin
-			  case(LUT_INDEX)
-					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
-					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
-					LCD_INTIAL+2:    LUT_DATA    <=    9'h001;
-					LCD_INTIAL+3:    LUT_DATA    <=    9'h006;
-					LCD_INTIAL+4:    LUT_DATA    <=    9'h080;
-					
-					LCD_LINE1+0: LUT_DATA <= 9'h145;  // 'E'
-					LCD_LINE1+1: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE1+2: LUT_DATA <= 9'h163;  // 'c'
-					LCD_LINE1+3: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE1+4: LUT_DATA <= 9'h16C;  // 'l'
-					LCD_LINE1+5: LUT_DATA <= 9'h168;  // 'h'
-					LCD_LINE1+6: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE1+7: LUT_DATA <= 9'h13A;  // ':'
-					LCD_LINE1+8: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+9: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+12: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+15: LUT_DATA <= 9'h120; // ' '
-
-					LCD_LINE2+0: LUT_DATA <= 9'h130;  // '0'
-					LCD_LINE2+1: LUT_DATA <= 9'h145;  // 'E'
-					LCD_LINE2+2: LUT_DATA <= 9'h178;  // 'x'
-					LCD_LINE2+3: LUT_DATA <= 9'h169;  // 'i'
-					LCD_LINE2+4: LUT_DATA <= 9'h174;  // 't'
-					LCD_LINE2+5: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+6: LUT_DATA <= 9'h131;  // '1'
-					LCD_LINE2+7: LUT_DATA <= 9'h145;  // 'E'
-					LCD_LINE2+8: LUT_DATA <= 9'h178;  // 'x'
-					LCD_LINE2+9: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE2+10: LUT_DATA <= 9'h163; // 'c'
-					LCD_LINE2+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+12: LUT_DATA <= 9'h132; // '2'
-					LCD_LINE2+13: LUT_DATA <= 9'h141; // 'A'
-					LCD_LINE2+14: LUT_DATA <= 9'h16C; // 'l'
-					LCD_LINE2+15: LUT_DATA <= 9'h174; // 't'					
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
-
-					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
 
 					default:        LUT_DATA    <=    9'dx ;
 			  endcase
 	end else if(Msg == 11) begin
-			  case(LUT_INDEX)
-					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
-					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
-					LCD_INTIAL+2:    LUT_DATA    <=    9'h001;
-					LCD_INTIAL+3:    LUT_DATA    <=    9'h006;
-					LCD_INTIAL+4:    LUT_DATA    <=    9'h080;
-					
-					LCD_LINE1+0: LUT_DATA <= 9'h151;  // 'Q'
-					LCD_LINE1+1: LUT_DATA <= 9'h175;  // 'u'
-					LCD_LINE1+2: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE1+3: LUT_DATA <= 9'h16E;  // 'n'
-					LCD_LINE1+4: LUT_DATA <= 9'h174;  // 't'
-					LCD_LINE1+5: LUT_DATA <= 9'h169;  // 'i'
-					LCD_LINE1+6: LUT_DATA <= 9'h164;  // 'd'
-					LCD_LINE1+7: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE1+8: LUT_DATA <= 9'h164;  // 'd'
-					LCD_LINE1+9: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE1+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+11: LUT_DATA <= 9'h164; // 'd'
-					LCD_LINE1+12: LUT_DATA <= 9'h165; // 'e'
-					LCD_LINE1+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+15: LUT_DATA <= 9'h120; // ' '
-
-					LCD_LINE2+0: LUT_DATA <= 9'h170;  // 'p'
-					LCD_LINE2+1: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE2+2: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE2+3: LUT_DATA <= 9'h163;  // 'c'
-					LCD_LINE2+4: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE2+5: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE2+6: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE2+7: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE2+8: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE2+9: LUT_DATA <= 9'h13A;  // ':'
-					LCD_LINE2+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+12: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+15: LUT_DATA <= 9'h120; // ' '
-					
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
-
-					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
-
-					default:        LUT_DATA    <=    9'dx ;
-			  endcase
-	end else if(Msg == 12) begin
-			  case(LUT_INDEX)
-					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
-					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
-					LCD_INTIAL+2:    LUT_DATA    <=    9'h001;
-					LCD_INTIAL+3:    LUT_DATA    <=    9'h006;
-					LCD_INTIAL+4:    LUT_DATA    <=    9'h080;
-					
-					LCD_LINE1+0: LUT_DATA <= 9'h151;  // 'Q'
-					LCD_LINE1+1: LUT_DATA <= 9'h175;  // 'u'
-					LCD_LINE1+2: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE1+3: LUT_DATA <= 9'h16C;  // 'l'
-					LCD_LINE1+4: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+5: LUT_DATA <= 9'h170;  // 'p'
-					LCD_LINE1+6: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE1+7: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE1+8: LUT_DATA <= 9'h163;  // 'c'
-					LCD_LINE1+9: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+10: LUT_DATA <= 9'h164; // 'd'
-					LCD_LINE1+11: LUT_DATA <= 9'h165; // 'e'
-					LCD_LINE1+12: LUT_DATA <= 9'h173; // 's'
-					LCD_LINE1+13: LUT_DATA <= 9'h165; // 'e'
-					LCD_LINE1+14: LUT_DATA <= 9'h16A; // 'j'
-					LCD_LINE1+15: LUT_DATA <= 9'h161; // 'a'
-
-					LCD_LINE2+0: LUT_DATA <= 9'h174;  // 't'
-					LCD_LINE2+1: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE2+2: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE2+3: LUT_DATA <= 9'h163;  // 'c'
-					LCD_LINE2+4: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE2+5: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE2+6: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+7: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE2+8: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+9: LUT_DATA <= 9'h169;  // 'i'
-					LCD_LINE2+10: LUT_DATA <= 9'h16E; // 'n'
-					LCD_LINE2+11: LUT_DATA <= 9'h164; // 'd'
-					LCD_LINE2+12: LUT_DATA <= 9'h169; // 'i'
-					LCD_LINE2+13: LUT_DATA <= 9'h163; // 'c'
-					LCD_LINE2+14: LUT_DATA <= 9'h165; // 'e'
-					LCD_LINE2+15: LUT_DATA <= 9'h13F; // '?'
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
-
-					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
-
-					default:        LUT_DATA    <=    9'dx ;
-			  endcase
-	end else if(Msg == 13) begin
-			  case(LUT_INDEX)
-					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
-					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
-					LCD_INTIAL+2:    LUT_DATA    <=    9'h001;
-					LCD_INTIAL+3:    LUT_DATA    <=    9'h006;
-					LCD_INTIAL+4:    LUT_DATA    <=    9'h080;
-					
-					LCD_LINE1+0: LUT_DATA <= 9'h150;  // 'P'
-					LCD_LINE1+1: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE1+2: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE1+3: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+4: LUT_DATA <= 9'h171;  // 'q'
-					LCD_LINE1+5: LUT_DATA <= 9'h175;  // 'u'
-					LCD_LINE1+6: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE1+7: LUT_DATA <= 9'h16C;  // 'l'
-					LCD_LINE1+8: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+9: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+12: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+15: LUT_DATA <= 9'h120; // ' '
-
-					LCD_LINE2+0: LUT_DATA <= 9'h170;  // 'p'
-					LCD_LINE2+1: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE2+2: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE2+3: LUT_DATA <= 9'h163;  // 'c'
-					LCD_LINE2+4: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE2+5: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE2+6: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE2+7: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE2+8: LUT_DATA <= 9'h13F;  // '?'
-					LCD_LINE2+9: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+12: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+15: LUT_DATA <= 9'h120; // ' '
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
-
-					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
-
-					default:        LUT_DATA    <=    9'dx ;
-			  endcase
-	end else if(Msg == 14) begin
-			  case(LUT_INDEX)
-					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
-					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
-					LCD_INTIAL+2:    LUT_DATA    <=    9'h001;
-					LCD_INTIAL+3:    LUT_DATA    <=    9'h006;
-					LCD_INTIAL+4:    LUT_DATA    <=    9'h080;
-					
-					LCD_LINE1+0: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+1: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+2: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+3: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+4: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+5: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+6: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+7: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+8: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+9: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+12: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+15: LUT_DATA <= 9'h120; // ' '
-
-					LCD_LINE2+0: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+1: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+2: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+3: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+4: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+5: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+6: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+7: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+8: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+9: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+10: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+11: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+12: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+13: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+15: LUT_DATA <= 9'h120; // ' '
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
-
-					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
-
-					default:        LUT_DATA    <=    9'dx ;
-			  endcase
-	end else if(Msg > 20 && Msg <= 30) begin
-				case(LUT_INDEX)
-					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
-					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
-					LCD_INTIAL+2:    LUT_DATA    <=    9'h001;
-					LCD_INTIAL+3:    LUT_DATA    <=    9'h006;
-					LCD_INTIAL+4:    LUT_DATA    <=    9'h080;
-	
-					LCD_LINE1+0: LUT_DATA <= 9'h149;  // 'I'
-					LCD_LINE1+1: LUT_DATA <= 9'h144;  // 'D'
-					LCD_LINE1+2: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+3: LUT_DATA <= 9'h164;  // 'd'
-					LCD_LINE1+4: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE1+5: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE1+6: LUT_DATA <= 9'h170;  // 'p'
-					LCD_LINE1+7: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE1+8: LUT_DATA <= 9'h16F;  // 'o'
-					LCD_LINE1+9: LUT_DATA <= 9'h163;  // 'c'
-					LCD_LINE1+10: LUT_DATA <= 9'h165; // 'e'
-					LCD_LINE1+11: LUT_DATA <= 9'h173; // 's'
-					LCD_LINE1+12: LUT_DATA <= 9'h173; // 's'
-					LCD_LINE1+13: LUT_DATA <= 9'h16F; // 'o'
-					LCD_LINE1+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE1+15: LUT_DATA <= 9'h130 + Msg - 20; // Numero
-					
-					LCD_LINE2+0: LUT_DATA <= 9'h171;  // 'q'
-					LCD_LINE2+1: LUT_DATA <= 9'h175;  // 'u'
-					LCD_LINE2+2: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE2+3: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+4: LUT_DATA <= 9'h173;  // 's'
-					LCD_LINE2+5: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE2+6: LUT_DATA <= 9'h172;  // 'r'
-					LCD_LINE2+7: LUT_DATA <= 9'h161;  // 'a'
-					LCD_LINE2+8: LUT_DATA <= 9'h120;  // ' '
-					LCD_LINE2+9: LUT_DATA <= 9'h165;  // 'e'
-					LCD_LINE2+10: LUT_DATA <= 9'h178; // 'x'
-					LCD_LINE2+11: LUT_DATA <= 9'h165; // 'e'
-					LCD_LINE2+12: LUT_DATA <= 9'h163; // 'c'
-					LCD_LINE2+13: LUT_DATA <= 9'h13A; // ':'
-					LCD_LINE2+14: LUT_DATA <= 9'h120; // ' '
-					LCD_LINE2+15: LUT_DATA <= 9'h120; // ' '
-					// ... [Complete a linha com espaços ou caracteres conforme necessário]
-
-					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
-
-					default:        LUT_DATA    <=    9'dx ;
-			  endcase
-	end else if(Msg > 30) begin
 				case(LUT_INDEX)
 					LCD_INTIAL+0:    LUT_DATA    <=    9'h038;
 					LCD_INTIAL+1:    LUT_DATA    <=    9'h00C;
@@ -468,13 +170,161 @@ begin
 					LCD_LINE2+15: LUT_DATA <= 9'h120; // ' '
 
 					LCD_CH_LINE:    LUT_DATA    <=    9'h0C0;
-					// Tratar a segunda linha conforme necessário
-					// ...
 
 					default:        LUT_DATA    <=    9'dx ;
 			endcase
-	end
-end
+	end else if(Msg == 12) begin
+		case(LUT_INDEX)
+			// --- Inicialização do LCD ---
+			LCD_INTIAL+0:  LUT_DATA <= 9'h038;
+			LCD_INTIAL+1:  LUT_DATA <= 9'h00C;
+			LCD_INTIAL+2:  LUT_DATA <= 9'h001;
+			LCD_INTIAL+3:  LUT_DATA <= 9'h006;
+			LCD_INTIAL+4:  LUT_DATA <= 9'h080;   // Início da primeira linha (0x80)
+
+			// --- Linha 1: "escolha o id do" ---
+			LCD_LINE1+0:   LUT_DATA <= 9'h165; // 'e'
+			LCD_LINE1+1:   LUT_DATA <= 9'h173; // 's'
+			LCD_LINE1+2:   LUT_DATA <= 9'h163; // 'c'
+			LCD_LINE1+3:   LUT_DATA <= 9'h16F; // 'o'
+			LCD_LINE1+4:   LUT_DATA <= 9'h16C; // 'l'
+			LCD_LINE1+5:   LUT_DATA <= 9'h168; // 'h'
+			LCD_LINE1+6:   LUT_DATA <= 9'h161; // 'a'
+			LCD_LINE1+7:   LUT_DATA <= 9'h120; // ' '
+			LCD_LINE1+8:   LUT_DATA <= 9'h16F; // 'o'
+			LCD_LINE1+9:   LUT_DATA <= 9'h120; // ' '
+			LCD_LINE1+10:  LUT_DATA <= 9'h169; // 'i'
+			LCD_LINE1+11:  LUT_DATA <= 9'h164; // 'd'
+			LCD_LINE1+12:  LUT_DATA <= 9'h120; // ' '
+			LCD_LINE1+13:  LUT_DATA <= 9'h164; // 'd'
+			LCD_LINE1+14:  LUT_DATA <= 9'h16F; // 'o'
+			LCD_LINE1+15:  LUT_DATA <= 9'h120; // ' '
+
+			// --- Mudar para a segunda linha ---
+			LCD_CH_LINE:   LUT_DATA <= 9'h0C0;
+
+			// --- Linha 2: "processo" ---
+			LCD_LINE2+0:   LUT_DATA <= 9'h170; // 'p'
+			LCD_LINE2+1:   LUT_DATA <= 9'h172; // 'r'
+			LCD_LINE2+2:   LUT_DATA <= 9'h16F; // 'o'
+			LCD_LINE2+3:   LUT_DATA <= 9'h163; // 'c'
+			LCD_LINE2+4:   LUT_DATA <= 9'h165; // 'e'
+			LCD_LINE2+5:   LUT_DATA <= 9'h173; // 's'
+			LCD_LINE2+6:   LUT_DATA <= 9'h173; // 's'
+			LCD_LINE2+7:   LUT_DATA <= 9'h16F; // 'o'
+			LCD_LINE2+8:   LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+9:   LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+10:  LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+11:  LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+12:  LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+13:  LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+14:  LUT_DATA <= 9'h120; // ' '
+			LCD_LINE2+15:  LUT_DATA <= 9'h120; // ' '
+
+			default: LUT_DATA <= 9'dx;
+		endcase
+	end else if(Msg == 13) begin
+    case(LUT_INDEX)
+        // --- Inicialização do LCD ---
+        LCD_INTIAL+0:  LUT_DATA <= 9'h038;
+        LCD_INTIAL+1:  LUT_DATA <= 9'h00C;
+        LCD_INTIAL+2:  LUT_DATA <= 9'h001;
+        LCD_INTIAL+3:  LUT_DATA <= 9'h006;
+        LCD_INTIAL+4:  LUT_DATA <= 9'h080;   // Início da primeira linha (0x80)
+
+        // --- Linha 1: "Escolha o ID" ---
+        LCD_LINE1+0:   LUT_DATA <= 9'h145; // 'E'
+        LCD_LINE1+1:   LUT_DATA <= 9'h173; // 's'
+        LCD_LINE1+2:   LUT_DATA <= 9'h163; // 'c'
+        LCD_LINE1+3:   LUT_DATA <= 9'h16F; // 'o'
+        LCD_LINE1+4:   LUT_DATA <= 9'h16C; // 'l'
+        LCD_LINE1+5:   LUT_DATA <= 9'h168; // 'h'
+        LCD_LINE1+6:   LUT_DATA <= 9'h161; // 'a'
+        LCD_LINE1+7:   LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+8:   LUT_DATA <= 9'h16F; // 'o'
+        LCD_LINE1+9:   LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+10:  LUT_DATA <= 9'h149; // 'I'
+        LCD_LINE1+11:  LUT_DATA <= 9'h144; // 'D'
+        LCD_LINE1+12:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+13:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+14:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+15:  LUT_DATA <= 9'h120; // ' '
+
+        // --- Mudar para segunda linha ---
+        LCD_CH_LINE:   LUT_DATA <= 9'h0C0;
+
+        // --- Linha 2: " 11 para sair" ---
+        LCD_LINE2+0:   LUT_DATA <= 9'h120; // ' '
+        LCD_LINE2+1:   LUT_DATA <= 9'h131; // '1'
+        LCD_LINE2+2:   LUT_DATA <= 9'h131; // '1'
+        LCD_LINE2+3:   LUT_DATA <= 9'h120; // ' '
+        LCD_LINE2+4:   LUT_DATA <= 9'h170; // 'p'
+        LCD_LINE2+5:   LUT_DATA <= 9'h161; // 'a'
+        LCD_LINE2+6:   LUT_DATA <= 9'h172; // 'r'
+        LCD_LINE2+7:   LUT_DATA <= 9'h161; // 'a'
+        LCD_LINE2+8:   LUT_DATA <= 9'h120; // ' '
+        LCD_LINE2+9:   LUT_DATA <= 9'h173; // 's'
+        LCD_LINE2+10:  LUT_DATA <= 9'h161; // 'a'
+        LCD_LINE2+11:  LUT_DATA <= 9'h169; // 'i'
+        LCD_LINE2+12:  LUT_DATA <= 9'h172; // 'r'
+        LCD_LINE2+13:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE2+14:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE2+15:  LUT_DATA <= 9'h120; // ' '
+
+        default: LUT_DATA <= 9'dx;
+    endcase
+	 end else if(Msg == 14) begin
+    case (LUT_INDEX)
+        // --- Inicialização do LCD ---
+        LCD_INTIAL+0:  LUT_DATA <= 9'h038;
+        LCD_INTIAL+1:  LUT_DATA <= 9'h00C;
+        LCD_INTIAL+2:  LUT_DATA <= 9'h001;
+        LCD_INTIAL+3:  LUT_DATA <= 9'h006;
+        LCD_INTIAL+4:  LUT_DATA <= 9'h080; 
+
+        // --- Linha 1: "PREEMPCAO" ---
+        LCD_LINE1+0:   LUT_DATA <= 9'h150; // 'P'
+        LCD_LINE1+1:   LUT_DATA <= 9'h152; // 'R'
+        LCD_LINE1+2:   LUT_DATA <= 9'h145; // 'E'
+        LCD_LINE1+3:   LUT_DATA <= 9'h145; // 'E'
+        LCD_LINE1+4:   LUT_DATA <= 9'h14D; // 'M'
+        LCD_LINE1+5:   LUT_DATA <= 9'h150; // 'P'
+        LCD_LINE1+6:   LUT_DATA <= 9'h143; // 'C'
+        LCD_LINE1+7:   LUT_DATA <= 9'h141; // 'A'
+        LCD_LINE1+8:   LUT_DATA <= 9'h14F; // 'O'
+        LCD_LINE1+9:   LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+10:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+11:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+12:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+13:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+14:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE1+15:  LUT_DATA <= 9'h120; // ' '
+
+        // --- Mudar para segunda linha ---
+        LCD_CH_LINE:   LUT_DATA <= 9'h0C0;
+
+        // --- Linha 2: "continuar: enter" ---
+        LCD_LINE2+0:   LUT_DATA <= 9'h163; // 'c'
+        LCD_LINE2+1:   LUT_DATA <= 9'h16F; // 'o'
+        LCD_LINE2+2:   LUT_DATA <= 9'h16E; // 'n'
+        LCD_LINE2+3:   LUT_DATA <= 9'h174; // 't'
+        LCD_LINE2+4:   LUT_DATA <= 9'h169; // 'i'
+        LCD_LINE2+5:   LUT_DATA <= 9'h16E; // 'n'
+        LCD_LINE2+6:   LUT_DATA <= 9'h175; // 'u'
+        LCD_LINE2+7:   LUT_DATA <= 9'h161; // 'a'
+        LCD_LINE2+8:   LUT_DATA <= 9'h172; // 'r'
+        LCD_LINE2+9:   LUT_DATA <= 9'h13A; // ':'
+        LCD_LINE2+10:  LUT_DATA <= 9'h120; // ' '
+        LCD_LINE2+11:  LUT_DATA <= 9'h165; // 'e'
+        LCD_LINE2+12:  LUT_DATA <= 9'h16E; // 'n'
+        LCD_LINE2+13:  LUT_DATA <= 9'h174; // 't'
+        LCD_LINE2+14:  LUT_DATA <= 9'h165; // 'e'
+        LCD_LINE2+15:  LUT_DATA <= 9'h172; // 'r'
+
+        default: LUT_DATA <= 9'dx;
+        
+    endcase
+end  end
 
 LCD_Controller LCD_Controller(
     //    Host Side

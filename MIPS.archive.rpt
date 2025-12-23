@@ -1,5 +1,5 @@
 Archive Project report for MIPS
-Wed Jul 23 14:14:59 2025
+Thu Dec 18 19:24:51 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Wed Jul 23 14:14:59 2025 ;
+; Archive Project Status ; Successful - Thu Dec 18 19:24:51 2025 ;
 ; Revision Name          ; MIPS                                  ;
 ; Top-level Entity Name  ; MIPS                                  ;
 ; Family                 ; Cyclone IV E                          ;
@@ -60,9 +60,9 @@ Info: ----------------------------------------------------------
 Info: Generated report 'MIPS.archive.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Wed Jul 23 14:14:59 2025
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Thu Dec 18 19:24:51 2025
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -78,33 +78,43 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; Control_Unit.v               ;
 ; Debounce_Switch.v            ;
 ; display_7_seg.v              ;
+; Display_LCD.v                ;
 ; Divisor_Freq.v               ;
 ; Flip_Flop_Input.v            ;
 ; Gerenciador_De_Saidas.v      ;
+; HD.v                         ;
 ; IN.v                         ;
 ; instructions.txt             ;
+; Instructions.v               ;
+; LCD.v                        ;
+; LCD_Controller.v             ;
 ; MIPS.qpf                     ;
 ; MIPS.qsf                     ;
 ; MIPS.v                       ;
 ; MIPS_assignment_defaults.qdf ;
 ; MUX_5.v                      ;
+; MUX_5b_2in.v                 ;
 ; MUX_5b_3in.v                 ;
 ; MUX_5b_4in.v                 ;
+; MUX_5b_5in.v                 ;
 ; MUX_32.v                     ;
 ; MUX_32b_3in.v                ;
 ; MUX_32b_4in.v                ;
+; MUX_32b_5in.v                ;
 ; OUT.v                        ;
 ; output_files/MUX_32b_3in.v   ;
 ; PC.v                         ;
 ; RAM.v                        ;
 ; registers.v                  ;
+; Reset_Delay.v                ;
 ; ROM.v                        ;
 ; Salva_saida.v                ;
 ; Shift_Left2_26.v             ;
 ; Shift_Left2_32.v             ;
 ; sign_extend.v                ;
 ; Split_Digitos.v              ;
-; Waveform4.vwf                ;
+; timer.v                      ;
+; Waveform1.vwf                ;
 +------------------------------+
 
 
