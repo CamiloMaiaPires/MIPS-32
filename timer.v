@@ -38,7 +38,7 @@ module timer (
 						executing <= 1;
 					end else begin
 						contador <= 0;     
-						quantum_end <= 1;     
+						quantum_end <= 0;     
 						executing <= 0;
 					end
 				end else begin

@@ -1,7 +1,7 @@
 
 	module MIPS(
 		Clock, enter, in, reset,
-		display, LED_Input, LED_Input2, 
+		display, LED_Input, LED_Input2, LEDqt1, LEDqt2,
 //			ALU_Result, imprime_saida, Ativa_PC, saida_ff, entrada_ff,instruction,
 //		Read_Data2, Read_Data, Write_Data, Read_Data1, Write_register, RegDst,MemWrite, MemRead, hd_instruction,
 //		CLK, CLK_read,
@@ -28,6 +28,8 @@
 		output LED_Input;
 		
 		output ledtest;
+		output LEDqt1;
+		output LEDqt2;
 //		output reg led_btn;
 
 
@@ -67,6 +69,8 @@
 		wire enter_debounce;
 		wire LED_Input_Ativa;
 		wire LED_Input_Ativa2;
+		wire LEDqt1;
+		wire LEDqt2;
 		wire [2:0] RegDst;
 		wire [5:0] Write_register;
 		wire [31:0] Write_Data;
@@ -175,7 +179,7 @@
 	assign halt = (instruction[31:26] == 6'b111111);
 	timer(CLK, Adress_PC_Out, reset_combined, QuantumFlag, halt, QuantumEnd, ExecutingQuantum);
 
-	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, InstructionWrite, ledtest, ExecutingQuantum, QuantumFlag, QuantumEnd);
+	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, InstructionWrite, ledtest, ExecutingQuantum, QuantumFlag, QuantumEnd, CLK, LEDqt1, LEDqt2);
 //	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, InstructionWrite, ledtest);
 	
 	MUX_5b_5in mux_5b5i(.V1(instruction[20:16]), .V2(instruction[15:11]), .V3(5'b11111), .V4(5'b11010), .V5(5'b11001), .option(RegDst), .out(Write_register));

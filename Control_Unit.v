@@ -21,13 +21,17 @@ InstructionWrite,
 ledtest,
 ExecutingQuantum,
 QuantumFlag,
-QuantumEnd
+QuantumEnd,
+clk,
+LEDqt1,
+LEDqt2
 );
 	output reg ledtest;
 	input saida_ff;
 	input enter;
 	input [5:0] op_code;
 	output reg Branch,MemRead,MemWrite,ALUSrc,RegWrite, out_flag, LED_Input_Ativa,LED_Input_Ativa2, entrada_ff, Ativa_PC, InstructionWrite;
+	output reg LEDqt1, LEDqt2;
 	output reg [2:0] MemtoReg, jump;
 	output reg [2:0] RegDst;
 	output reg [2:0] ALUop;
@@ -35,12 +39,23 @@ QuantumEnd
 	input ExecutingQuantum;
 	input QuantumEnd;
 	output reg QuantumFlag;
+	reg QuantumEnd_d;
+	input clk;
 //	reg quantum_wait;
 
 	
 	initial begin
 		entrada_ff <= 1;
 		QuantumFlag <= 0;
+		LEDqt1 <= 0;
+		LEDqt2 <= 0;
+	end
+	
+	always @(posedge clk) begin
+		if (QuantumEnd_d)
+			QuantumEnd_d <= 1'b0;
+		else if (QuantumEnd)
+			QuantumEnd_d <= 1'b0;		
 	end
 
 	
@@ -70,10 +85,51 @@ QuantumEnd
 //			entrada_ff <= 1'b0;
 //			setLCD <= 0;
 //			InstructionWrite <= 0;
-//			QuantumFlag <= 0;
+//			QuantumFlag <= 0;	
 //		end else begin
 	
-		if (QuantumEnd == 1) begin
+//		if (QuantumEnd == 1) begin
+//			RegDst <= 3'b100;
+//			jump <= 2'b10;
+//			Branch <= 0;
+//			MemRead <= 0;
+//			MemtoReg <= 3'b100;
+//			ALUop <= 3'b000;
+//			MemWrite <= 0;
+//			ALUSrc <= 0;
+//			RegWrite <= 1;
+//			Ativa_PC <= 1;
+//			out_flag <= 0;
+//			LED_Input_Ativa <= 0;
+//			LED_Input_Ativa2 <= 0;
+//			entrada_ff <= 1'b0;
+//			setLCD <= 0;
+//			InstructionWrite <= 0;
+//			QuantumFlag <= 0;
+//		end else begin
+		
+		if (QuantumEnd) begin
+		   // salva no registrador 25
+			RegDst <= 3'b100;
+			RegWrite <= 1;
+			jump <= 2'b00;
+			Ativa_PC <= 0;
+			Branch <= 0;
+			MemRead <= 0;
+			MemtoReg <= 3'b100;
+			ALUop <= 3'b000;
+			MemWrite <= 0;
+			ALUSrc <= 0;
+			RegWrite <= 1;
+			Ativa_PC <= 0;
+			LED_Input_Ativa <= 0;
+			LED_Input_Ativa2 <= 0;
+			entrada_ff <= 1'b0;
+			setLCD <= 0;
+			InstructionWrite <= 0;
+			QuantumFlag <= ExecutingQuantum;
+			LEDqt1 <= 1;
+		end else if (QuantumEnd_d) begin
 			RegDst <= 3'b100;
 			jump <= 2'b10;
 			Branch <= 0;
@@ -82,7 +138,7 @@ QuantumEnd
 			ALUop <= 3'b000;
 			MemWrite <= 0;
 			ALUSrc <= 0;
-			RegWrite <= 1;
+			RegWrite <= 0;
 			Ativa_PC <= 1;
 			out_flag <= 0;
 			LED_Input_Ativa <= 0;
@@ -91,6 +147,7 @@ QuantumEnd
 			setLCD <= 0;
 			InstructionWrite <= 0;
 			QuantumFlag <= 0;
+			LEDqt2 <= 1;
 		end else begin
 	
 		
