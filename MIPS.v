@@ -2,15 +2,14 @@
 	module MIPS(
 		Clock, enter, in, reset,
 		display, LED_Input, LED_Input2, LEDqt1, LEDqt2,
-//			ALU_Result, imprime_saida, Ativa_PC, saida_ff, entrada_ff,instruction,
-//		Read_Data2, Read_Data, Write_Data, Read_Data1, Write_register, RegDst,MemWrite, MemRead, hd_instruction,
-//		CLK, CLK_read,
-//		next_adress_PC, Adress_PC_Out,
+		ALU_Result, imprime_saida, Ativa_PC, saida_ff, entrada_ff,instruction,
+		Read_Data2, Read_Data, Write_Data, Read_Data1, Write_register, RegDst,MemWrite, MemRead, hd_instruction,
+		CLK, CLK_read,
+		next_adress_PC, Adress_PC_Out,
 		ledtest, 
 //		bt0, led_btn
 		LCD_DATA, LCD_ON,	LCD_BLON, LCD_RW,	LCD_EN, LCD_RS,
-//		QuantumEnd, ExecutingQuantum, QuantumFlag, halt, Reg_Addr1
-		QuantumEnd
+		QuantumEnd, ExecutingQuantum, QuantumFlag, halt, Reg_Addr1,
 	);
 	
 		// === INOUT ===
@@ -28,32 +27,31 @@
 		output LED_Input;
 		
 		output ledtest;
-		output LEDqt1;
-		output LEDqt2;
 //		output reg led_btn;
 
 
-//		output [31:0] instruction; // instrução atual
-//		output [31:0] ALU_Result;
-//		output Ativa_PC, saida_ff, entrada_ff;
-//		output imprime_saida;
-//		output Read_Data2;
-//		output Read_Data;
-//		output Write_Data;
-//		output Read_Data1;
-//		output Write_register;
-//		output RegDst;
-//		output MemWrite, MemRead;
-//		output hd_instruction;
+		output [31:0] instruction; // instrução atual
+		output [31:0] ALU_Result;
+		output Ativa_PC, saida_ff, entrada_ff;
+		output imprime_saida;
+		output Read_Data2;
+		output Read_Data;
+		output Write_Data;
+		output Read_Data1;
+		output Write_register;
+		output RegDst;
+		output MemWrite, MemRead;
+		output hd_instruction;
 
-//		output CLK, CLK_read;
-//		output next_adress_PC;
-//		output Adress_PC_Out;
-		output QuantumEnd;	
-//		output ExecutingQuantum;
-//		output QuantumFlag;
-//		output halt;
-//		output [4:0] Reg_Addr1;
+		output CLK, CLK_read;
+		output next_adress_PC;
+		output Adress_PC_Out;
+		output QuantumEnd;
+		output LEDqt1, LEDqt2;
+		output ExecutingQuantum;
+		output QuantumFlag;
+		output halt;
+		output [4:0] Reg_Addr1;
 		
 		//LCD
 		output LCD_ON,	LCD_BLON, LCD_RW,	LCD_EN, LCD_RS;
@@ -179,7 +177,7 @@
 	assign halt = (instruction[31:26] == 6'b111111);
 	timer(CLK, Adress_PC_Out, reset_combined, QuantumFlag, halt, QuantumEnd, ExecutingQuantum);
 
-	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, InstructionWrite, ledtest, ExecutingQuantum, QuantumFlag, QuantumEnd, CLK, LEDqt1, LEDqt2);
+	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, InstructionWrite, ledtest, ExecutingQuantum, QuantumFlag, QuantumEnd, CLK, LEDqt1, LEDqt2, reset_combined);
 //	Control_Unit(instruction[31:26], saida_ff, enter_debounce, RegDst, Jump, Branch, MemRead, MemtoReg, ALUOp, MemWrite, ALUSrc, RegWrite, out_flag, entrada_ff, LED_Input_Ativa, LED_Input_Ativa2, Ativa_PC, setLCD, InstructionWrite, ledtest);
 	
 	MUX_5b_5in mux_5b5i(.V1(instruction[20:16]), .V2(instruction[15:11]), .V3(5'b11111), .V4(5'b11010), .V5(5'b11001), .option(RegDst), .out(Write_register));

@@ -24,11 +24,13 @@ QuantumFlag,
 QuantumEnd,
 clk,
 LEDqt1,
-LEDqt2
+LEDqt2,
+reset
 );
 	output reg ledtest;
 	input saida_ff;
 	input enter;
+	input reset;
 	input [5:0] op_code;
 	output reg Branch,MemRead,MemWrite,ALUSrc,RegWrite, out_flag, LED_Input_Ativa,LED_Input_Ativa2, entrada_ff, Ativa_PC, InstructionWrite;
 	output reg LEDqt1, LEDqt2;
@@ -46,20 +48,22 @@ LEDqt2
 	
 	initial begin
 		entrada_ff <= 1;
-		QuantumFlag <= 0;
-		LEDqt1 <= 0;
-		LEDqt2 <= 0;
 	end
 	
 	always @(posedge clk) begin
 		if (QuantumEnd_d)
 			QuantumEnd_d <= 1'b0;
 		else if (QuantumEnd)
-			QuantumEnd_d <= 1'b0;		
+			QuantumEnd_d <= 1'b1;		
 	end
 
 	
 	always @ (*) begin
+		if (reset) begin
+			QuantumFlag <= 0;
+			LEDqt1 <= 0;
+			LEDqt2 <= 0;
+		end
 	
 //		if (QuantumEnd && !quantum_wait) begin
 //			// salva o registrador

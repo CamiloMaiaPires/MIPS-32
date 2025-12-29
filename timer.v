@@ -8,7 +8,7 @@ module timer (
 	output reg executing
 );
 
-	parameter [7:0] LIMITE_QUANTUM = 8'd7; 
+	parameter [7:0] LIMITE_QUANTUM = 8'd3; 
 
 	reg [7:0] contador;  
 	reg [31:0] pc_prev;
@@ -38,7 +38,7 @@ module timer (
 						executing <= 1;
 					end else begin
 						contador <= 0;     
-						quantum_end <= 0;     
+						quantum_end <= 1;     
 						executing <= 0;
 					end
 				end else begin
