@@ -25,7 +25,8 @@ QuantumEnd,
 clk,
 LEDqt1,
 LEDqt2,
-reset
+reset,
+QuantumEnd_d
 );
 	output reg ledtest;
 	input saida_ff;
@@ -40,8 +41,8 @@ reset
 	output reg setLCD;
 	input ExecutingQuantum;
 	input QuantumEnd;
+	output reg QuantumEnd_d;
 	output reg QuantumFlag;
-	reg QuantumEnd_d;
 	input clk;
 //	reg quantum_wait;
 
@@ -51,10 +52,14 @@ reset
 	end
 	
 	always @(posedge clk) begin
-		if (QuantumEnd_d)
-			QuantumEnd_d <= 1'b0;
-		else if (QuantumEnd)
-			QuantumEnd_d <= 1'b1;		
+		if (reset) begin
+			QuantumEnd_d <= 0;
+		end else begin
+			if (QuantumEnd_d)
+				QuantumEnd_d <= 1'b0;
+			else if (QuantumEnd)
+				QuantumEnd_d <= 1'b1;		
+		end
 	end
 
 	
@@ -131,7 +136,7 @@ reset
 			entrada_ff <= 1'b0;
 			setLCD <= 0;
 			InstructionWrite <= 0;
-			QuantumFlag <= ExecutingQuantum;
+			QuantumFlag <= 1;
 			LEDqt1 <= 1;
 		end else if (QuantumEnd_d) begin
 			RegDst <= 3'b100;

@@ -8,18 +8,10 @@ module timer (
 	output reg executing
 );
 
-	parameter [7:0] LIMITE_QUANTUM = 8'd3; 
+	parameter [7:0] LIMITE_QUANTUM = 8'd6; 
 
 	reg [7:0] contador;  
 	reg [31:0] pc_prev;
-
-    
-	initial begin
-		contador <= 0;
-		quantum_end <= 0;
-		executing <= 0;
-		pc_prev <= PC;
-	end
 
 	always @(posedge clk) begin
 		if (Reset || Halt) begin
@@ -27,7 +19,7 @@ module timer (
 			contador <= 0;
 			quantum_end <= 0;
 			executing <= 0;
-			pc_prev <= PC;
+			pc_prev <= 32'd1;
 		end else begin
 			if (PC != pc_prev) begin
 				pc_prev <= PC;
